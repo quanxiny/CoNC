@@ -1,0 +1,383 @@
+{
+  "checked_at_utc": "2026-10-15T10:10:30.438913+00:00",
+  "scope": "Bounded primary NIST metadata verification; no source instance debugging, extraction, model inference, or training",
+  "tiny_single_case_zip_read_in_memory": true,
+  "tiny_zip_source_member_decompressed_or_read": false,
+  "existing_local_archives_or_audit_modified": false,
+  "coverage": null,
+  "mit_2073_v2": {
+    "official_page": "https://samate.nist.gov/SARD/test-cases/2073/versions/2.0.0",
+    "verified_fields": {
+      "id": 2073,
+      "version": "2.0.0",
+      "state": "good",
+      "status": "candidate",
+      "author": "MIT",
+      "language": "c",
+      "submission_date": "2008-04-11",
+      "fixed_case": 834,
+      "pairs": [
+        "831-v1.0.0",
+        "832-v1.0.0",
+        "833-v1.0.0",
+        "2073-v1.0.0"
+      ]
+    },
+    "resource": {
+      "url": "https://samate.nist.gov/SARD/downloads/versions/2073-v2.0.0.zip",
+      "url_provenance": "Download href parsed from official case page HTML",
+      "head_status": 200,
+      "content_type": "application/zip",
+      "content_length": 3495,
+      "member_names": [
+        ".dockerignore",
+        ".gitignore",
+        "Dockerfile",
+        "Makefile",
+        "manifest.sarif",
+        "src/basic-00180-ok.c"
+      ],
+      "sarif_member": "manifest.sarif",
+      "sarif_member_bytes": 3420,
+      "sarif_metadata_read": true,
+      "source_member": "src/basic-00180-ok.c",
+      "source_member_bytes": 2100,
+      "source_sha256_from_official_manifest": "e859198264d8edb5aa8db0d821ca97fd2a77eaec5f7952fecf86c0657fb448ee",
+      "source_sha256_computed": false,
+      "result_kind": "pass",
+      "rule_id": "CWE-119",
+      "standalone_sarif_url": null,
+      "standalone_source_url": null,
+      "availability": "The small official version-only ZIP supplies both SARIF and source; separate raw URLs were not established.",
+      "saved_path": "external_eval/vendor/mit/2073-v2.0.0.zip",
+      "saved_archive_sha256": "a969f0c87bc15270d151bec1050b47375ce3e24d4436c70b95e6820295f0ec88",
+      "saved_bytes": 3495,
+      "saved_member_count": 6,
+      "save_action": "one HTTP GET to save independent vendor archive",
+      "archive_hash_computed": true,
+      "source_member_read": false,
+      "source_hash_checked_against_official_manifest": true,
+      "source_hash_verified_by_reading_source": false,
+      "transfer_accounting": "One earlier 3495-byte metadata-only in-memory ZIP fetch; one later GET saved this independent vendor archive. No duplicate file was created."
+    },
+    "supplement_use": "Can be staged as a distinct official v2 supplement for basic-00180-ok; preserve old ZIP and audit. No local replacement performed.",
+    "explicit_supplement_mapping": {
+      "base_case": "basic-00180",
+      "variant": "ok",
+      "original_archive": "datasets/2014-06-08-a-taxonomy-of-buffer-overflows.zip",
+      "original_identifier": "2073-v1.0.0",
+      "original_properties_id": 834,
+      "original_state": "good",
+      "original_status": "deprecated",
+      "original_binary_label": 0,
+      "original_source_member": "src/basic-00180-ok.c",
+      "original_source_sha256_from_manifest": "433ef63ba17d06b08b8050ac2747ca7ababffeb89423077c52afcfc5e5e22cc4",
+      "supplement_identifier": "2073-v2.0.0",
+      "supplement_binary_label": 0,
+      "supplement_source_sha256_from_manifest": "e859198264d8edb5aa8db0d821ca97fd2a77eaec5f7952fecf86c0657fb448ee",
+      "original_local_archive_modified": false,
+      "current_use": "downloaded separate supplement only; no dataset manifest changed",
+      "future_manifest_policy": "If accepted, explicitly select v2 for basic-00180/ok and preserve original identifier, label, source hash, archive hash, and replacement reason; never silently overwrite v1."
+    }
+  },
+  "juliet_1_3": {
+    "official_page": "https://samate.nist.gov/SARD/test-suites/112",
+    "official_release_log": "https://samate.nist.gov/SARD/downloads/documents/releaseJuliet1.3Doc.txt",
+    "official_changes_document": "https://samate.nist.gov/SARD/downloads/documents/Juliet_1.3_Changes_From_1.2.pdf",
+    "official_suite_number": 112,
+    "official_test_case_count": 64099,
+    "official_cwe_count": 118,
+    "official_archive_sha256": "ada9d7e1c323d283446df3f55bdee0d00bda1fed786785fe98764d58688f38eb",
+    "official_sha256_matches_previous_local_audit": true,
+    "local_changelog_verification": {
+      "archive": "datasets/2017-10-01-juliet-test-suite-for-c-cplusplus-v1-3.zip",
+      "member": "C/doc/changelog_Juliet_C_Cpp.txt",
+      "actual_observed_heading": "Sep 2017 - v1.3",
+      "heading_read_and_verified": true,
+      "declared_test_case_count": 64295
+    },
+    "local_manifest_testcase_elements": 64123,
+    "official_removed_case_statement": {
+      "cases": 24,
+      "files": 51,
+      "cwe": 121,
+      "reason": "stack-allocated memory used after lifetime; cases could not be fixed while retaining their test purpose",
+      "release_log_lines": "15-17",
+      "changes_document_section": "2.5",
+      "changes_document_printed_pages": "10-11"
+    },
+    "metadata_member_crosscheck": {
+      "method": "Compare each XML file/@path basename against ZIP member basenames; no source content reads",
+      "testcases_with_missing_files": 24,
+      "fully_missing_testcases": 24,
+      "missing_files": 51,
+      "all_missing_case_pattern": "CWE121_Stack_Based_Buffer_Overflow__CWE131_{loop,memcpy,memmove}_{21,22,42,43,61,62,83,84}",
+      "local_manifest_minus_fully_missing_testcases": 64099,
+      "interpretation": "The 24 missing XML cases and 51 missing files match the official removed-case statement; count 64123-24 matches official 64099. XML appears to retain those removed entries.",
+      "interpretation_kind": "Inference from official removal metadata plus local XML/member-name evidence, not an official statement that manifest.xml is stale",
+      "stale_testcases": [
+        {
+          "scenario_id": "CWE121_Stack_Based_Buffer_Overflow__CWE131_loop_21",
+          "xml_testcase_ordinal_1_based": 883,
+          "sard_numeric_id": null,
+          "missing_file_paths": [
+            "CWE121_Stack_Based_Buffer_Overflow__CWE131_loop_21.c"
+          ]
+        },
+        {
+          "scenario_id": "CWE121_Stack_Based_Buffer_Overflow__CWE131_loop_22",
+          "xml_testcase_ordinal_1_based": 884,
+          "sard_numeric_id": null,
+          "missing_file_paths": [
+            "CWE121_Stack_Based_Buffer_Overflow__CWE131_loop_22a.c",
+            "CWE121_Stack_Based_Buffer_Overflow__CWE131_loop_22b.c"
+          ]
+        },
+        {
+          "scenario_id": "CWE121_Stack_Based_Buffer_Overflow__CWE131_loop_42",
+          "xml_testcase_ordinal_1_based": 890,
+          "sard_numeric_id": null,
+          "missing_file_paths": [
+            "CWE121_Stack_Based_Buffer_Overflow__CWE131_loop_42.c"
+          ]
+        },
+        {
+          "scenario_id": "CWE121_Stack_Based_Buffer_Overflow__CWE131_loop_43",
+          "xml_testcase_ordinal_1_based": 891,
+          "sard_numeric_id": null,
+          "missing_file_paths": [
+            "CWE121_Stack_Based_Buffer_Overflow__CWE131_loop_43.cpp"
+          ]
+        },
+        {
+          "scenario_id": "CWE121_Stack_Based_Buffer_Overflow__CWE131_loop_61",
+          "xml_testcase_ordinal_1_based": 898,
+          "sard_numeric_id": null,
+          "missing_file_paths": [
+            "CWE121_Stack_Based_Buffer_Overflow__CWE131_loop_61a.c",
+            "CWE121_Stack_Based_Buffer_Overflow__CWE131_loop_61b.c"
+          ]
+        },
+        {
+          "scenario_id": "CWE121_Stack_Based_Buffer_Overflow__CWE131_loop_62",
+          "xml_testcase_ordinal_1_based": 899,
+          "sard_numeric_id": null,
+          "missing_file_paths": [
+            "CWE121_Stack_Based_Buffer_Overflow__CWE131_loop_62a.cpp",
+            "CWE121_Stack_Based_Buffer_Overflow__CWE131_loop_62b.cpp"
+          ]
+        },
+        {
+          "scenario_id": "CWE121_Stack_Based_Buffer_Overflow__CWE131_loop_83",
+          "xml_testcase_ordinal_1_based": 911,
+          "sard_numeric_id": null,
+          "missing_file_paths": [
+            "CWE121_Stack_Based_Buffer_Overflow__CWE131_loop_83.h",
+            "CWE121_Stack_Based_Buffer_Overflow__CWE131_loop_83_bad.cpp",
+            "CWE121_Stack_Based_Buffer_Overflow__CWE131_loop_83_goodG2B.cpp",
+            "CWE121_Stack_Based_Buffer_Overflow__CWE131_loop_83a.cpp"
+          ]
+        },
+        {
+          "scenario_id": "CWE121_Stack_Based_Buffer_Overflow__CWE131_loop_84",
+          "xml_testcase_ordinal_1_based": 912,
+          "sard_numeric_id": null,
+          "missing_file_paths": [
+            "CWE121_Stack_Based_Buffer_Overflow__CWE131_loop_84.h",
+            "CWE121_Stack_Based_Buffer_Overflow__CWE131_loop_84_bad.cpp",
+            "CWE121_Stack_Based_Buffer_Overflow__CWE131_loop_84_goodG2B.cpp",
+            "CWE121_Stack_Based_Buffer_Overflow__CWE131_loop_84a.cpp"
+          ]
+        },
+        {
+          "scenario_id": "CWE121_Stack_Based_Buffer_Overflow__CWE131_memcpy_21",
+          "xml_testcase_ordinal_1_based": 931,
+          "sard_numeric_id": null,
+          "missing_file_paths": [
+            "CWE121_Stack_Based_Buffer_Overflow__CWE131_memcpy_21.c"
+          ]
+        },
+        {
+          "scenario_id": "CWE121_Stack_Based_Buffer_Overflow__CWE131_memcpy_22",
+          "xml_testcase_ordinal_1_based": 932,
+          "sard_numeric_id": null,
+          "missing_file_paths": [
+            "CWE121_Stack_Based_Buffer_Overflow__CWE131_memcpy_22a.c",
+            "CWE121_Stack_Based_Buffer_Overflow__CWE131_memcpy_22b.c"
+          ]
+        },
+        {
+          "scenario_id": "CWE121_Stack_Based_Buffer_Overflow__CWE131_memcpy_42",
+          "xml_testcase_ordinal_1_based": 938,
+          "sard_numeric_id": null,
+          "missing_file_paths": [
+            "CWE121_Stack_Based_Buffer_Overflow__CWE131_memcpy_42.c"
+          ]
+        },
+        {
+          "scenario_id": "CWE121_Stack_Based_Buffer_Overflow__CWE131_memcpy_43",
+          "xml_testcase_ordinal_1_based": 939,
+          "sard_numeric_id": null,
+          "missing_file_paths": [
+            "CWE121_Stack_Based_Buffer_Overflow__CWE131_memcpy_43.cpp"
+          ]
+        },
+        {
+          "scenario_id": "CWE121_Stack_Based_Buffer_Overflow__CWE131_memcpy_61",
+          "xml_testcase_ordinal_1_based": 946,
+          "sard_numeric_id": null,
+          "missing_file_paths": [
+            "CWE121_Stack_Based_Buffer_Overflow__CWE131_memcpy_61a.c",
+            "CWE121_Stack_Based_Buffer_Overflow__CWE131_memcpy_61b.c"
+          ]
+        },
+        {
+          "scenario_id": "CWE121_Stack_Based_Buffer_Overflow__CWE131_memcpy_62",
+          "xml_testcase_ordinal_1_based": 947,
+          "sard_numeric_id": null,
+          "missing_file_paths": [
+            "CWE121_Stack_Based_Buffer_Overflow__CWE131_memcpy_62a.cpp",
+            "CWE121_Stack_Based_Buffer_Overflow__CWE131_memcpy_62b.cpp"
+          ]
+        },
+        {
+          "scenario_id": "CWE121_Stack_Based_Buffer_Overflow__CWE131_memcpy_83",
+          "xml_testcase_ordinal_1_based": 959,
+          "sard_numeric_id": null,
+          "missing_file_paths": [
+            "CWE121_Stack_Based_Buffer_Overflow__CWE131_memcpy_83.h",
+            "CWE121_Stack_Based_Buffer_Overflow__CWE131_memcpy_83_bad.cpp",
+            "CWE121_Stack_Based_Buffer_Overflow__CWE131_memcpy_83_goodG2B.cpp",
+            "CWE121_Stack_Based_Buffer_Overflow__CWE131_memcpy_83a.cpp"
+          ]
+        },
+        {
+          "scenario_id": "CWE121_Stack_Based_Buffer_Overflow__CWE131_memcpy_84",
+          "xml_testcase_ordinal_1_based": 960,
+          "sard_numeric_id": null,
+          "missing_file_paths": [
+            "CWE121_Stack_Based_Buffer_Overflow__CWE131_memcpy_84.h",
+            "CWE121_Stack_Based_Buffer_Overflow__CWE131_memcpy_84_bad.cpp",
+            "CWE121_Stack_Based_Buffer_Overflow__CWE131_memcpy_84_goodG2B.cpp",
+            "CWE121_Stack_Based_Buffer_Overflow__CWE131_memcpy_84a.cpp"
+          ]
+        },
+        {
+          "scenario_id": "CWE121_Stack_Based_Buffer_Overflow__CWE131_memmove_21",
+          "xml_testcase_ordinal_1_based": 979,
+          "sard_numeric_id": null,
+          "missing_file_paths": [
+            "CWE121_Stack_Based_Buffer_Overflow__CWE131_memmove_21.c"
+          ]
+        },
+        {
+          "scenario_id": "CWE121_Stack_Based_Buffer_Overflow__CWE131_memmove_22",
+          "xml_testcase_ordinal_1_based": 980,
+          "sard_numeric_id": null,
+          "missing_file_paths": [
+            "CWE121_Stack_Based_Buffer_Overflow__CWE131_memmove_22a.c",
+            "CWE121_Stack_Based_Buffer_Overflow__CWE131_memmove_22b.c"
+          ]
+        },
+        {
+          "scenario_id": "CWE121_Stack_Based_Buffer_Overflow__CWE131_memmove_42",
+          "xml_testcase_ordinal_1_based": 986,
+          "sard_numeric_id": null,
+          "missing_file_paths": [
+            "CWE121_Stack_Based_Buffer_Overflow__CWE131_memmove_42.c"
+          ]
+        },
+        {
+          "scenario_id": "CWE121_Stack_Based_Buffer_Overflow__CWE131_memmove_43",
+          "xml_testcase_ordinal_1_based": 987,
+          "sard_numeric_id": null,
+          "missing_file_paths": [
+            "CWE121_Stack_Based_Buffer_Overflow__CWE131_memmove_43.cpp"
+          ]
+        },
+        {
+          "scenario_id": "CWE121_Stack_Based_Buffer_Overflow__CWE131_memmove_61",
+          "xml_testcase_ordinal_1_based": 994,
+          "sard_numeric_id": null,
+          "missing_file_paths": [
+            "CWE121_Stack_Based_Buffer_Overflow__CWE131_memmove_61a.c",
+            "CWE121_Stack_Based_Buffer_Overflow__CWE131_memmove_61b.c"
+          ]
+        },
+        {
+          "scenario_id": "CWE121_Stack_Based_Buffer_Overflow__CWE131_memmove_62",
+          "xml_testcase_ordinal_1_based": 995,
+          "sard_numeric_id": null,
+          "missing_file_paths": [
+            "CWE121_Stack_Based_Buffer_Overflow__CWE131_memmove_62a.cpp",
+            "CWE121_Stack_Based_Buffer_Overflow__CWE131_memmove_62b.cpp"
+          ]
+        },
+        {
+          "scenario_id": "CWE121_Stack_Based_Buffer_Overflow__CWE131_memmove_83",
+          "xml_testcase_ordinal_1_based": 1007,
+          "sard_numeric_id": null,
+          "missing_file_paths": [
+            "CWE121_Stack_Based_Buffer_Overflow__CWE131_memmove_83.h",
+            "CWE121_Stack_Based_Buffer_Overflow__CWE131_memmove_83_bad.cpp",
+            "CWE121_Stack_Based_Buffer_Overflow__CWE131_memmove_83_goodG2B.cpp",
+            "CWE121_Stack_Based_Buffer_Overflow__CWE131_memmove_83a.cpp"
+          ]
+        },
+        {
+          "scenario_id": "CWE121_Stack_Based_Buffer_Overflow__CWE131_memmove_84",
+          "xml_testcase_ordinal_1_based": 1008,
+          "sard_numeric_id": null,
+          "missing_file_paths": [
+            "CWE121_Stack_Based_Buffer_Overflow__CWE131_memmove_84.h",
+            "CWE121_Stack_Based_Buffer_Overflow__CWE131_memmove_84_bad.cpp",
+            "CWE121_Stack_Based_Buffer_Overflow__CWE131_memmove_84_goodG2B.cpp",
+            "CWE121_Stack_Based_Buffer_Overflow__CWE131_memmove_84a.cpp"
+          ]
+        }
+      ],
+      "id_limit": "The local XML testcase elements have no SARD numeric IDs. scenario_id is the exact filename-based case family+flow identifier, and ordinal identifies the XML element. No numeric ID has been invented.",
+      "known_removed_evidence": {
+        "official_release_log": "https://samate.nist.gov/SARD/downloads/documents/releaseJuliet1.3Doc.txt",
+        "official_changes_document": "https://samate.nist.gov/SARD/downloads/documents/Juliet_1.3_Changes_From_1.2.pdf",
+        "section": "2.5 BOF/Stack Accessing Memory After Its Lifetime",
+        "printed_pages": [
+          10,
+          11
+        ],
+        "directly_stated_cwe": 121,
+        "directly_stated_functions": [
+          "loop",
+          "memcpy",
+          "memmove"
+        ],
+        "directly_stated_flow_variants": [
+          "21",
+          "22",
+          "42",
+          "43",
+          "61",
+          "62",
+          "83",
+          "84"
+        ],
+        "directly_stated_removed_testcases": 24,
+        "directly_stated_removed_files": 51,
+        "all_local_stale_case_ids_match_stated_pattern": true,
+        "future_manifest_policy": "Exclude these 24 fully missing testcase entries explicitly as official-known-removed metadata remnants. Keep their identifiers and reason in a frozen exclusion list; do not count their 51 files as 51 scenarios."
+      }
+    },
+    "changelog_vs_xml_difference": 172,
+    "changelog_vs_official_difference": 196,
+    "difference_172_explained": false,
+    "explanation_limit": "No explicit explanation for 64295 versus 64123 was found in the official suite page, release log, or targeted count checks in the changes document. No wider search performed.",
+    "counts_are_accepted_extracted_samples": false
+  },
+  "access_limits": [
+    "Web tool did not expose the ZIP or a guessed standalone SARIF endpoint. The official page HTML and version ZIP were reachable using local HTTPS with a normal browser User-Agent.",
+    "Only the 3495-byte version-only ZIP was read into memory; no full dataset download and no archive extraction to disk.",
+    "Official manifest source hash is metadata only and has not been recomputed from source content."
+  ],
+  "source_code_contents_read": false,
+  "tiny_single_case_zip_persisted_as_separate_vendor_asset": true
+}

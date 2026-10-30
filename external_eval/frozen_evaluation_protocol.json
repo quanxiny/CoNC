@@ -1,0 +1,42 @@
+{
+  "version": "external-frozen-v1",
+  "methods": [
+    "v76",
+    "v52"
+  ],
+  "seeds": [
+    11,
+    29,
+    47
+  ],
+  "threshold": 0.5,
+  "comparison": ">=",
+  "dtype": "float32",
+  "batch_size": 64,
+  "tf32": false,
+  "device_family": "NVIDIA A100",
+  "primary_population": "target, resolved scene labels, nonempty complete original slice inventory, all slice predictions successful for both methods and every seed; common intersection",
+  "primary_metric_scope": "conditional-on-common-input-coverage",
+  "partial_prediction": "diagnostic only; observed max >=0.5 is positive lower bound, otherwise unknown if any missing or zero slices",
+  "juliet_pairs": "all discovered positive-negative scene combinations within same family+flow; unknown entry cardinality and unresolved pair families disclosed separately",
+  "mit_pairs": "each base min/med/large paired with ok; missing/unknown counts as not simultaneously correct",
+  "mit_four_variant": "all four variants of each observed official base correct; missing/unknown counts as failure; complete-base count reported",
+  "bootstrap": {
+    "seed": 20261015,
+    "replicates": 500,
+    "unit": "Juliet template_group / MIT base case",
+    "confidence": 0.95,
+    "shared_draws_across_methods_and_seeds": true
+  },
+  "seed_summary": "all three observed seeds, arithmetic mean and sample standard deviation; never pool seed-times-scene as independent observations",
+  "undefined_metrics": "null with explicit reason; never manufacture AUC or CI",
+  "source_policy": "read accepted immutable tensor cache and scene sidecars only; never external C source",
+  "checkpoint_policy": "strictly load existing original NoRefiner76 or RiskBridge(AllVisible) states; no training, substitutes or best-seed selection",
+  "exact_TRAIN_input_overlap_strata": {
+    "selection": "fixed before model scores; any match in matches[].scene_ids versus no encoded-slice match, within the unchanged all-method/all-seed complete common set",
+    "audit": "verify exact_input_overlap.json selfhash and its preparation receipt identity; bind audit hash to statistics request",
+    "primary_unchanged": "retain primary population, all target counts, every identifiable pair and MIT four-variant denominator",
+    "report": "both strata six metrics per seed, observed three-seed mean and sample SD; descriptive secondary strata without CI; no-input scenes never classified as clean",
+    "scope": "exact original encoded input equality only, not proof of raw-source or semantic independence"
+  }
+}

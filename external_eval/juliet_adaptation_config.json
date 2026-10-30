@@ -1,0 +1,43 @@
+{
+  "schema": "juliet-1.3.1-retrospective-adaptation-config-v1",
+  "prepared": "external_eval/runs/juliet_1_3_1_repair_0d75437f78f8/prepared",
+  "output": "external_eval/juliet_adaptation_1_3_1",
+  "exact_overlap": "external_eval/runs/juliet_1_3_1_repair_0d75437f78f8/prepared/exact_input_overlap.json",
+  "training_index_receipt": "external_eval/selected_train_input_hashes.json",
+  "expected_complete_scenes": 8039,
+  "expected_candidate_scenes": 5676,
+  "salt": "20261016",
+  "any_slice_policy": "enforce",
+  "diagnostic_case_ids": [
+    "237211",
+    "240859",
+    "240893",
+    "240981",
+    "66480",
+    "67525",
+    "72646"
+  ],
+  "training": {
+    "methods": [
+      "v76",
+      "v52"
+    ],
+    "seeds": [
+      11,
+      29,
+      47
+    ],
+    "max_epochs": 3,
+    "lr": 1e-05,
+    "weight_decay": 0.01,
+    "batch_scenes": 4,
+    "grad_clip": 1.0,
+    "patience": 2,
+    "min_delta": 0.0001,
+    "wall_seconds_per_invocation": 3600,
+    "checkpoint_every_steps": 0
+  },
+  "split_assignment": "size_balanced_components",
+  "baseline_index": "external_eval/predictions/juliet_1_3_1_frozen_0d75437f78f8/evaluation_3cd8b5a5760629852e2eaa1b0cb085c66dcb2f2304fe61de4ad0c7d8d42df2c0.json",
+  "min_components_per_split": 2
+}

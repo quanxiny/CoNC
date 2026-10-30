@@ -1,0 +1,858 @@
+{
+  "repository": "https://github.com/jumormt/DeepWukong.git",
+  "commit": "28449e57262dd24c0938108687e1019f0fc6ddd5",
+  "git_tree_path_count": 1715,
+  "asset_count": 106,
+  "downloaded_total_bytes": 43454645,
+  "asset_total_bytes": 43454645,
+  "assets": [
+    {
+      "path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/LICENSE",
+      "commit": "28449e57262dd24c0938108687e1019f0fc6ddd5",
+      "git_blob_sha1": "cb83fc80c7a799f0d712342b20588a23a7efb0d3",
+      "sha256": "66446dd4d4fb9d73203c625dba2c00af146897474f31e6d1d13216cf4b85d4f3",
+      "size_bytes": 1067
+    },
+    {
+      "path": "data/sensiAPI.txt",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/data/sensiAPI.txt",
+      "commit": "28449e57262dd24c0938108687e1019f0fc6ddd5",
+      "git_blob_sha1": "a78c5ed72363fdf624a18174a662c6c61bc0634f",
+      "sha256": "db405099434d0bb1a7db7cefee2e369f58868ea85eca9d7161f07025c1a82ed6",
+      "size_bytes": 18610
+    },
+    {
+      "path": "joern/LICENSE",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/joern/LICENSE",
+      "commit": "28449e57262dd24c0938108687e1019f0fc6ddd5",
+      "git_blob_sha1": "6951a3c215c977f37796f7dc46d86d66e354a2a3",
+      "sha256": "77fff4fedb2516149dd830d15c86921ee67c38e33f484384a6d032e698d9d6b3",
+      "size_bytes": 7635
+    },
+    {
+      "path": "joern/projects/extensions/joern-fuzzyc/build/libs/joern-fuzzyc.jar",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/joern/projects/extensions/joern-fuzzyc/build/libs/joern-fuzzyc.jar",
+      "commit": "28449e57262dd24c0938108687e1019f0fc6ddd5",
+      "git_blob_sha1": "8cbe17a7ac56251ad57048782d7e8b163e21d1f7",
+      "sha256": "59f7724bcd88755c95c17b7bc11dd9866dbd69acd03b7debcd3b4d7deb8708cc",
+      "size_bytes": 435480
+    },
+    {
+      "path": "joern/projects/extensions/jpanlib/LICENSE",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/joern/projects/extensions/jpanlib/LICENSE",
+      "commit": "28449e57262dd24c0938108687e1019f0fc6ddd5",
+      "git_blob_sha1": "8b650f910d42b0de2c35fe683a968db24ceb8402",
+      "sha256": "3799cc2bd432d2fbd648fb0d5cc0705f106f6feb2617ec685b5468630a0e5484",
+      "size_bytes": 35065
+    },
+    {
+      "path": "joern/projects/extensions/jpanlib/build/libs/jpanlib.jar",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/joern/projects/extensions/jpanlib/build/libs/jpanlib.jar",
+      "commit": "28449e57262dd24c0938108687e1019f0fc6ddd5",
+      "git_blob_sha1": "d53a7f0848471d9e70d07b115d1d04f69dea9885",
+      "sha256": "ad4314a03244a75a103a26634c87954358f68520c0a8d90ed796789ac241626b",
+      "size_bytes": 192060
+    },
+    {
+      "path": "joern/projects/octopus/LICENSE",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/joern/projects/octopus/LICENSE",
+      "commit": "28449e57262dd24c0938108687e1019f0fc6ddd5",
+      "git_blob_sha1": "65c5ca88a67c30becee01c5a8816d964b03862f9",
+      "sha256": "da7eabb7bafdf7d3ae5e9f223aa5bdc1eece45ac569dc21b3b037520b4464768",
+      "size_bytes": 7651
+    },
+    {
+      "path": "joern/projects/octopus/lib/antlr4-annotations-4.5.3.jar",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/joern/projects/octopus/lib/antlr4-annotations-4.5.3.jar",
+      "commit": "28449e57262dd24c0938108687e1019f0fc6ddd5",
+      "git_blob_sha1": "e770577d52d6b2fb060c67e07592ce915d775cbd",
+      "sha256": "6bf115b34430a50760136a8d2b014c0c668cbe15c77e692caed53c3fd5cecd4d",
+      "size_bytes": 11063
+    },
+    {
+      "path": "joern/projects/octopus/lib/antlr4-runtime-4.5.3.jar",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/joern/projects/octopus/lib/antlr4-runtime-4.5.3.jar",
+      "commit": "28449e57262dd24c0938108687e1019f0fc6ddd5",
+      "git_blob_sha1": "55bd5e3585c0b7f2e904dd6502155b66c5484d00",
+      "sha256": "ee77c10e0d6c91293d5f05d694656ff430727096bcb4f8f635ce676ea87ee890",
+      "size_bytes": 393240
+    },
+    {
+      "path": "joern/projects/octopus/lib/aopalliance-1.0.jar",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/joern/projects/octopus/lib/aopalliance-1.0.jar",
+      "commit": "28449e57262dd24c0938108687e1019f0fc6ddd5",
+      "git_blob_sha1": "578b1a0c359ef88a84461bdb91d9d0041afd54de",
+      "sha256": "0addec670fedcd3f113c5c8091d783280d23f75e3acb841b61a9cdb079376a08",
+      "size_bytes": 4467
+    },
+    {
+      "path": "joern/projects/octopus/lib/commons-cli-1.2.jar",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/joern/projects/octopus/lib/commons-cli-1.2.jar",
+      "commit": "28449e57262dd24c0938108687e1019f0fc6ddd5",
+      "git_blob_sha1": "ce4b9fffe40c41669797cd806ac989471b2acd84",
+      "sha256": "e7cd8951956d349b568b7ccfd4f5b2529a8c113e67c32b028f52ffda371259d9",
+      "size_bytes": 41123
+    },
+    {
+      "path": "joern/projects/octopus/lib/commons-codec-1.7.jar",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/joern/projects/octopus/lib/commons-codec-1.7.jar",
+      "commit": "28449e57262dd24c0938108687e1019f0fc6ddd5",
+      "git_blob_sha1": "efa7f7291afc616ddb7419b825afc3ec78897b6d",
+      "sha256": "db82a948bc070414fcfd3880ebd1205c94df5f5c61558ccbc653ec2f820bf7a4",
+      "size_bytes": 259600
+    },
+    {
+      "path": "joern/projects/octopus/lib/commons-collections-3.2.1.jar",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/joern/projects/octopus/lib/commons-collections-3.2.1.jar",
+      "commit": "28449e57262dd24c0938108687e1019f0fc6ddd5",
+      "git_blob_sha1": "c35fa1fee145cba638884e41b80a401cbe4924ef",
+      "sha256": "87363a4c94eaabeefd8b930cb059f66b64c9f7d632862f23de3012da7660047b",
+      "size_bytes": 575389
+    },
+    {
+      "path": "joern/projects/octopus/lib/commons-compress-1.8.jar",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/joern/projects/octopus/lib/commons-compress-1.8.jar",
+      "commit": "28449e57262dd24c0938108687e1019f0fc6ddd5",
+      "git_blob_sha1": "940b0687323428c7ef6063a07a43eb77fb9cbea1",
+      "sha256": "9cf50a75b62cc85314ff8de34949283b04e2dc4dca12e58c6283f73358b7b6e4",
+      "size_bytes": 364620
+    },
+    {
+      "path": "joern/projects/octopus/lib/commons-configuration-1.10.jar",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/joern/projects/octopus/lib/commons-configuration-1.10.jar",
+      "commit": "28449e57262dd24c0938108687e1019f0fc6ddd5",
+      "git_blob_sha1": "792243660467436164d597b0f6730f78e5b045fb",
+      "sha256": "95d4e6711e88ce78992c82c25bc03c8df9ecf5a357f0de0bec72a26db3399374",
+      "size_bytes": 362679
+    },
+    {
+      "path": "joern/projects/octopus/lib/commons-csv-1.2.jar",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/joern/projects/octopus/lib/commons-csv-1.2.jar",
+      "commit": "28449e57262dd24c0938108687e1019f0fc6ddd5",
+      "git_blob_sha1": "1b26424fda3aae4ffbe81032f495005536a7029d",
+      "sha256": "e3dff89337c2f1c47d97ab70b9586fa6e7c89c7388cd4549122a7565082cca6e",
+      "size_bytes": 38795
+    },
+    {
+      "path": "joern/projects/octopus/lib/commons-io-2.5.jar",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/joern/projects/octopus/lib/commons-io-2.5.jar",
+      "commit": "28449e57262dd24c0938108687e1019f0fc6ddd5",
+      "git_blob_sha1": "107b061f5fa84cecca645eae9bdefc98e084ce03",
+      "sha256": "a10418348d234968600ccb1d988efcbbd08716e1d96936ccc1880e7d22513474",
+      "size_bytes": 208700
+    },
+    {
+      "path": "joern/projects/octopus/lib/commons-lang-2.6.jar",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/joern/projects/octopus/lib/commons-lang-2.6.jar",
+      "commit": "28449e57262dd24c0938108687e1019f0fc6ddd5",
+      "git_blob_sha1": "98467d3a653ebad776ffa3542efeb9732fe0b482",
+      "sha256": "50f11b09f877c294d56f24463f47d28f929cf5044f648661c0f0cfbae9a2f49c",
+      "size_bytes": 284220
+    },
+    {
+      "path": "joern/projects/octopus/lib/commons-lang3-3.3.2.jar",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/joern/projects/octopus/lib/commons-lang3-3.3.2.jar",
+      "commit": "28449e57262dd24c0938108687e1019f0fc6ddd5",
+      "git_blob_sha1": "2ce08ae99d17d474e21d079da08fea37e6bffe0c",
+      "sha256": "6b81d10754dadf184d386011486e6509c2cc0c3d33565ced4fb4402b9413d47d",
+      "size_bytes": 412739
+    },
+    {
+      "path": "joern/projects/octopus/lib/commons-lang3-3.4.jar",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/joern/projects/octopus/lib/commons-lang3-3.4.jar",
+      "commit": "28449e57262dd24c0938108687e1019f0fc6ddd5",
+      "git_blob_sha1": "8ec91d454c31f73638de2994711a8487822247c1",
+      "sha256": "734c8356420cc8e30c795d64fd1fcd5d44ea9d90342a2cc3262c5158fbc6d98b",
+      "size_bytes": 434678
+    },
+    {
+      "path": "joern/projects/octopus/lib/commons-logging-1.1.1.jar",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/joern/projects/octopus/lib/commons-logging-1.1.1.jar",
+      "commit": "28449e57262dd24c0938108687e1019f0fc6ddd5",
+      "git_blob_sha1": "1deef144cb17ed2c11c6cdcdcb2d9530fa8d0b47",
+      "sha256": "ce6f913cad1f0db3aad70186d65c5bc7ffcc9a99e3fe8e0b137312819f7c362f",
+      "size_bytes": 60686
+    },
+    {
+      "path": "joern/projects/octopus/lib/dom4j-1.6.1.jar",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/joern/projects/octopus/lib/dom4j-1.6.1.jar",
+      "commit": "28449e57262dd24c0938108687e1019f0fc6ddd5",
+      "git_blob_sha1": "c8c4dbb92d6c23a7fbb2813eb721eb4cce91750c",
+      "sha256": "593552ffea3c5823c6602478b5002a7c525fd904a3c44f1abe4065c22edfac73",
+      "size_bytes": 313898
+    },
+    {
+      "path": "joern/projects/octopus/lib/ftplet-api-1.0.6.jar",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/joern/projects/octopus/lib/ftplet-api-1.0.6.jar",
+      "commit": "28449e57262dd24c0938108687e1019f0fc6ddd5",
+      "git_blob_sha1": "10116642eb355ddafb46bdaf624f8a334ed64ced",
+      "sha256": "569f3b812644e23f0f3a2f45110b2216788fd57157613d77f5eab3df2130f8c6",
+      "size_bytes": 20756
+    },
+    {
+      "path": "joern/projects/octopus/lib/ftpserver-core-1.0.6.jar",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/joern/projects/octopus/lib/ftpserver-core-1.0.6.jar",
+      "commit": "28449e57262dd24c0938108687e1019f0fc6ddd5",
+      "git_blob_sha1": "3ee6c21e52e77dd1608b4955391a691a9e7fd52b",
+      "sha256": "e0b6df55cca376c65a8969e4d9ed72a92c9bf0780ee077a03ff728e07314edcb",
+      "size_bytes": 295875
+    },
+    {
+      "path": "joern/projects/octopus/lib/gmetric4j-1.0.3.jar",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/joern/projects/octopus/lib/gmetric4j-1.0.3.jar",
+      "commit": "28449e57262dd24c0938108687e1019f0fc6ddd5",
+      "git_blob_sha1": "ad8fdda9fcf946981895b5dd595aa1fc42f7ab05",
+      "sha256": "0175395aaba56bdb0319ccdbdaafa83bd2f13f14cb5c03fb434466e814eb93af",
+      "size_bytes": 43752
+    },
+    {
+      "path": "joern/projects/octopus/lib/gremlin-core-3.0.1-incubating.jar",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/joern/projects/octopus/lib/gremlin-core-3.0.1-incubating.jar",
+      "commit": "28449e57262dd24c0938108687e1019f0fc6ddd5",
+      "git_blob_sha1": "3166b84f378657468d4c3a45240511e0f6fdf92d",
+      "sha256": "50fc4007e6bbf9927008dd5bb266fa704af17dd3ade21995f9c6842502058463",
+      "size_bytes": 1019563
+    },
+    {
+      "path": "joern/projects/octopus/lib/gremlin-driver-3.0.1-incubating.jar",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/joern/projects/octopus/lib/gremlin-driver-3.0.1-incubating.jar",
+      "commit": "28449e57262dd24c0938108687e1019f0fc6ddd5",
+      "git_blob_sha1": "1f0490df26f19ea96565d6f25f7fedcf474e586b",
+      "sha256": "6540de0e5a2987714eb5537071609529d28ba85e2c9003d83e40e917975b2fa4",
+      "size_bytes": 138437
+    },
+    {
+      "path": "joern/projects/octopus/lib/gremlin-groovy-3.0.1-incubating.jar",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/joern/projects/octopus/lib/gremlin-groovy-3.0.1-incubating.jar",
+      "commit": "28449e57262dd24c0938108687e1019f0fc6ddd5",
+      "git_blob_sha1": "046597c86acf9cf38779bbc9619d00a3db56067f",
+      "sha256": "0b5b561206a377370780b61e583f303d26732977446b0b36edf5e9a878ab9665",
+      "size_bytes": 176692
+    },
+    {
+      "path": "joern/projects/octopus/lib/gremlin-shaded-3.0.1-incubating.jar",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/joern/projects/octopus/lib/gremlin-shaded-3.0.1-incubating.jar",
+      "commit": "28449e57262dd24c0938108687e1019f0fc6ddd5",
+      "git_blob_sha1": "1384635a07a82d81ce4e27869f28836d4b0d0e34",
+      "sha256": "33727c51561e3b0852a586559b43f085b14503422bf66105c7bbfa2c35ec762f",
+      "size_bytes": 415090
+    },
+    {
+      "path": "joern/projects/octopus/lib/groovy-2.4.1-indy.jar",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/joern/projects/octopus/lib/groovy-2.4.1-indy.jar",
+      "commit": "28449e57262dd24c0938108687e1019f0fc6ddd5",
+      "git_blob_sha1": "3869adaee6873fb963c4f7762d82f978c29a4ea9",
+      "sha256": "a6f50a348d707f00a4f5a8e6e8a133e99e166d51aff9e9e6982ab9847dc37af1",
+      "size_bytes": 4480595
+    },
+    {
+      "path": "joern/projects/octopus/lib/groovy-2.4.1.jar",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/joern/projects/octopus/lib/groovy-2.4.1.jar",
+      "commit": "28449e57262dd24c0938108687e1019f0fc6ddd5",
+      "git_blob_sha1": "35ec0b44548b58582c09ab3d51d9f896037b600a",
+      "sha256": "5ba5858a1adee2114384a6cb44e038aaba06d91ebe22abec97778b81a47f6bc5",
+      "size_bytes": 4511752
+    },
+    {
+      "path": "joern/projects/octopus/lib/groovy-console-2.4.1.jar",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/joern/projects/octopus/lib/groovy-console-2.4.1.jar",
+      "commit": "28449e57262dd24c0938108687e1019f0fc6ddd5",
+      "git_blob_sha1": "2df27a40482adf9d32237e1f1bad809df139a3f2",
+      "sha256": "1b825ff3800baddaef00bbfd0a92a391bf34f41bac28b18a10757f40d097d937",
+      "size_bytes": 642245
+    },
+    {
+      "path": "joern/projects/octopus/lib/groovy-groovysh-2.4.1-indy.jar",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/joern/projects/octopus/lib/groovy-groovysh-2.4.1-indy.jar",
+      "commit": "28449e57262dd24c0938108687e1019f0fc6ddd5",
+      "git_blob_sha1": "d407e06543947462b4488b85bf45c6853b8d290e",
+      "sha256": "7cd4e1076366b60ec1069a97280fb0f06cb2f6d592237526ab495cc4d37d0b22",
+      "size_bytes": 370147
+    },
+    {
+      "path": "joern/projects/octopus/lib/groovy-json-2.4.1-indy.jar",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/joern/projects/octopus/lib/groovy-json-2.4.1-indy.jar",
+      "commit": "28449e57262dd24c0938108687e1019f0fc6ddd5",
+      "git_blob_sha1": "aadd0255320766734cae787aaa66e0f74a40cdd9",
+      "sha256": "7ee1bb89ccba44a0c8c0733d23674270e58019ad1f35e5505c5f349686cc8964",
+      "size_bytes": 120877
+    },
+    {
+      "path": "joern/projects/octopus/lib/groovy-jsr223-2.4.1-indy.jar",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/joern/projects/octopus/lib/groovy-jsr223-2.4.1-indy.jar",
+      "commit": "28449e57262dd24c0938108687e1019f0fc6ddd5",
+      "git_blob_sha1": "d4ba91c064f05f06c62f7d8956951510c1e1a5a1",
+      "sha256": "b61e73f42417befb0e1491704f816e1e9dffb6063b398ed0480793dcccea9c29",
+      "size_bytes": 15638
+    },
+    {
+      "path": "joern/projects/octopus/lib/groovy-sql-2.4.1-indy.jar",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/joern/projects/octopus/lib/groovy-sql-2.4.1-indy.jar",
+      "commit": "28449e57262dd24c0938108687e1019f0fc6ddd5",
+      "git_blob_sha1": "fd239c24d9fc3c15932e7e09a826bddc191bf8e0",
+      "sha256": "26496a901cde6583b0bd1e5f4274df64bf1c5759d34016562580d9bb3c18362b",
+      "size_bytes": 76023
+    },
+    {
+      "path": "joern/projects/octopus/lib/groovy-swing-2.4.1.jar",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/joern/projects/octopus/lib/groovy-swing-2.4.1.jar",
+      "commit": "28449e57262dd24c0938108687e1019f0fc6ddd5",
+      "git_blob_sha1": "eacaa7ec7d9168c8e9c897b0a20e3627ecabb9f3",
+      "sha256": "330691dc898b88df671896a80d31f29ba3f34b1ea5f1f91eb46182b927755c13",
+      "size_bytes": 349106
+    },
+    {
+      "path": "joern/projects/octopus/lib/groovy-templates-2.4.1.jar",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/joern/projects/octopus/lib/groovy-templates-2.4.1.jar",
+      "commit": "28449e57262dd24c0938108687e1019f0fc6ddd5",
+      "git_blob_sha1": "48c1311ae33fe6c8b651ea810a95ea57d9656f3d",
+      "sha256": "efcb277287b63470ebfba16cd9abab953b73c1e88c56b093039413c76a08348f",
+      "size_bytes": 93472
+    },
+    {
+      "path": "joern/projects/octopus/lib/groovy-xml-2.4.1.jar",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/joern/projects/octopus/lib/groovy-xml-2.4.1.jar",
+      "commit": "28449e57262dd24c0938108687e1019f0fc6ddd5",
+      "git_blob_sha1": "d565e1fea895cca76a429c21260799b9b6acb74d",
+      "sha256": "36e440d22677e300d297b42ec12813d0a9142060637116376ab1583d16fb4f25",
+      "size_bytes": 210795
+    },
+    {
+      "path": "joern/projects/octopus/lib/gs-core-1.3.jar",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/joern/projects/octopus/lib/gs-core-1.3.jar",
+      "commit": "28449e57262dd24c0938108687e1019f0fc6ddd5",
+      "git_blob_sha1": "50fc5e3455ee8cc0147fa22112a8b92e8904357e",
+      "sha256": "2d6a6f92f86c624fcbf468fc7e9cb9c8e3fb7e14c72ad578edb04cc36b0b66cd",
+      "size_bytes": 926273
+    },
+    {
+      "path": "joern/projects/octopus/lib/guava-18.0.jar",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/joern/projects/octopus/lib/guava-18.0.jar",
+      "commit": "28449e57262dd24c0938108687e1019f0fc6ddd5",
+      "git_blob_sha1": "8f89e490180121500dfb1e65b3ebd8f1a7a4c3b1",
+      "sha256": "d664fbfc03d2e5ce9cab2a44fb01f1d0bf9dfebeccc1a473b1f9ea31f79f6f99",
+      "size_bytes": 2256213
+    },
+    {
+      "path": "joern/projects/octopus/lib/hamcrest-core-1.3.jar",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/joern/projects/octopus/lib/hamcrest-core-1.3.jar",
+      "commit": "28449e57262dd24c0938108687e1019f0fc6ddd5",
+      "git_blob_sha1": "9d5fe16e3dd37ebe79a36f61f5d0e1a69a653a8a",
+      "sha256": "66fdef91e9739348df7a096aa384a5685f4e875584cce89386a7a47251c4d8e9",
+      "size_bytes": 45024
+    },
+    {
+      "path": "joern/projects/octopus/lib/high-scale-lib-1.1.4.jar",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/joern/projects/octopus/lib/high-scale-lib-1.1.4.jar",
+      "commit": "28449e57262dd24c0938108687e1019f0fc6ddd5",
+      "git_blob_sha1": "064fc68769e21dffb96452dbcdded133111d8053",
+      "sha256": "f2826020d995a296482896e1b6da97d1608e86fd82c3ce483bd9a2e18f075902",
+      "size_bytes": 98218
+    },
+    {
+      "path": "joern/projects/octopus/lib/hppc-0.7.1.jar",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/joern/projects/octopus/lib/hppc-0.7.1.jar",
+      "commit": "28449e57262dd24c0938108687e1019f0fc6ddd5",
+      "git_blob_sha1": "ed318de2148621ba731754fd365a6f1c96ae3a59",
+      "sha256": "40d2a57f59e9eae7b018d3b4841954087ee40a5c1db6a54c3ea87742e3890391",
+      "size_bytes": 1140290
+    },
+    {
+      "path": "joern/projects/octopus/lib/ivy-2.3.0.jar",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/joern/projects/octopus/lib/ivy-2.3.0.jar",
+      "commit": "28449e57262dd24c0938108687e1019f0fc6ddd5",
+      "git_blob_sha1": "543de46096ced56b2ac237d3c2d31c06709b7599",
+      "sha256": "ff3543305c62f23d1a4cafc66fab9c9f55ea169ccf2b6c040d3fa23254b86b18",
+      "size_bytes": 1222059
+    },
+    {
+      "path": "joern/projects/octopus/lib/jackson-annotations-2.5.0.jar",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/joern/projects/octopus/lib/jackson-annotations-2.5.0.jar",
+      "commit": "28449e57262dd24c0938108687e1019f0fc6ddd5",
+      "git_blob_sha1": "62521310a6a36445da887bd21d6f5acdbdcdd695",
+      "sha256": "0ca408c24202a7626ec8b861e99d85eca5e38b73311dd6dd12e3e9deecc3fe94",
+      "size_bytes": 39815
+    },
+    {
+      "path": "joern/projects/octopus/lib/jackson-core-2.5.3.jar",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/joern/projects/octopus/lib/jackson-core-2.5.3.jar",
+      "commit": "28449e57262dd24c0938108687e1019f0fc6ddd5",
+      "git_blob_sha1": "f3ae1ae5aa7a0e2af2b5c7bed453c69c6c2e27d5",
+      "sha256": "c9a900c30c702d371be2d3714938dfa6de616599c8eb39f8e3cf7aedd62dfd32",
+      "size_bytes": 229998
+    },
+    {
+      "path": "joern/projects/octopus/lib/jackson-databind-2.5.3.jar",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/joern/projects/octopus/lib/jackson-databind-2.5.3.jar",
+      "commit": "28449e57262dd24c0938108687e1019f0fc6ddd5",
+      "git_blob_sha1": "e2171874263f8148113d33cabf0ebbcc597378b9",
+      "sha256": "7a47be42e41328a6fc0d4a77983eb587c5e3d74156fa7c0fa93f817bcd199fc3",
+      "size_bytes": 1143162
+    },
+    {
+      "path": "joern/projects/octopus/lib/javassist-3.16.1-GA.jar",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/joern/projects/octopus/lib/javassist-3.16.1-GA.jar",
+      "commit": "28449e57262dd24c0938108687e1019f0fc6ddd5",
+      "git_blob_sha1": "c29da0fae07d37c9bb12009d9a6cdeb80c81dc65",
+      "sha256": "4f7018ac2c41ddad1c5dd13996c4ff6f456a750638deffda0cc8eebeff152ed1",
+      "size_bytes": 659343
+    },
+    {
+      "path": "joern/projects/octopus/lib/javatuples-1.2.jar",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/joern/projects/octopus/lib/javatuples-1.2.jar",
+      "commit": "28449e57262dd24c0938108687e1019f0fc6ddd5",
+      "git_blob_sha1": "4c7c2c58b4bc0e1dbcbb24660905619994748bfb",
+      "sha256": "2eda5b19d9820e1cc2f69fcd01639a715a673c11f8507e3d1ed593cf765d5e0a",
+      "size_bytes": 65507
+    },
+    {
+      "path": "joern/projects/octopus/lib/javax.json-1.0.jar",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/joern/projects/octopus/lib/javax.json-1.0.jar",
+      "commit": "28449e57262dd24c0938108687e1019f0fc6ddd5",
+      "git_blob_sha1": "11f8cefeefc09bf3d9283462bb5bc3af22c368aa",
+      "sha256": "2f21effa513d79aff4500d04ebe66a6b85d96f64d1e957df3f938fa2e2c00d4a",
+      "size_bytes": 78579
+    },
+    {
+      "path": "joern/projects/octopus/lib/javax.servlet-api-3.1.0.jar",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/joern/projects/octopus/lib/javax.servlet-api-3.1.0.jar",
+      "commit": "28449e57262dd24c0938108687e1019f0fc6ddd5",
+      "git_blob_sha1": "6b14c3d267867e76c04948bb31b3de18e01412ee",
+      "sha256": "af456b2dd41c4e82cf54f3e743bc678973d9fe35bd4d3071fa05c7e5333b8482",
+      "size_bytes": 95806
+    },
+    {
+      "path": "joern/projects/octopus/lib/jbcrypt-0.3m.jar",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/joern/projects/octopus/lib/jbcrypt-0.3m.jar",
+      "commit": "28449e57262dd24c0938108687e1019f0fc6ddd5",
+      "git_blob_sha1": "ccace8bbcd563e371a9d09bf25355acb053434b2",
+      "sha256": "c0717079f4fe18f72f36ad1ab15a2afa63c6544fee4b9ac2128851330b5e1031",
+      "size_bytes": 17750
+    },
+    {
+      "path": "joern/projects/octopus/lib/jcabi-log-0.14.jar",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/joern/projects/octopus/lib/jcabi-log-0.14.jar",
+      "commit": "28449e57262dd24c0938108687e1019f0fc6ddd5",
+      "git_blob_sha1": "f663e0b922f5952d95f75674c9f5d3dbff34799a",
+      "sha256": "095815157128766570462d1df4cd7377a493427e6e0b88b9cd8ca0e9870951d3",
+      "size_bytes": 38943
+    },
+    {
+      "path": "joern/projects/octopus/lib/jcabi-manifests-1.1.jar",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/joern/projects/octopus/lib/jcabi-manifests-1.1.jar",
+      "commit": "28449e57262dd24c0938108687e1019f0fc6ddd5",
+      "git_blob_sha1": "4d904f45b2a90691355011826f81befdd3b260ca",
+      "sha256": "ffa9717ad78e630f210ecbe06c7108039ddaf6109725c2a139ef5d572b95c849",
+      "size_bytes": 11747
+    },
+    {
+      "path": "joern/projects/octopus/lib/jcl-over-slf4j-1.7.12.jar",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/joern/projects/octopus/lib/jcl-over-slf4j-1.7.12.jar",
+      "commit": "28449e57262dd24c0938108687e1019f0fc6ddd5",
+      "git_blob_sha1": "64ec66f2f49d97b3f32bfe966c17994a9a44fca1",
+      "sha256": "702d1b805b9fa319609f7bdd7022017919be2280b4116666aaae5a01c0b50158",
+      "size_bytes": 16618
+    },
+    {
+      "path": "joern/projects/octopus/lib/je-5.0.73.jar",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/joern/projects/octopus/lib/je-5.0.73.jar",
+      "commit": "28449e57262dd24c0938108687e1019f0fc6ddd5",
+      "git_blob_sha1": "e0feaa6e9e50e51db80d1cb08f7c477ea69f3140",
+      "sha256": "9e7a37ced1469da7e66e186c322f06e899252a8ade20f8a9dd211237d3fd2d60",
+      "size_bytes": 2487420
+    },
+    {
+      "path": "joern/projects/octopus/lib/jetty-http-9.3.6.v20151106.jar",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/joern/projects/octopus/lib/jetty-http-9.3.6.v20151106.jar",
+      "commit": "28449e57262dd24c0938108687e1019f0fc6ddd5",
+      "git_blob_sha1": "867ab9c74a288b027c9568a74077a48ab754b9c2",
+      "sha256": "f0bb475e064671ccd75fc89edae5f3f718139189e5e09e672cb4fc3784215d1b",
+      "size_bytes": 116853
+    },
+    {
+      "path": "joern/projects/octopus/lib/jetty-io-9.3.6.v20151106.jar",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/joern/projects/octopus/lib/jetty-io-9.3.6.v20151106.jar",
+      "commit": "28449e57262dd24c0938108687e1019f0fc6ddd5",
+      "git_blob_sha1": "50de7ef749492f69077c17b16fc3be65446807ca",
+      "sha256": "8ece9bf183c6c2d6c5036d7664d450cf9897f0e5aacb8f3dae092db7cf7848ec",
+      "size_bytes": 105099
+    },
+    {
+      "path": "joern/projects/octopus/lib/jetty-security-9.3.6.v20151106.jar",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/joern/projects/octopus/lib/jetty-security-9.3.6.v20151106.jar",
+      "commit": "28449e57262dd24c0938108687e1019f0fc6ddd5",
+      "git_blob_sha1": "992fc05a9d353f87b40c0910853ed0ae5313d30f",
+      "sha256": "d9729341568a245f3c028991c328e5fce35294f026fdfb9e2ab628ff34975fb5",
+      "size_bytes": 91199
+    },
+    {
+      "path": "joern/projects/octopus/lib/jetty-server-9.3.6.v20151106.jar",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/joern/projects/octopus/lib/jetty-server-9.3.6.v20151106.jar",
+      "commit": "28449e57262dd24c0938108687e1019f0fc6ddd5",
+      "git_blob_sha1": "6311e2966700a2d17720c7e000cce05be7f18da8",
+      "sha256": "2277b6211e1db363d0cb22317f49906cd906dd47ca93f397cffead618dc052ea",
+      "size_bytes": 481502
+    },
+    {
+      "path": "joern/projects/octopus/lib/jetty-servlet-9.3.6.v20151106.jar",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/joern/projects/octopus/lib/jetty-servlet-9.3.6.v20151106.jar",
+      "commit": "28449e57262dd24c0938108687e1019f0fc6ddd5",
+      "git_blob_sha1": "9409f61cf7a9c83b4797263aa48d13009be6fb5d",
+      "sha256": "4aabcb8c4b32918cdc66f6b4e48ba08276559f3d3eba6919cb49c221d08bb7f9",
+      "size_bytes": 113426
+    },
+    {
+      "path": "joern/projects/octopus/lib/jetty-util-9.3.6.v20151106.jar",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/joern/projects/octopus/lib/jetty-util-9.3.6.v20151106.jar",
+      "commit": "28449e57262dd24c0938108687e1019f0fc6ddd5",
+      "git_blob_sha1": "9a686b6267c2e42a791702feaaa4e5fa4c218d74",
+      "sha256": "3149d7cb665e3b7a37809fb9915a4c4ef190ec3d2d80d6c15207bde075224304",
+      "size_bytes": 413963
+    },
+    {
+      "path": "joern/projects/octopus/lib/jetty-webapp-9.3.6.v20151106.jar",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/joern/projects/octopus/lib/jetty-webapp-9.3.6.v20151106.jar",
+      "commit": "28449e57262dd24c0938108687e1019f0fc6ddd5",
+      "git_blob_sha1": "85d2ac67b8814b4199901f0a8e68055d0532fc7a",
+      "sha256": "2e1805b52831dc88d2c19f1ee660609f337e2ec3007c9931dac65b7867f4aff1",
+      "size_bytes": 111130
+    },
+    {
+      "path": "joern/projects/octopus/lib/jetty-xml-9.3.6.v20151106.jar",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/joern/projects/octopus/lib/jetty-xml-9.3.6.v20151106.jar",
+      "commit": "28449e57262dd24c0938108687e1019f0fc6ddd5",
+      "git_blob_sha1": "15941e427b43d5803cfad510363063968489ade2",
+      "sha256": "58a7c092323e9bff29fa7cd9ca072f5d7fb8e5806342c941b9780c5cbfcaf112",
+      "size_bytes": 50312
+    },
+    {
+      "path": "joern/projects/octopus/lib/jline-2.12.jar",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/joern/projects/octopus/lib/jline-2.12.jar",
+      "commit": "28449e57262dd24c0938108687e1019f0fc6ddd5",
+      "git_blob_sha1": "41676a1e210dec6f80cb730830b69dab202a0852",
+      "sha256": "d34b45c8ca4359c65ae61e406339022e4731c739bc3448ce3999a60440baaa72",
+      "size_bytes": 213854
+    },
+    {
+      "path": "joern/projects/octopus/lib/json-20141113.jar",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/joern/projects/octopus/lib/json-20141113.jar",
+      "commit": "28449e57262dd24c0938108687e1019f0fc6ddd5",
+      "git_blob_sha1": "015c308380f62144bb42d6d41b24493be6fd5e3f",
+      "sha256": "87bbe48a7e93d6bcfe91c36f4e73a4a670b3843e0cc10aaf48a23ba40a99671b",
+      "size_bytes": 65050
+    },
+    {
+      "path": "joern/projects/octopus/lib/jsr305-3.0.0.jar",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/joern/projects/octopus/lib/jsr305-3.0.0.jar",
+      "commit": "28449e57262dd24c0938108687e1019f0fc6ddd5",
+      "git_blob_sha1": "cc39b7383d8c3c891114e0e4f23d4d1ef3af7a55",
+      "sha256": "bec0b24dcb23f9670172724826584802b80ae6cbdaba03bdebdef9327b962f6a",
+      "size_bytes": 33031
+    },
+    {
+      "path": "joern/projects/octopus/lib/junit-4.12.jar",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/joern/projects/octopus/lib/junit-4.12.jar",
+      "commit": "28449e57262dd24c0938108687e1019f0fc6ddd5",
+      "git_blob_sha1": "3a7fc266c3e32283a2b21fe12166ebdcc33a1da1",
+      "sha256": "59721f0805e223d84b90677887d9ff567dc534d7c502ca903c0c2b17f05c116a",
+      "size_bytes": 314932
+    },
+    {
+      "path": "joern/projects/octopus/lib/log4j-1.2.14.jar",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/joern/projects/octopus/lib/log4j-1.2.14.jar",
+      "commit": "28449e57262dd24c0938108687e1019f0fc6ddd5",
+      "git_blob_sha1": "625130719013f195869881a36dcb8d2b14d64d1e",
+      "sha256": "e3bff9ab64a09b1ac2800f3b5fb1e3d99728064acb6dd3924938507638a404fb",
+      "size_bytes": 367444
+    },
+    {
+      "path": "joern/projects/octopus/lib/logback-classic-1.1.3.jar",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/joern/projects/octopus/lib/logback-classic-1.1.3.jar",
+      "commit": "28449e57262dd24c0938108687e1019f0fc6ddd5",
+      "git_blob_sha1": "c5ecdeb5bece8a30cde25712376c58595574384f",
+      "sha256": "98c3f18f5d0d642cd5f327cc724566cd19649626c7d88f70143bd704c94157d5",
+      "size_bytes": 280928
+    },
+    {
+      "path": "joern/projects/octopus/lib/logback-core-1.1.3.jar",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/joern/projects/octopus/lib/logback-core-1.1.3.jar",
+      "commit": "28449e57262dd24c0938108687e1019f0fc6ddd5",
+      "git_blob_sha1": "c776e4a004a9c821b7b104b444d1c35dd86d88ca",
+      "sha256": "47c0fd342995d3315b8faccacc324b2a76143b27c430d4b2d6a29eabc31f5c14",
+      "size_bytes": 455041
+    },
+    {
+      "path": "joern/projects/octopus/lib/lucene-analyzers-common-4.10.4.jar",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/joern/projects/octopus/lib/lucene-analyzers-common-4.10.4.jar",
+      "commit": "28449e57262dd24c0938108687e1019f0fc6ddd5",
+      "git_blob_sha1": "701caeb79e4e56c58b27531ab52423b56a283238",
+      "sha256": "bbfcf8b6426b1adad6e2ffecad5fa019ef51d8a72ee73c8bcb7f90a4778915e1",
+      "size_bytes": 1699875
+    },
+    {
+      "path": "joern/projects/octopus/lib/lucene-core-4.10.4.jar",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/joern/projects/octopus/lib/lucene-core-4.10.4.jar",
+      "commit": "28449e57262dd24c0938108687e1019f0fc6ddd5",
+      "git_blob_sha1": "823664c4870190a77111060c1707b6837399b4c6",
+      "sha256": "5a63c75e2ef9c2707f6afb9900c726382b6de91a833281e86b46b4a308401a58",
+      "size_bytes": 2563490
+    },
+    {
+      "path": "joern/projects/octopus/lib/lucene-queries-4.10.4.jar",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/joern/projects/octopus/lib/lucene-queries-4.10.4.jar",
+      "commit": "28449e57262dd24c0938108687e1019f0fc6ddd5",
+      "git_blob_sha1": "0920f774eb9e216534f74b7cb97b3f1f7d86e03b",
+      "sha256": "b0194247146dd63d1a8a20ee8b4bd3191004d534e7a87c7645a9aeef357a06d1",
+      "size_bytes": 213029
+    },
+    {
+      "path": "joern/projects/octopus/lib/lucene-queryparser-4.10.4.jar",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/joern/projects/octopus/lib/lucene-queryparser-4.10.4.jar",
+      "commit": "28449e57262dd24c0938108687e1019f0fc6ddd5",
+      "git_blob_sha1": "f9ac0e44b0af525439bf4a3df8529bb33b75fa9b",
+      "sha256": "febf32f7eece8567a82daf77566f5c2e2ffe67733e2df268f435da720418437b",
+      "size_bytes": 391515
+    },
+    {
+      "path": "joern/projects/octopus/lib/lucene-sandbox-4.10.4.jar",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/joern/projects/octopus/lib/lucene-sandbox-4.10.4.jar",
+      "commit": "28449e57262dd24c0938108687e1019f0fc6ddd5",
+      "git_blob_sha1": "b43a28787115a7250c8c8aa2fc72a03170ecbcc1",
+      "sha256": "59136c71c0d3aafb68a5079af4fbed398bc9bf7d7e0f97c5d944820fdbdbe665",
+      "size_bytes": 119449
+    },
+    {
+      "path": "joern/projects/octopus/lib/lucene-spatial-4.10.4.jar",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/joern/projects/octopus/lib/lucene-spatial-4.10.4.jar",
+      "commit": "28449e57262dd24c0938108687e1019f0fc6ddd5",
+      "git_blob_sha1": "09cff6bed82c107b5b14992be237144a082c06bc",
+      "sha256": "55a5721730d08671c94e80ffb4e1a50dbd2867ea2633aa734eab4166467518a4",
+      "size_bytes": 126794
+    },
+    {
+      "path": "joern/projects/octopus/lib/mbox2-1.0.jar",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/joern/projects/octopus/lib/mbox2-1.0.jar",
+      "commit": "28449e57262dd24c0938108687e1019f0fc6ddd5",
+      "git_blob_sha1": "cb474bf1dd90ca973ad99df0a4a629dbb7b35b4c",
+      "sha256": "3c2db334867211f385a2d62d061818268443f361381f78bbc53f9e897e145983",
+      "size_bytes": 23238
+    },
+    {
+      "path": "joern/projects/octopus/lib/metrics-core-3.0.1.jar",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/joern/projects/octopus/lib/metrics-core-3.0.1.jar",
+      "commit": "28449e57262dd24c0938108687e1019f0fc6ddd5",
+      "git_blob_sha1": "9b50dad6d0e125a665c4f6969ea062393a962468",
+      "sha256": "b0e462902227f7261d0d1a63b6abb28adcf71144058e243cc0927d360a1faea1",
+      "size_bytes": 85449
+    },
+    {
+      "path": "joern/projects/octopus/lib/metrics-ganglia-3.0.1.jar",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/joern/projects/octopus/lib/metrics-ganglia-3.0.1.jar",
+      "commit": "28449e57262dd24c0938108687e1019f0fc6ddd5",
+      "git_blob_sha1": "b93a46a32550619ff6d9103bda16e02e7b464335",
+      "sha256": "92cace141fd15d03e6e7b52cbc13f3980e90e7c72570b1379201fcef66d4a0c5",
+      "size_bytes": 8547
+    },
+    {
+      "path": "joern/projects/octopus/lib/metrics-graphite-3.0.1.jar",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/joern/projects/octopus/lib/metrics-graphite-3.0.1.jar",
+      "commit": "28449e57262dd24c0938108687e1019f0fc6ddd5",
+      "git_blob_sha1": "2bf11aecefcaf5d3343f0e7f5d2c396222f0f885",
+      "sha256": "da9d6ea17abdf32d3b0463e84cfe491cf5632d7c6f692722afbc33dab514a001",
+      "size_bytes": 9853
+    },
+    {
+      "path": "joern/projects/octopus/lib/mina-core-2.0.4.jar",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/joern/projects/octopus/lib/mina-core-2.0.4.jar",
+      "commit": "28449e57262dd24c0938108687e1019f0fc6ddd5",
+      "git_blob_sha1": "fc12e9e0e386551ec0899d4863c736ebd43f53fc",
+      "sha256": "f6e37603b0ff1b50b31c1be7e5815098d78aff1f277db27d3aee5d7e8cce636e",
+      "size_bytes": 644934
+    },
+    {
+      "path": "joern/projects/octopus/lib/netty-all-4.0.28.Final.jar",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/joern/projects/octopus/lib/netty-all-4.0.28.Final.jar",
+      "commit": "28449e57262dd24c0938108687e1019f0fc6ddd5",
+      "git_blob_sha1": "8dde200f53adf8da71b35ce2eba09e61c48d9151",
+      "sha256": "e9c739540a9cf6e34acd7fee0ea68bbaca0710412d254467fb6f279b58fab226",
+      "size_bytes": 2001771
+    },
+    {
+      "path": "joern/projects/octopus/lib/oncrpc-1.0.7.jar",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/joern/projects/octopus/lib/oncrpc-1.0.7.jar",
+      "commit": "28449e57262dd24c0938108687e1019f0fc6ddd5",
+      "git_blob_sha1": "cb17b7e46228274db603e04195ed8e0c29f368d8",
+      "sha256": "953e0f388db0246798f35987a2ad17a2219a29e3c2f9dd00a766c24565162e4a",
+      "size_bytes": 87603
+    },
+    {
+      "path": "joern/projects/octopus/lib/opencsv-3.5.jar",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/joern/projects/octopus/lib/opencsv-3.5.jar",
+      "commit": "28449e57262dd24c0938108687e1019f0fc6ddd5",
+      "git_blob_sha1": "1c5d95a5d7b2b31dcb61d97f1d3a7ae82771ba53",
+      "sha256": "b2ca6173d500ecec4d2ea8feff9222fd27a8e830c432e53b8b45cab3f71f4ab8",
+      "size_bytes": 37914
+    },
+    {
+      "path": "joern/projects/octopus/lib/pherd-1.0.jar",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/joern/projects/octopus/lib/pherd-1.0.jar",
+      "commit": "28449e57262dd24c0938108687e1019f0fc6ddd5",
+      "git_blob_sha1": "75192574da348f42c70e046b9b1103732f2eaf44",
+      "sha256": "9e74f3702d13756faece5987147c937c09b6837a38ed32199f59c26697b94230",
+      "size_bytes": 46227
+    },
+    {
+      "path": "joern/projects/octopus/lib/reflections-0.9.9-RC1.jar",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/joern/projects/octopus/lib/reflections-0.9.9-RC1.jar",
+      "commit": "28449e57262dd24c0938108687e1019f0fc6ddd5",
+      "git_blob_sha1": "8524129ebb492b4fedd836a7ea39f311ea51647b",
+      "sha256": "8be6ea8a7d790056c3492c2c9419985834b258345c81764984b4eb2a86c28492",
+      "size_bytes": 121013
+    },
+    {
+      "path": "joern/projects/octopus/lib/slf4j-api-1.7.13.jar",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/joern/projects/octopus/lib/slf4j-api-1.7.13.jar",
+      "commit": "28449e57262dd24c0938108687e1019f0fc6ddd5",
+      "git_blob_sha1": "f07884ee7943865d9c7de52114a82657fc5f9453",
+      "sha256": "20d68d0c2e4fb984ffc164852b8b68df49a2b8716076f576881bcef7649a0e35",
+      "size_bytes": 33088
+    },
+    {
+      "path": "joern/projects/octopus/lib/snakeyaml-1.15.jar",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/joern/projects/octopus/lib/snakeyaml-1.15.jar",
+      "commit": "28449e57262dd24c0938108687e1019f0fc6ddd5",
+      "git_blob_sha1": "34084e33257e0d04f66ca703ae34eb747a9f20b4",
+      "sha256": "79ea8aac6590f49ee8390c2f17ed9343079e85b44158a097b301dfee42af86ec",
+      "size_bytes": 269295
+    },
+    {
+      "path": "joern/projects/octopus/lib/spark-core-2.5.jar",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/joern/projects/octopus/lib/spark-core-2.5.jar",
+      "commit": "28449e57262dd24c0938108687e1019f0fc6ddd5",
+      "git_blob_sha1": "bf907803b45bd44b6c67494557fb27837dd7a49c",
+      "sha256": "e4ee0f1b9197b7fa069e55da58f77b6a50a26db3ddf218191c19f2654a6a7f5e",
+      "size_bytes": 134361
+    },
+    {
+      "path": "joern/projects/octopus/lib/spatial4j-0.4.1.jar",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/joern/projects/octopus/lib/spatial4j-0.4.1.jar",
+      "commit": "28449e57262dd24c0938108687e1019f0fc6ddd5",
+      "git_blob_sha1": "e62c0b480bfa529df1d96c6da2d505be57d8cf1a",
+      "sha256": "c467b888bf475495a86a0f4491cb87f80f584e7646cafc7686489f81bce371bc",
+      "size_bytes": 102177
+    },
+    {
+      "path": "joern/projects/octopus/lib/spring-beans-2.5.5.jar",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/joern/projects/octopus/lib/spring-beans-2.5.5.jar",
+      "commit": "28449e57262dd24c0938108687e1019f0fc6ddd5",
+      "git_blob_sha1": "3e89f2ea54ee1b0ecf1a9b904ad241e66b7fb61e",
+      "sha256": "69a94e366da93af085ec346fa5c93442de0f919efd7b983e9e514af2fe6e143b",
+      "size_bytes": 486031
+    },
+    {
+      "path": "joern/projects/octopus/lib/spring-context-2.5.5.jar",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/joern/projects/octopus/lib/spring-context-2.5.5.jar",
+      "commit": "28449e57262dd24c0938108687e1019f0fc6ddd5",
+      "git_blob_sha1": "5aa699945f983409c11539da4e7561194cbaafc1",
+      "sha256": "5c4a771a0bd1ae8245e8994f69891017fa5c5d2698eb656743e17f17c4b5113e",
+      "size_bytes": 473513
+    },
+    {
+      "path": "joern/projects/octopus/lib/spring-core-2.5.5.jar",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/joern/projects/octopus/lib/spring-core-2.5.5.jar",
+      "commit": "28449e57262dd24c0938108687e1019f0fc6ddd5",
+      "git_blob_sha1": "9caf9d88a479e0d2fb661eaa0e399b87638207f8",
+      "sha256": "8f68d8a4e7667955e51ee8a0764998614c34863b7c36b9e2c0b5477790145061",
+      "size_bytes": 287235
+    },
+    {
+      "path": "joern/projects/octopus/lib/tinkergraph-gremlin-3.0.1-incubating.jar",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/joern/projects/octopus/lib/tinkergraph-gremlin-3.0.1-incubating.jar",
+      "commit": "28449e57262dd24c0938108687e1019f0fc6ddd5",
+      "git_blob_sha1": "5ce400f4025bb43a86b7ae2d83c32e05a8d763b0",
+      "sha256": "c83bd91ea3b6c72375c82b9e102fc473b6564d2d2c1a2cb9bf4eefa1124be32d",
+      "size_bytes": 89199
+    },
+    {
+      "path": "joern/projects/octopus/lib/titan-berkeleyje-1.0.0.jar",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/joern/projects/octopus/lib/titan-berkeleyje-1.0.0.jar",
+      "commit": "28449e57262dd24c0938108687e1019f0fc6ddd5",
+      "git_blob_sha1": "c87caa187b089a67153cf5ae9c670c3ff4a0b0b1",
+      "sha256": "65fafe71bb89eb0478b9a93999dedf47d40289f1b1bc5e8316f9e5416b868cea",
+      "size_bytes": 23178
+    },
+    {
+      "path": "joern/projects/octopus/lib/titan-core-1.0.0.jar",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/joern/projects/octopus/lib/titan-core-1.0.0.jar",
+      "commit": "28449e57262dd24c0938108687e1019f0fc6ddd5",
+      "git_blob_sha1": "f50a28b47c2069e41c3cf3ef4be2efcd2ffd5f32",
+      "sha256": "d142e0ab7a9acc577bd885226e40697ffa9640b9eb89dbb3e08f4c04a3ae5975",
+      "size_bytes": 1588694
+    },
+    {
+      "path": "joern/projects/octopus/lib/titan-lucene-1.0.0.jar",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/joern/projects/octopus/lib/titan-lucene-1.0.0.jar",
+      "commit": "28449e57262dd24c0938108687e1019f0fc6ddd5",
+      "git_blob_sha1": "2b1cb0a73ae251c38654ccbfa2611adf26ccd348",
+      "sha256": "cf906048e6a6bf8922d005c5c70416ea92a71c1022d9dce0566aec0476a35dbc",
+      "size_bytes": 21974
+    },
+    {
+      "path": "joern/projects/octopus/lib/websocket-api-9.3.6.v20151106.jar",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/joern/projects/octopus/lib/websocket-api-9.3.6.v20151106.jar",
+      "commit": "28449e57262dd24c0938108687e1019f0fc6ddd5",
+      "git_blob_sha1": "f5bbf3785e37acdfeb106453a2b30a86bfa8c300",
+      "sha256": "541a2c575082b6eec72a2ac59d7397301c41991978768b6b5c9d261ec9a25755",
+      "size_bytes": 45301
+    },
+    {
+      "path": "joern/projects/octopus/lib/websocket-client-9.3.6.v20151106.jar",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/joern/projects/octopus/lib/websocket-client-9.3.6.v20151106.jar",
+      "commit": "28449e57262dd24c0938108687e1019f0fc6ddd5",
+      "git_blob_sha1": "5416be3439225f8173f473452bdac7fd565c6566",
+      "sha256": "c4e74f5b2b9ec4b71ecc5c852039f5f43101d0b7332b9c95924591c633427518",
+      "size_bytes": 36019
+    },
+    {
+      "path": "joern/projects/octopus/lib/websocket-common-9.3.6.v20151106.jar",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/joern/projects/octopus/lib/websocket-common-9.3.6.v20151106.jar",
+      "commit": "28449e57262dd24c0938108687e1019f0fc6ddd5",
+      "git_blob_sha1": "b4e15eec25c52c35b1301c5185fbf1357b151d23",
+      "sha256": "df209f43c7d4485263088d1947e9ef20b450218b1c520c14654dcf25b0bd0793",
+      "size_bytes": 188066
+    },
+    {
+      "path": "joern/projects/octopus/lib/websocket-server-9.3.6.v20151106.jar",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/joern/projects/octopus/lib/websocket-server-9.3.6.v20151106.jar",
+      "commit": "28449e57262dd24c0938108687e1019f0fc6ddd5",
+      "git_blob_sha1": "be34e026df10779ec1cf4949c3529bc04c36e169",
+      "sha256": "cfe658a601eff23ee151c03672ad838388365f79d98556a04be130ac7c11cf4d",
+      "size_bytes": 37950
+    },
+    {
+      "path": "joern/projects/octopus/lib/websocket-servlet-9.3.6.v20151106.jar",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/joern/projects/octopus/lib/websocket-servlet-9.3.6.v20151106.jar",
+      "commit": "28449e57262dd24c0938108687e1019f0fc6ddd5",
+      "git_blob_sha1": "370020b2bbb749fb87b97198609bd07a6cdd9e39",
+      "sha256": "fa8d1146605c66b732d5c03066800fee63e4822cde688d189db4a336a442f412",
+      "size_bytes": 18181
+    },
+    {
+      "path": "joern/projects/octopus/lib/xml-apis-1.0.b2.jar",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/joern/projects/octopus/lib/xml-apis-1.0.b2.jar",
+      "commit": "28449e57262dd24c0938108687e1019f0fc6ddd5",
+      "git_blob_sha1": "ad33a5afa6ddae02f3ed0b42b1c7fcbf22a7d2ab",
+      "sha256": "8232f3482c346d843e5e3fb361055771c1acc105b6d8a189eb9018c55948cf9f",
+      "size_bytes": 109318
+    },
+    {
+      "path": "joern/projects/octopus/lib/xz-1.5.jar",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/joern/projects/octopus/lib/xz-1.5.jar",
+      "commit": "28449e57262dd24c0938108687e1019f0fc6ddd5",
+      "git_blob_sha1": "2e9599ecfa6eef94200d2ca4275b9bafda773d4a",
+      "sha256": "86f30fa8775fa3a62cdb39d1ed78a6019164c1058864048d42cbee244e26e840",
+      "size_bytes": 99555
+    }
+  ]
+}

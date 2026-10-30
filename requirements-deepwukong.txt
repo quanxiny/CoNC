@@ -1,0 +1,16 @@
+# Separate Python 3.10 environment used by the retained DeepWukong runs.
+--extra-index-url https://download.pytorch.org/whl/cu130
+torch==2.11.0+cu130
+numpy==1.26.4
+scipy==1.15.3
+torch-geometric==2.8.0.post1
+pytorch-lightning==2.6.6
+torchmetrics==1.9.0
+lightning-utilities==0.15.3
+gensim==4.4.0
+omegaconf==2.4.0
+wordninja==2.0.0
+smart-open==8.0.4
+wrapt
+networkx
+scikit-learn

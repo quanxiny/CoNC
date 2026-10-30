@@ -1,0 +1,25 @@
+{
+  "unit_id": "og24455320:test:3387",
+  "query": {
+    "source_case": 87482,
+    "label": 0,
+    "query_line": 18
+  },
+  "predictions": {
+    "11": {
+      "risk": "0.12158559262752533",
+      "prediction": "0"
+    },
+    "29": {
+      "risk": "0.00010163903789361939",
+      "prediction": "0"
+    },
+    "47": {
+      "risk": "0.05966188386082649",
+      "prediction": "0"
+    }
+  },
+  "eva": {
+    "prediction": "1"
+  }
+}

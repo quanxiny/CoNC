@@ -1,0 +1,82 @@
+{
+  "adaptation": {
+    "edge_types": "native GCN uses directed adjacency without separate relation channels",
+    "empty_edges": "normalize upstream empty edge tensor rank to [2,0], no edges added",
+    "graph": "original Joern CONTROLS/REACHES line projection induced on retained slice lines",
+    "labels": "fixed query/scene benchmark labels, not native any-vulnerable-line XFG labeling",
+    "model": "unmodified pinned official model, statement BiLSTM and GCN/TopK/attention/classifier bodies",
+    "node_order": "existing ordered source-line list",
+    "numeric_candidate_graph": false,
+    "sanitization": "source comments and label-bearing identifiers neutralized before symbolization; external canonical sanitized source reused unchanged",
+    "slicing": "fixed backward benchmark slices, not upstream backward-plus-forward XFG enumeration",
+    "training_loop": "manual equivalent CE/Adam/LambdaLR/clip/DEV loop for modern execution and immutable receipts",
+    "unit": "existing benchmark slice; external score is maximum slice risk per scene",
+    "word2vec_reproducibility": "stable TRAIN row order, one worker and explicit seed/hash seed replace upstream unordered multicore defaults"
+  },
+  "architecture": {
+    "classifier": "256->512->512->2; ReLU/dropout0.5",
+    "graph_encoder": "3 GCNConv256/TopKPooling0.8 stages; GlobalAttention per stage, sum readouts",
+    "statement_encoder": "one-layer bidirectional LSTM hidden256, sum direction states, dropout0.5",
+    "statement_token_limit": 16,
+    "trainable_embedding_dim": 256
+  },
+  "display_name": "DeepWukong-GCN (matched-slice adaptation)",
+  "external": {
+    "aggregation": "maximum slice risk; common cohorts filtered from same predictions",
+    "formai": {
+      "common_scenes": 161,
+      "scenes": 167,
+      "slices": 2709
+    },
+    "mit": {
+      "common_scenes": 796,
+      "scenes": 1059,
+      "slices": 1578
+    }
+  },
+  "license": "MIT",
+  "method_id": "deepwukong_matched_slice",
+  "model_class": "src.models.vd.DeepWuKong",
+  "native_pipeline_claim": false,
+  "recipe": {
+    "TEST_or_external_selection": false,
+    "batch_size": 64,
+    "checkpoint_improvement_min_delta": 0,
+    "early_stopping_min_delta": 0.0,
+    "eligible_epoch0": false,
+    "gradient_clip_L2": 5,
+    "learning_rate": 0.002,
+    "lr_multiplier_each_epoch": 0.95,
+    "max_epochs": 50,
+    "optimizer": "native Adam",
+    "patience": 10,
+    "precision": "CPU FP32",
+    "seeds": [
+      11,
+      29,
+      47
+    ],
+    "selection": "minimum source DEV mean-of-batch cross-entropy after completed epoch; sample-mean CE also recorded",
+    "source_dev": 11940,
+    "source_test": 11577,
+    "source_train": 94179,
+    "threads_per_seed": 4,
+    "threshold": 0.5,
+    "weight_decay": 0,
+    "word2vec": {
+      "PYTHONHASHSEED": 0,
+      "epochs": 5,
+      "max_vocab_size": 190000,
+      "min_count": 3,
+      "negative": 5,
+      "per_model_seed": true,
+      "sg": 1,
+      "training_split": "family TRAIN94179 only",
+      "vector_size": 256,
+      "window": 5,
+      "workers": 1
+    }
+  },
+  "status": "FROZEN_RELEASE_RECIPE",
+  "result_sha256": "1d93616c97042a15950501f437c357187161391c035d7d6e098a2e652ee4574e"
+}

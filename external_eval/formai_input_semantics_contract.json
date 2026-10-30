@@ -1,0 +1,2723 @@
+{
+  "status": "PASS_SCOPE_CONTRACT",
+  "request": {
+    "dependency_hashes": {
+      "external_eval/formai_semantics_contract.py": "32ee52b9362ddaa4fad646312f90e8282eaefdac3c76da13ab1e221422b4e929",
+      "external_eval/legacy_frontend.py": "b0bdd07ba95e2515a69f38068b929f24c0947f1d6f1e36570d98b1e3c7d7cbb3",
+      "external_eval/partial_condition_probe.py": "70aa553972aec972abd1da7526e9c6ce4eecf6f359bbcb3059ad0b70886761c3",
+      "external_eval/condition_repair.py": "adf5e21fd4a5775d612f39050cf5d61bf128bb02ae359018f31adcceb9aa1f90",
+      "external_eval/finite_frontend_profile.json": "94c006a3707e565454a17a096f8b245c1e18e1502242bc29818e6223a16dd48b",
+      "external_eval/legacy_frontend_fixture_bounded/result.json": "459b5d9dcf2754737ee95039ce7ad0c327501447784aa486e0d52432ac8c5073"
+    },
+    "external_source_read": false,
+    "Java_or_model_forward": false,
+    "fixture_scope": "original symbolizer/tokenizer/15-field encoder plus existing original PDG fixture evidence"
+  },
+  "dependency_hashes": {
+    "external_eval/formai_semantics_contract.py": "32ee52b9362ddaa4fad646312f90e8282eaefdac3c76da13ab1e221422b4e929",
+    "external_eval/legacy_frontend.py": "b0bdd07ba95e2515a69f38068b929f24c0947f1d6f1e36570d98b1e3c7d7cbb3",
+    "external_eval/partial_condition_probe.py": "70aa553972aec972abd1da7526e9c6ce4eecf6f359bbcb3059ad0b70886761c3",
+    "external_eval/condition_repair.py": "adf5e21fd4a5775d612f39050cf5d61bf128bb02ae359018f31adcceb9aa1f90",
+    "external_eval/finite_frontend_profile.json": "94c006a3707e565454a17a096f8b245c1e18e1502242bc29818e6223a16dd48b",
+    "external_eval/legacy_frontend_fixture_bounded/result.json": "459b5d9dcf2754737ee95039ce7ad0c327501447784aa486e0d52432ac8c5073"
+  },
+  "original_sources": {
+    "third_party/VDTransformer/src/preprocess/data_generator.py": {
+      "sha256": "9167a2f61e2638939f4a8ec30432c5e92a430b3382e7e52594bd624ad21c2e51",
+      "definitions": [
+        "extract_line_number",
+        "read_csv",
+        "extract_nodes_with_location_info",
+        "build_PDG",
+        "build_XFG"
+      ],
+      "line_numbers": [
+        17,
+        41,
+        65,
+        93,
+        172
+      ]
+    },
+    "third_party/VDTransformer/src/preprocess/dataset_generator.py": {
+      "sha256": "657c48ce1cf0d2fa292aff950e84c69304bdb8eeea7348d2564e3e87534b8afe",
+      "definitions": [
+        "get_indentation",
+        "get_condition"
+      ],
+      "line_numbers": [
+        92,
+        105
+      ]
+    },
+    "third_party/VDTransformer/src/preprocess/symbolizer.py": {
+      "sha256": "1d12e842c5f21409f0cbc4d0fbe772445d888d012827cb3e3716fe70ee7154cb",
+      "definitions": [
+        "operators3",
+        "operators2",
+        "operators1",
+        "keywords",
+        "main_set",
+        "main_args",
+        "clean_gadget",
+        "tokenize_code_line"
+      ],
+      "line_numbers": [
+        9,
+        10,
+        14,
+        20,
+        47,
+        49,
+        52,
+        143
+      ]
+    },
+    "external/overflowgen/joint_graph_study_v1/implementation_family_isolated_v2/graph_input.py": {
+      "sha256": "13d6a44201cccdbe72018c2587d838dc3f9f802b895015b7f3d002fd56d1c76f"
+    },
+    "external/overflowgen/safe_numeric_artifacts/word_index.json": {
+      "sha256": "f3694506a45f65f176eabb2f31e3bb0e3d62a882686126d285fa56cd2d7f0ed8"
+    }
+  },
+  "format_and_literal_collision_fixtures": [
+    {
+      "name": "scanf_width",
+      "fixture_source_sha256": [
+        "74a5832ebc4118b41a242dde359619407a23e48e52af417be817e07aeefa2bcd",
+        "919d8a090b8d451c4eef590504e0884bc75c26b2ba6bd5079145200a2d1f4561"
+      ],
+      "original_symbolic_tokens_identical": true,
+      "all_15_fields_exactly_identical": true,
+      "tokens": [
+        [
+          "char",
+          "VAR1",
+          "[",
+          "8",
+          "]",
+          ";"
+        ],
+        [
+          "scanf",
+          "(",
+          "\"\"",
+          ",",
+          "VAR1",
+          ")",
+          ";"
+        ]
+      ],
+      "graph": {
+        "nodes": [
+          {
+            "op": 12,
+            "op_name": "OPAQUE",
+            "parents": [],
+            "literal": null,
+            "initial_known": false,
+            "exact": null,
+            "line": 0,
+            "condition": 0,
+            "unit": 0,
+            "target": 0,
+            "binding": "conditional_text_candidate_not_C_proof"
+          },
+          {
+            "op": 1,
+            "op_name": "CONST",
+            "parents": [],
+            "literal": 8,
+            "initial_known": true,
+            "exact": 8,
+            "line": 0,
+            "condition": 1,
+            "unit": 0,
+            "target": 0,
+            "binding": "conditional_text_candidate_not_C_proof"
+          },
+          {
+            "op": 14,
+            "op_name": "ARRAY",
+            "parents": [
+              1
+            ],
+            "literal": null,
+            "initial_known": false,
+            "exact": null,
+            "line": 0,
+            "condition": 1,
+            "unit": 1,
+            "target": 0,
+            "binding": "conditional_text_candidate_not_C_proof"
+          }
+        ],
+        "rules": {
+          "state": "unknown",
+          "evidence": [],
+          "function_safety_truth": "UNKNOWN"
+        },
+        "stats": {
+          "opaque_expressions": 0,
+          "branch_assignments": 0,
+          "mutations_unknown": 0,
+          "node_cap": 0
+        },
+        "limits": {
+          "nodes": 64
+        },
+        "version_scope": "source-order candidates; branches retain PHI ambiguity; loop/alias/type proof unsupported"
+      },
+      "tensors": {
+        "tokens": {
+          "dtype": "uint16",
+          "shape": [
+            12,
+            32
+          ],
+          "sha256": "df56d2424a7c6d6782cd9b988e974252f11517cd0f53d9ef9a7a87f7cbbdb0ea"
+        },
+        "numbers": {
+          "dtype": "int16",
+          "shape": [
+            12,
+            32
+          ],
+          "sha256": "9a75ce9d448f54b9467cee2502b3374bda1a97afde06d242b272f5064054b9e4"
+        },
+        "marks": {
+          "dtype": "uint8",
+          "shape": [
+            12,
+            32
+          ],
+          "sha256": "800004ef40efcc4d2d3772959db062f7de996df99b68b0bf891bf6421a0ceb11"
+        },
+        "line_count": {
+          "dtype": "uint8",
+          "shape": [],
+          "sha256": "dbc1b4c900ffe48d575b5da5c638040125f65db0fe3e24494b76ea986457d986"
+        },
+        "key": {
+          "dtype": "uint8",
+          "shape": [],
+          "sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a"
+        },
+        "ops": {
+          "dtype": "uint8",
+          "shape": [
+            64
+          ],
+          "sha256": "e4e312291fecda2e8030fdd4f5b5207146744ad8daa07ce4f4f475694a6c50fc"
+        },
+        "parents": {
+          "dtype": "int16",
+          "shape": [
+            64,
+            2
+          ],
+          "sha256": "fb3c7bb16b52a2835a74625fb1b67107262fc59e7ece980419f18403a1b0bf4e"
+        },
+        "node_line": {
+          "dtype": "uint8",
+          "shape": [
+            64
+          ],
+          "sha256": "f5a5fd42d16a20302798ef6ed309979b43003d2320d9f0e8ea9831a92759fb4b"
+        },
+        "condition": {
+          "dtype": "uint8",
+          "shape": [
+            64
+          ],
+          "sha256": "bbd3b565dab2868962af6950af54cf66943dae77b0a68882c1705052db0067d3"
+        },
+        "unit": {
+          "dtype": "uint8",
+          "shape": [
+            64
+          ],
+          "sha256": "2f59c313eecc21d0cae49d92ef60246e0498bcb84ff30925f2e9bc045578b1aa"
+        },
+        "known": {
+          "dtype": "uint8",
+          "shape": [
+            64
+          ],
+          "sha256": "4286da436d65e3a216846042ca5e0f51ac7a192e9da271a72a9c4097beecd52f"
+        },
+        "bits": {
+          "dtype": "uint8",
+          "shape": [
+            64,
+            32
+          ],
+          "sha256": "6862339669b7f0365377ed347e4febe633de5eba50ee799ba4e75cd6f8fa20c9"
+        },
+        "target": {
+          "dtype": "uint8",
+          "shape": [
+            64
+          ],
+          "sha256": "f5a5fd42d16a20302798ef6ed309979b43003d2320d9f0e8ea9831a92759fb4b"
+        },
+        "node_count": {
+          "dtype": "uint8",
+          "shape": [],
+          "sha256": "084fed08b978af4d7d196a7446a86b58009e636b611db16211b65a9aadff29c5"
+        },
+        "edges": {
+          "dtype": "uint8",
+          "shape": [
+            12,
+            12
+          ],
+          "sha256": "81c611f35bff79491538b2f7cf201c7597a661a5c549633541c62bdc8af1613f"
+        }
+      },
+      "semantic_support": "UNSUPPORTED_GUARD_OR_TYPE_OR_CAPACITY_INFORMATION_ERASED",
+      "scope_action": "reject matching source patterns symmetrically before original candidate construction",
+      "claim": "representation collision only; no vulnerability label inferred by this fixture"
+    },
+    {
+      "name": "scanf_type",
+      "fixture_source_sha256": [
+        "349e2d2897cb209f3862eb017fa2292e55871c1fc6efa5ad0dbed51ce788a806",
+        "877987c13fdab295ff7bff0532b4b6b7b66c4fa3cc3c10cae9f966df5f958607"
+      ],
+      "original_symbolic_tokens_identical": true,
+      "all_15_fields_exactly_identical": true,
+      "tokens": [
+        [
+          "char",
+          "VAR1",
+          "[",
+          "8",
+          "]",
+          ";"
+        ],
+        [
+          "scanf",
+          "(",
+          "\"\"",
+          ",",
+          "VAR1",
+          ")",
+          ";"
+        ]
+      ],
+      "graph": {
+        "nodes": [
+          {
+            "op": 12,
+            "op_name": "OPAQUE",
+            "parents": [],
+            "literal": null,
+            "initial_known": false,
+            "exact": null,
+            "line": 0,
+            "condition": 0,
+            "unit": 0,
+            "target": 0,
+            "binding": "conditional_text_candidate_not_C_proof"
+          },
+          {
+            "op": 1,
+            "op_name": "CONST",
+            "parents": [],
+            "literal": 8,
+            "initial_known": true,
+            "exact": 8,
+            "line": 0,
+            "condition": 1,
+            "unit": 0,
+            "target": 0,
+            "binding": "conditional_text_candidate_not_C_proof"
+          },
+          {
+            "op": 14,
+            "op_name": "ARRAY",
+            "parents": [
+              1
+            ],
+            "literal": null,
+            "initial_known": false,
+            "exact": null,
+            "line": 0,
+            "condition": 1,
+            "unit": 1,
+            "target": 0,
+            "binding": "conditional_text_candidate_not_C_proof"
+          }
+        ],
+        "rules": {
+          "state": "unknown",
+          "evidence": [],
+          "function_safety_truth": "UNKNOWN"
+        },
+        "stats": {
+          "opaque_expressions": 0,
+          "branch_assignments": 0,
+          "mutations_unknown": 0,
+          "node_cap": 0
+        },
+        "limits": {
+          "nodes": 64
+        },
+        "version_scope": "source-order candidates; branches retain PHI ambiguity; loop/alias/type proof unsupported"
+      },
+      "tensors": {
+        "tokens": {
+          "dtype": "uint16",
+          "shape": [
+            12,
+            32
+          ],
+          "sha256": "df56d2424a7c6d6782cd9b988e974252f11517cd0f53d9ef9a7a87f7cbbdb0ea"
+        },
+        "numbers": {
+          "dtype": "int16",
+          "shape": [
+            12,
+            32
+          ],
+          "sha256": "9a75ce9d448f54b9467cee2502b3374bda1a97afde06d242b272f5064054b9e4"
+        },
+        "marks": {
+          "dtype": "uint8",
+          "shape": [
+            12,
+            32
+          ],
+          "sha256": "800004ef40efcc4d2d3772959db062f7de996df99b68b0bf891bf6421a0ceb11"
+        },
+        "line_count": {
+          "dtype": "uint8",
+          "shape": [],
+          "sha256": "dbc1b4c900ffe48d575b5da5c638040125f65db0fe3e24494b76ea986457d986"
+        },
+        "key": {
+          "dtype": "uint8",
+          "shape": [],
+          "sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a"
+        },
+        "ops": {
+          "dtype": "uint8",
+          "shape": [
+            64
+          ],
+          "sha256": "e4e312291fecda2e8030fdd4f5b5207146744ad8daa07ce4f4f475694a6c50fc"
+        },
+        "parents": {
+          "dtype": "int16",
+          "shape": [
+            64,
+            2
+          ],
+          "sha256": "fb3c7bb16b52a2835a74625fb1b67107262fc59e7ece980419f18403a1b0bf4e"
+        },
+        "node_line": {
+          "dtype": "uint8",
+          "shape": [
+            64
+          ],
+          "sha256": "f5a5fd42d16a20302798ef6ed309979b43003d2320d9f0e8ea9831a92759fb4b"
+        },
+        "condition": {
+          "dtype": "uint8",
+          "shape": [
+            64
+          ],
+          "sha256": "bbd3b565dab2868962af6950af54cf66943dae77b0a68882c1705052db0067d3"
+        },
+        "unit": {
+          "dtype": "uint8",
+          "shape": [
+            64
+          ],
+          "sha256": "2f59c313eecc21d0cae49d92ef60246e0498bcb84ff30925f2e9bc045578b1aa"
+        },
+        "known": {
+          "dtype": "uint8",
+          "shape": [
+            64
+          ],
+          "sha256": "4286da436d65e3a216846042ca5e0f51ac7a192e9da271a72a9c4097beecd52f"
+        },
+        "bits": {
+          "dtype": "uint8",
+          "shape": [
+            64,
+            32
+          ],
+          "sha256": "6862339669b7f0365377ed347e4febe633de5eba50ee799ba4e75cd6f8fa20c9"
+        },
+        "target": {
+          "dtype": "uint8",
+          "shape": [
+            64
+          ],
+          "sha256": "f5a5fd42d16a20302798ef6ed309979b43003d2320d9f0e8ea9831a92759fb4b"
+        },
+        "node_count": {
+          "dtype": "uint8",
+          "shape": [],
+          "sha256": "084fed08b978af4d7d196a7446a86b58009e636b611db16211b65a9aadff29c5"
+        },
+        "edges": {
+          "dtype": "uint8",
+          "shape": [
+            12,
+            12
+          ],
+          "sha256": "81c611f35bff79491538b2f7cf201c7597a661a5c549633541c62bdc8af1613f"
+        }
+      },
+      "semantic_support": "UNSUPPORTED_GUARD_OR_TYPE_OR_CAPACITY_INFORMATION_ERASED",
+      "scope_action": "reject matching source patterns symmetrically before original candidate construction",
+      "claim": "representation collision only; no vulnerability label inferred by this fixture"
+    },
+    {
+      "name": "fscanf_width",
+      "fixture_source_sha256": [
+        "536053b76732469c9a00431fbdd73912cc7601d1196e64bd9fc0ed13ee09b099",
+        "ac2a343dcc55445b2a4b5c6c651d3bc3d9789f2457c90291349bc1b1a1419750"
+      ],
+      "original_symbolic_tokens_identical": true,
+      "all_15_fields_exactly_identical": true,
+      "tokens": [
+        [
+          "char",
+          "VAR1",
+          "[",
+          "8",
+          "]",
+          ";"
+        ],
+        [
+          "fscanf",
+          "(",
+          "VAR2",
+          ",",
+          "\"\"",
+          ",",
+          "VAR1",
+          ")",
+          ";"
+        ]
+      ],
+      "graph": {
+        "nodes": [
+          {
+            "op": 12,
+            "op_name": "OPAQUE",
+            "parents": [],
+            "literal": null,
+            "initial_known": false,
+            "exact": null,
+            "line": 0,
+            "condition": 0,
+            "unit": 0,
+            "target": 0,
+            "binding": "conditional_text_candidate_not_C_proof"
+          },
+          {
+            "op": 1,
+            "op_name": "CONST",
+            "parents": [],
+            "literal": 8,
+            "initial_known": true,
+            "exact": 8,
+            "line": 0,
+            "condition": 1,
+            "unit": 0,
+            "target": 0,
+            "binding": "conditional_text_candidate_not_C_proof"
+          },
+          {
+            "op": 14,
+            "op_name": "ARRAY",
+            "parents": [
+              1
+            ],
+            "literal": null,
+            "initial_known": false,
+            "exact": null,
+            "line": 0,
+            "condition": 1,
+            "unit": 1,
+            "target": 0,
+            "binding": "conditional_text_candidate_not_C_proof"
+          }
+        ],
+        "rules": {
+          "state": "unknown",
+          "evidence": [],
+          "function_safety_truth": "UNKNOWN"
+        },
+        "stats": {
+          "opaque_expressions": 0,
+          "branch_assignments": 0,
+          "mutations_unknown": 0,
+          "node_cap": 0
+        },
+        "limits": {
+          "nodes": 64
+        },
+        "version_scope": "source-order candidates; branches retain PHI ambiguity; loop/alias/type proof unsupported"
+      },
+      "tensors": {
+        "tokens": {
+          "dtype": "uint16",
+          "shape": [
+            12,
+            32
+          ],
+          "sha256": "4141847870b8ce65cfb1907119dbfa3448a5af5c0ee22bc9400da9155d603123"
+        },
+        "numbers": {
+          "dtype": "int16",
+          "shape": [
+            12,
+            32
+          ],
+          "sha256": "9a75ce9d448f54b9467cee2502b3374bda1a97afde06d242b272f5064054b9e4"
+        },
+        "marks": {
+          "dtype": "uint8",
+          "shape": [
+            12,
+            32
+          ],
+          "sha256": "800004ef40efcc4d2d3772959db062f7de996df99b68b0bf891bf6421a0ceb11"
+        },
+        "line_count": {
+          "dtype": "uint8",
+          "shape": [],
+          "sha256": "dbc1b4c900ffe48d575b5da5c638040125f65db0fe3e24494b76ea986457d986"
+        },
+        "key": {
+          "dtype": "uint8",
+          "shape": [],
+          "sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a"
+        },
+        "ops": {
+          "dtype": "uint8",
+          "shape": [
+            64
+          ],
+          "sha256": "e4e312291fecda2e8030fdd4f5b5207146744ad8daa07ce4f4f475694a6c50fc"
+        },
+        "parents": {
+          "dtype": "int16",
+          "shape": [
+            64,
+            2
+          ],
+          "sha256": "fb3c7bb16b52a2835a74625fb1b67107262fc59e7ece980419f18403a1b0bf4e"
+        },
+        "node_line": {
+          "dtype": "uint8",
+          "shape": [
+            64
+          ],
+          "sha256": "f5a5fd42d16a20302798ef6ed309979b43003d2320d9f0e8ea9831a92759fb4b"
+        },
+        "condition": {
+          "dtype": "uint8",
+          "shape": [
+            64
+          ],
+          "sha256": "bbd3b565dab2868962af6950af54cf66943dae77b0a68882c1705052db0067d3"
+        },
+        "unit": {
+          "dtype": "uint8",
+          "shape": [
+            64
+          ],
+          "sha256": "2f59c313eecc21d0cae49d92ef60246e0498bcb84ff30925f2e9bc045578b1aa"
+        },
+        "known": {
+          "dtype": "uint8",
+          "shape": [
+            64
+          ],
+          "sha256": "4286da436d65e3a216846042ca5e0f51ac7a192e9da271a72a9c4097beecd52f"
+        },
+        "bits": {
+          "dtype": "uint8",
+          "shape": [
+            64,
+            32
+          ],
+          "sha256": "6862339669b7f0365377ed347e4febe633de5eba50ee799ba4e75cd6f8fa20c9"
+        },
+        "target": {
+          "dtype": "uint8",
+          "shape": [
+            64
+          ],
+          "sha256": "f5a5fd42d16a20302798ef6ed309979b43003d2320d9f0e8ea9831a92759fb4b"
+        },
+        "node_count": {
+          "dtype": "uint8",
+          "shape": [],
+          "sha256": "084fed08b978af4d7d196a7446a86b58009e636b611db16211b65a9aadff29c5"
+        },
+        "edges": {
+          "dtype": "uint8",
+          "shape": [
+            12,
+            12
+          ],
+          "sha256": "81c611f35bff79491538b2f7cf201c7597a661a5c549633541c62bdc8af1613f"
+        }
+      },
+      "semantic_support": "UNSUPPORTED_GUARD_OR_TYPE_OR_CAPACITY_INFORMATION_ERASED",
+      "scope_action": "reject matching source patterns symmetrically before original candidate construction",
+      "claim": "representation collision only; no vulnerability label inferred by this fixture"
+    },
+    {
+      "name": "sscanf_width",
+      "fixture_source_sha256": [
+        "af697d0922e4416fe6ea7d1ddc54b253cdea402e18c67032a3fc2d169aba15fa",
+        "83e05dcada327d279723ba25e4ba7aa76e44ae5087c680e4ee4b63be722054d2"
+      ],
+      "original_symbolic_tokens_identical": true,
+      "all_15_fields_exactly_identical": true,
+      "tokens": [
+        [
+          "char",
+          "VAR1",
+          "[",
+          "8",
+          "]",
+          ";"
+        ],
+        [
+          "sscanf",
+          "(",
+          "VAR2",
+          ",",
+          "\"\"",
+          ",",
+          "VAR1",
+          ")",
+          ";"
+        ]
+      ],
+      "graph": {
+        "nodes": [
+          {
+            "op": 12,
+            "op_name": "OPAQUE",
+            "parents": [],
+            "literal": null,
+            "initial_known": false,
+            "exact": null,
+            "line": 0,
+            "condition": 0,
+            "unit": 0,
+            "target": 0,
+            "binding": "conditional_text_candidate_not_C_proof"
+          },
+          {
+            "op": 1,
+            "op_name": "CONST",
+            "parents": [],
+            "literal": 8,
+            "initial_known": true,
+            "exact": 8,
+            "line": 0,
+            "condition": 1,
+            "unit": 0,
+            "target": 0,
+            "binding": "conditional_text_candidate_not_C_proof"
+          },
+          {
+            "op": 14,
+            "op_name": "ARRAY",
+            "parents": [
+              1
+            ],
+            "literal": null,
+            "initial_known": false,
+            "exact": null,
+            "line": 0,
+            "condition": 1,
+            "unit": 1,
+            "target": 0,
+            "binding": "conditional_text_candidate_not_C_proof"
+          }
+        ],
+        "rules": {
+          "state": "unknown",
+          "evidence": [],
+          "function_safety_truth": "UNKNOWN"
+        },
+        "stats": {
+          "opaque_expressions": 0,
+          "branch_assignments": 0,
+          "mutations_unknown": 0,
+          "node_cap": 0
+        },
+        "limits": {
+          "nodes": 64
+        },
+        "version_scope": "source-order candidates; branches retain PHI ambiguity; loop/alias/type proof unsupported"
+      },
+      "tensors": {
+        "tokens": {
+          "dtype": "uint16",
+          "shape": [
+            12,
+            32
+          ],
+          "sha256": "4141847870b8ce65cfb1907119dbfa3448a5af5c0ee22bc9400da9155d603123"
+        },
+        "numbers": {
+          "dtype": "int16",
+          "shape": [
+            12,
+            32
+          ],
+          "sha256": "9a75ce9d448f54b9467cee2502b3374bda1a97afde06d242b272f5064054b9e4"
+        },
+        "marks": {
+          "dtype": "uint8",
+          "shape": [
+            12,
+            32
+          ],
+          "sha256": "800004ef40efcc4d2d3772959db062f7de996df99b68b0bf891bf6421a0ceb11"
+        },
+        "line_count": {
+          "dtype": "uint8",
+          "shape": [],
+          "sha256": "dbc1b4c900ffe48d575b5da5c638040125f65db0fe3e24494b76ea986457d986"
+        },
+        "key": {
+          "dtype": "uint8",
+          "shape": [],
+          "sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a"
+        },
+        "ops": {
+          "dtype": "uint8",
+          "shape": [
+            64
+          ],
+          "sha256": "e4e312291fecda2e8030fdd4f5b5207146744ad8daa07ce4f4f475694a6c50fc"
+        },
+        "parents": {
+          "dtype": "int16",
+          "shape": [
+            64,
+            2
+          ],
+          "sha256": "fb3c7bb16b52a2835a74625fb1b67107262fc59e7ece980419f18403a1b0bf4e"
+        },
+        "node_line": {
+          "dtype": "uint8",
+          "shape": [
+            64
+          ],
+          "sha256": "f5a5fd42d16a20302798ef6ed309979b43003d2320d9f0e8ea9831a92759fb4b"
+        },
+        "condition": {
+          "dtype": "uint8",
+          "shape": [
+            64
+          ],
+          "sha256": "bbd3b565dab2868962af6950af54cf66943dae77b0a68882c1705052db0067d3"
+        },
+        "unit": {
+          "dtype": "uint8",
+          "shape": [
+            64
+          ],
+          "sha256": "2f59c313eecc21d0cae49d92ef60246e0498bcb84ff30925f2e9bc045578b1aa"
+        },
+        "known": {
+          "dtype": "uint8",
+          "shape": [
+            64
+          ],
+          "sha256": "4286da436d65e3a216846042ca5e0f51ac7a192e9da271a72a9c4097beecd52f"
+        },
+        "bits": {
+          "dtype": "uint8",
+          "shape": [
+            64,
+            32
+          ],
+          "sha256": "6862339669b7f0365377ed347e4febe633de5eba50ee799ba4e75cd6f8fa20c9"
+        },
+        "target": {
+          "dtype": "uint8",
+          "shape": [
+            64
+          ],
+          "sha256": "f5a5fd42d16a20302798ef6ed309979b43003d2320d9f0e8ea9831a92759fb4b"
+        },
+        "node_count": {
+          "dtype": "uint8",
+          "shape": [],
+          "sha256": "084fed08b978af4d7d196a7446a86b58009e636b611db16211b65a9aadff29c5"
+        },
+        "edges": {
+          "dtype": "uint8",
+          "shape": [
+            12,
+            12
+          ],
+          "sha256": "81c611f35bff79491538b2f7cf201c7597a661a5c549633541c62bdc8af1613f"
+        }
+      },
+      "semantic_support": "UNSUPPORTED_GUARD_OR_TYPE_OR_CAPACITY_INFORMATION_ERASED",
+      "scope_action": "reject matching source patterns symmetrically before original candidate construction",
+      "claim": "representation collision only; no vulnerability label inferred by this fixture"
+    },
+    {
+      "name": "sprintf_type",
+      "fixture_source_sha256": [
+        "7830682a4c3ca3aa4df0eb8b69bc24b34e63c8691b9bb39c21494f6a0a6d4824",
+        "b0a329e1301030b57c090769f958ad316d4c62f39ceb8aca3ab54b51a816ac35"
+      ],
+      "original_symbolic_tokens_identical": true,
+      "all_15_fields_exactly_identical": true,
+      "tokens": [
+        [
+          "char",
+          "VAR1",
+          "[",
+          "8",
+          "]",
+          ";"
+        ],
+        [
+          "sprintf",
+          "(",
+          "VAR1",
+          ",",
+          "\"\"",
+          ",",
+          "VAR2",
+          ")",
+          ";"
+        ]
+      ],
+      "graph": {
+        "nodes": [
+          {
+            "op": 12,
+            "op_name": "OPAQUE",
+            "parents": [],
+            "literal": null,
+            "initial_known": false,
+            "exact": null,
+            "line": 0,
+            "condition": 0,
+            "unit": 0,
+            "target": 0,
+            "binding": "conditional_text_candidate_not_C_proof"
+          },
+          {
+            "op": 1,
+            "op_name": "CONST",
+            "parents": [],
+            "literal": 8,
+            "initial_known": true,
+            "exact": 8,
+            "line": 0,
+            "condition": 1,
+            "unit": 0,
+            "target": 0,
+            "binding": "conditional_text_candidate_not_C_proof"
+          },
+          {
+            "op": 14,
+            "op_name": "ARRAY",
+            "parents": [
+              1
+            ],
+            "literal": null,
+            "initial_known": false,
+            "exact": null,
+            "line": 0,
+            "condition": 1,
+            "unit": 1,
+            "target": 0,
+            "binding": "conditional_text_candidate_not_C_proof"
+          }
+        ],
+        "rules": {
+          "state": "unknown",
+          "evidence": [],
+          "function_safety_truth": "UNKNOWN"
+        },
+        "stats": {
+          "opaque_expressions": 0,
+          "branch_assignments": 0,
+          "mutations_unknown": 0,
+          "node_cap": 0
+        },
+        "limits": {
+          "nodes": 64
+        },
+        "version_scope": "source-order candidates; branches retain PHI ambiguity; loop/alias/type proof unsupported"
+      },
+      "tensors": {
+        "tokens": {
+          "dtype": "uint16",
+          "shape": [
+            12,
+            32
+          ],
+          "sha256": "3e35a12e1cddd51d6a61e739eaf0bed1ae36f429e98c2bfa42cd96ca549893fa"
+        },
+        "numbers": {
+          "dtype": "int16",
+          "shape": [
+            12,
+            32
+          ],
+          "sha256": "9a75ce9d448f54b9467cee2502b3374bda1a97afde06d242b272f5064054b9e4"
+        },
+        "marks": {
+          "dtype": "uint8",
+          "shape": [
+            12,
+            32
+          ],
+          "sha256": "800004ef40efcc4d2d3772959db062f7de996df99b68b0bf891bf6421a0ceb11"
+        },
+        "line_count": {
+          "dtype": "uint8",
+          "shape": [],
+          "sha256": "dbc1b4c900ffe48d575b5da5c638040125f65db0fe3e24494b76ea986457d986"
+        },
+        "key": {
+          "dtype": "uint8",
+          "shape": [],
+          "sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a"
+        },
+        "ops": {
+          "dtype": "uint8",
+          "shape": [
+            64
+          ],
+          "sha256": "e4e312291fecda2e8030fdd4f5b5207146744ad8daa07ce4f4f475694a6c50fc"
+        },
+        "parents": {
+          "dtype": "int16",
+          "shape": [
+            64,
+            2
+          ],
+          "sha256": "fb3c7bb16b52a2835a74625fb1b67107262fc59e7ece980419f18403a1b0bf4e"
+        },
+        "node_line": {
+          "dtype": "uint8",
+          "shape": [
+            64
+          ],
+          "sha256": "f5a5fd42d16a20302798ef6ed309979b43003d2320d9f0e8ea9831a92759fb4b"
+        },
+        "condition": {
+          "dtype": "uint8",
+          "shape": [
+            64
+          ],
+          "sha256": "bbd3b565dab2868962af6950af54cf66943dae77b0a68882c1705052db0067d3"
+        },
+        "unit": {
+          "dtype": "uint8",
+          "shape": [
+            64
+          ],
+          "sha256": "2f59c313eecc21d0cae49d92ef60246e0498bcb84ff30925f2e9bc045578b1aa"
+        },
+        "known": {
+          "dtype": "uint8",
+          "shape": [
+            64
+          ],
+          "sha256": "4286da436d65e3a216846042ca5e0f51ac7a192e9da271a72a9c4097beecd52f"
+        },
+        "bits": {
+          "dtype": "uint8",
+          "shape": [
+            64,
+            32
+          ],
+          "sha256": "6862339669b7f0365377ed347e4febe633de5eba50ee799ba4e75cd6f8fa20c9"
+        },
+        "target": {
+          "dtype": "uint8",
+          "shape": [
+            64
+          ],
+          "sha256": "f5a5fd42d16a20302798ef6ed309979b43003d2320d9f0e8ea9831a92759fb4b"
+        },
+        "node_count": {
+          "dtype": "uint8",
+          "shape": [],
+          "sha256": "084fed08b978af4d7d196a7446a86b58009e636b611db16211b65a9aadff29c5"
+        },
+        "edges": {
+          "dtype": "uint8",
+          "shape": [
+            12,
+            12
+          ],
+          "sha256": "81c611f35bff79491538b2f7cf201c7597a661a5c549633541c62bdc8af1613f"
+        }
+      },
+      "semantic_support": "UNSUPPORTED_GUARD_OR_TYPE_OR_CAPACITY_INFORMATION_ERASED",
+      "scope_action": "reject matching source patterns symmetrically before original candidate construction",
+      "claim": "representation collision only; no vulnerability label inferred by this fixture"
+    },
+    {
+      "name": "strcpy_literal_length",
+      "fixture_source_sha256": [
+        "d6dcec374f9c1012887c06f1303c0362bb25b274502d31db06187e702287f6e8",
+        "bd50574c55a401520ca4ba5d51394574ee8a0330ac2eb865ff9006374a0d44af"
+      ],
+      "original_symbolic_tokens_identical": true,
+      "all_15_fields_exactly_identical": true,
+      "tokens": [
+        [
+          "char",
+          "VAR1",
+          "[",
+          "8",
+          "]",
+          ";"
+        ],
+        [
+          "strcpy",
+          "(",
+          "VAR1",
+          ",",
+          "\"\"",
+          ")",
+          ";"
+        ]
+      ],
+      "graph": {
+        "nodes": [
+          {
+            "op": 12,
+            "op_name": "OPAQUE",
+            "parents": [],
+            "literal": null,
+            "initial_known": false,
+            "exact": null,
+            "line": 0,
+            "condition": 0,
+            "unit": 0,
+            "target": 0,
+            "binding": "conditional_text_candidate_not_C_proof"
+          },
+          {
+            "op": 1,
+            "op_name": "CONST",
+            "parents": [],
+            "literal": 8,
+            "initial_known": true,
+            "exact": 8,
+            "line": 0,
+            "condition": 1,
+            "unit": 0,
+            "target": 0,
+            "binding": "conditional_text_candidate_not_C_proof"
+          },
+          {
+            "op": 14,
+            "op_name": "ARRAY",
+            "parents": [
+              1
+            ],
+            "literal": null,
+            "initial_known": false,
+            "exact": null,
+            "line": 0,
+            "condition": 1,
+            "unit": 1,
+            "target": 0,
+            "binding": "conditional_text_candidate_not_C_proof"
+          },
+          {
+            "op": 12,
+            "op_name": "OPAQUE",
+            "parents": [],
+            "literal": null,
+            "initial_known": false,
+            "exact": null,
+            "line": 1,
+            "condition": 1,
+            "unit": 0,
+            "target": 1,
+            "binding": "conditional_text_candidate_not_C_proof"
+          },
+          {
+            "op": 17,
+            "op_name": "COPY_DEST",
+            "parents": [
+              3,
+              1
+            ],
+            "literal": null,
+            "initial_known": false,
+            "exact": null,
+            "line": 1,
+            "condition": 1,
+            "unit": 1,
+            "target": 1,
+            "binding": "conditional_text_candidate_not_C_proof"
+          },
+          {
+            "op": 18,
+            "op_name": "COPY_SOURCE",
+            "parents": [
+              3,
+              0
+            ],
+            "literal": null,
+            "initial_known": false,
+            "exact": null,
+            "line": 1,
+            "condition": 1,
+            "unit": 0,
+            "target": 1,
+            "binding": "conditional_text_candidate_not_C_proof"
+          }
+        ],
+        "rules": {
+          "state": "unknown",
+          "evidence": [
+            {
+              "node": 4,
+              "kind": "copy",
+              "a": 3,
+              "b": 1,
+              "unit_known": true,
+              "conditional_operand_values": [
+                null,
+                8
+              ],
+              "relation": "UNKNOWN"
+            },
+            {
+              "node": 5,
+              "kind": "copy",
+              "a": 3,
+              "b": 0,
+              "unit_known": false,
+              "conditional_operand_values": [
+                null,
+                null
+              ],
+              "relation": "UNKNOWN"
+            }
+          ],
+          "function_safety_truth": "UNKNOWN"
+        },
+        "stats": {
+          "opaque_expressions": 1,
+          "branch_assignments": 0,
+          "mutations_unknown": 0,
+          "node_cap": 0
+        },
+        "limits": {
+          "nodes": 64
+        },
+        "version_scope": "source-order candidates; branches retain PHI ambiguity; loop/alias/type proof unsupported"
+      },
+      "tensors": {
+        "tokens": {
+          "dtype": "uint16",
+          "shape": [
+            12,
+            32
+          ],
+          "sha256": "fd9854c7e614b319371a7e1fe14567efb0cf5c4194f8f4d93ec1e2b78088daeb"
+        },
+        "numbers": {
+          "dtype": "int16",
+          "shape": [
+            12,
+            32
+          ],
+          "sha256": "9a75ce9d448f54b9467cee2502b3374bda1a97afde06d242b272f5064054b9e4"
+        },
+        "marks": {
+          "dtype": "uint8",
+          "shape": [
+            12,
+            32
+          ],
+          "sha256": "800004ef40efcc4d2d3772959db062f7de996df99b68b0bf891bf6421a0ceb11"
+        },
+        "line_count": {
+          "dtype": "uint8",
+          "shape": [],
+          "sha256": "dbc1b4c900ffe48d575b5da5c638040125f65db0fe3e24494b76ea986457d986"
+        },
+        "key": {
+          "dtype": "uint8",
+          "shape": [],
+          "sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a"
+        },
+        "ops": {
+          "dtype": "uint8",
+          "shape": [
+            64
+          ],
+          "sha256": "3f44dfd8ea32cc28a2df97770f620fdfe81ac397de1d35d22a82dd663144d160"
+        },
+        "parents": {
+          "dtype": "int16",
+          "shape": [
+            64,
+            2
+          ],
+          "sha256": "2ecdfd37c324dea537d0def0db29fe41397ae8310efc06a8f976b3081a0b84be"
+        },
+        "node_line": {
+          "dtype": "uint8",
+          "shape": [
+            64
+          ],
+          "sha256": "3b4148a980c683f93f045309d2aff4f4805d632a446630d572e7b924f017c579"
+        },
+        "condition": {
+          "dtype": "uint8",
+          "shape": [
+            64
+          ],
+          "sha256": "741eca31d8a7db2fc02d2ecb6c06eace4e2acaf55e91007c578292025d74adbe"
+        },
+        "unit": {
+          "dtype": "uint8",
+          "shape": [
+            64
+          ],
+          "sha256": "2aad2f385cf1bfdb1f6a22a1197adf3e69ce5d45b04b4822f86baab7e95fd1b1"
+        },
+        "known": {
+          "dtype": "uint8",
+          "shape": [
+            64
+          ],
+          "sha256": "4286da436d65e3a216846042ca5e0f51ac7a192e9da271a72a9c4097beecd52f"
+        },
+        "bits": {
+          "dtype": "uint8",
+          "shape": [
+            64,
+            32
+          ],
+          "sha256": "6862339669b7f0365377ed347e4febe633de5eba50ee799ba4e75cd6f8fa20c9"
+        },
+        "target": {
+          "dtype": "uint8",
+          "shape": [
+            64
+          ],
+          "sha256": "3b4148a980c683f93f045309d2aff4f4805d632a446630d572e7b924f017c579"
+        },
+        "node_count": {
+          "dtype": "uint8",
+          "shape": [],
+          "sha256": "67586e98fad27da0b9968bc039a1ef34c939b9b8e523a8bef89d478608c5ecf6"
+        },
+        "edges": {
+          "dtype": "uint8",
+          "shape": [
+            12,
+            12
+          ],
+          "sha256": "81c611f35bff79491538b2f7cf201c7597a661a5c549633541c62bdc8af1613f"
+        }
+      },
+      "semantic_support": "UNSUPPORTED_GUARD_OR_TYPE_OR_CAPACITY_INFORMATION_ERASED",
+      "scope_action": "reject matching source patterns symmetrically before original candidate construction",
+      "claim": "representation collision only; no vulnerability label inferred by this fixture"
+    },
+    {
+      "name": "sizeof_string_length",
+      "fixture_source_sha256": [
+        "23e687cac05b8bfc2bd1e27cef308d657cbcd41c235bcd6d6f60608c68383739",
+        "346768dcfa5fc97907a6f8b4610e3121696b5bfb79777ed134fc29959a47670d"
+      ],
+      "original_symbolic_tokens_identical": true,
+      "all_15_fields_exactly_identical": true,
+      "tokens": [
+        [
+          "char",
+          "VAR1",
+          "[",
+          "8",
+          "]",
+          ";"
+        ],
+        [
+          "memset",
+          "(",
+          "VAR1",
+          ",",
+          "0",
+          ",",
+          "sizeof",
+          "(",
+          "\"\"",
+          ")",
+          ")",
+          ";"
+        ]
+      ],
+      "graph": {
+        "nodes": [
+          {
+            "op": 12,
+            "op_name": "OPAQUE",
+            "parents": [],
+            "literal": null,
+            "initial_known": false,
+            "exact": null,
+            "line": 0,
+            "condition": 0,
+            "unit": 0,
+            "target": 0,
+            "binding": "conditional_text_candidate_not_C_proof"
+          },
+          {
+            "op": 1,
+            "op_name": "CONST",
+            "parents": [],
+            "literal": 8,
+            "initial_known": true,
+            "exact": 8,
+            "line": 0,
+            "condition": 1,
+            "unit": 0,
+            "target": 0,
+            "binding": "conditional_text_candidate_not_C_proof"
+          },
+          {
+            "op": 14,
+            "op_name": "ARRAY",
+            "parents": [
+              1
+            ],
+            "literal": null,
+            "initial_known": false,
+            "exact": null,
+            "line": 0,
+            "condition": 1,
+            "unit": 1,
+            "target": 0,
+            "binding": "conditional_text_candidate_not_C_proof"
+          },
+          {
+            "op": 12,
+            "op_name": "OPAQUE",
+            "parents": [],
+            "literal": null,
+            "initial_known": false,
+            "exact": null,
+            "line": 1,
+            "condition": 1,
+            "unit": 0,
+            "target": 1,
+            "binding": "conditional_text_candidate_not_C_proof"
+          },
+          {
+            "op": 17,
+            "op_name": "COPY_DEST",
+            "parents": [
+              3,
+              1
+            ],
+            "literal": null,
+            "initial_known": false,
+            "exact": null,
+            "line": 1,
+            "condition": 1,
+            "unit": 1,
+            "target": 1,
+            "binding": "conditional_text_candidate_not_C_proof"
+          }
+        ],
+        "rules": {
+          "state": "unknown",
+          "evidence": [
+            {
+              "node": 4,
+              "kind": "copy",
+              "a": 3,
+              "b": 1,
+              "unit_known": true,
+              "conditional_operand_values": [
+                null,
+                8
+              ],
+              "relation": "UNKNOWN"
+            }
+          ],
+          "function_safety_truth": "UNKNOWN"
+        },
+        "stats": {
+          "opaque_expressions": 1,
+          "branch_assignments": 0,
+          "mutations_unknown": 0,
+          "node_cap": 0
+        },
+        "limits": {
+          "nodes": 64
+        },
+        "version_scope": "source-order candidates; branches retain PHI ambiguity; loop/alias/type proof unsupported"
+      },
+      "tensors": {
+        "tokens": {
+          "dtype": "uint16",
+          "shape": [
+            12,
+            32
+          ],
+          "sha256": "ecd5e05e38115f89290e59a85196794151d88749c5e9ecd013a63eed28424b68"
+        },
+        "numbers": {
+          "dtype": "int16",
+          "shape": [
+            12,
+            32
+          ],
+          "sha256": "9a75ce9d448f54b9467cee2502b3374bda1a97afde06d242b272f5064054b9e4"
+        },
+        "marks": {
+          "dtype": "uint8",
+          "shape": [
+            12,
+            32
+          ],
+          "sha256": "e8097b774a32429e0cedd4b9b6fe1eaf6d29967ac0455b4bcebecbb22896b025"
+        },
+        "line_count": {
+          "dtype": "uint8",
+          "shape": [],
+          "sha256": "dbc1b4c900ffe48d575b5da5c638040125f65db0fe3e24494b76ea986457d986"
+        },
+        "key": {
+          "dtype": "uint8",
+          "shape": [],
+          "sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a"
+        },
+        "ops": {
+          "dtype": "uint8",
+          "shape": [
+            64
+          ],
+          "sha256": "7925465c00015870764d1c3994b8112a74d5a0cd75517cdaaa5e61d33527e8e0"
+        },
+        "parents": {
+          "dtype": "int16",
+          "shape": [
+            64,
+            2
+          ],
+          "sha256": "9066ba5e2d496096ae1e41b250b6508d3434de749d7a1ae5da2a5704db12f5de"
+        },
+        "node_line": {
+          "dtype": "uint8",
+          "shape": [
+            64
+          ],
+          "sha256": "fd29bb132a0ef4f417ccecf7e8ba3828c30d003d3471a0ce4a65c27a9929c644"
+        },
+        "condition": {
+          "dtype": "uint8",
+          "shape": [
+            64
+          ],
+          "sha256": "ab9a625e4696e6ea4319fbb83d8e8f03a5b57172f504fa0e93aceca00cc3ba3b"
+        },
+        "unit": {
+          "dtype": "uint8",
+          "shape": [
+            64
+          ],
+          "sha256": "2aad2f385cf1bfdb1f6a22a1197adf3e69ce5d45b04b4822f86baab7e95fd1b1"
+        },
+        "known": {
+          "dtype": "uint8",
+          "shape": [
+            64
+          ],
+          "sha256": "4286da436d65e3a216846042ca5e0f51ac7a192e9da271a72a9c4097beecd52f"
+        },
+        "bits": {
+          "dtype": "uint8",
+          "shape": [
+            64,
+            32
+          ],
+          "sha256": "6862339669b7f0365377ed347e4febe633de5eba50ee799ba4e75cd6f8fa20c9"
+        },
+        "target": {
+          "dtype": "uint8",
+          "shape": [
+            64
+          ],
+          "sha256": "fd29bb132a0ef4f417ccecf7e8ba3828c30d003d3471a0ce4a65c27a9929c644"
+        },
+        "node_count": {
+          "dtype": "uint8",
+          "shape": [],
+          "sha256": "e77b9a9ae9e30b0dbdb6f510a264ef9de781501d7b6b92ae89eb059c5ab743db"
+        },
+        "edges": {
+          "dtype": "uint8",
+          "shape": [
+            12,
+            12
+          ],
+          "sha256": "81c611f35bff79491538b2f7cf201c7597a661a5c549633541c62bdc8af1613f"
+        }
+      },
+      "semantic_support": "UNSUPPORTED_GUARD_OR_TYPE_OR_CAPACITY_INFORMATION_ERASED",
+      "scope_action": "reject matching source patterns symmetrically before original candidate construction",
+      "claim": "representation collision only; no vulnerability label inferred by this fixture"
+    }
+  ],
+  "sizeof_array_pointer_and_byte_element_evidence": [
+    {
+      "name": "sizeof_array_unknown",
+      "original_result_sha256": "6b3abab990e89d501ca7ec8f155a60730cd3df2bbaf9cd5cce07772946c996c4",
+      "public_graph_tensor_evidence": {
+        "candidate_source_lines": [
+          3
+        ],
+        "slices": [
+          {
+            "key_source_line": 3,
+            "status": "ENCODED",
+            "public": {
+              "line_num": [
+                2,
+                3
+              ],
+              "key_line": 1,
+              "line_code": [
+                [
+                  "<U>",
+                  "char",
+                  "VAR1",
+                  "[",
+                  "8",
+                  "]",
+                  ";"
+                ],
+                [
+                  "<U>",
+                  "memset",
+                  "(",
+                  "VAR1",
+                  ",",
+                  "0",
+                  ",",
+                  "sizeof",
+                  "(",
+                  "VAR1",
+                  ")",
+                  ")",
+                  ";"
+                ]
+              ]
+            },
+            "graph": {
+              "nodes": [
+                {
+                  "op": 12,
+                  "op_name": "OPAQUE",
+                  "parents": [],
+                  "literal": null,
+                  "initial_known": false,
+                  "exact": null,
+                  "line": 0,
+                  "condition": 0,
+                  "unit": 0,
+                  "target": 0,
+                  "binding": "conditional_text_candidate_not_C_proof"
+                },
+                {
+                  "op": 1,
+                  "op_name": "CONST",
+                  "parents": [],
+                  "literal": 8,
+                  "initial_known": true,
+                  "exact": 8,
+                  "line": 0,
+                  "condition": 1,
+                  "unit": 0,
+                  "target": 0,
+                  "binding": "conditional_text_candidate_not_C_proof"
+                },
+                {
+                  "op": 14,
+                  "op_name": "ARRAY",
+                  "parents": [
+                    1
+                  ],
+                  "literal": null,
+                  "initial_known": false,
+                  "exact": null,
+                  "line": 0,
+                  "condition": 1,
+                  "unit": 1,
+                  "target": 0,
+                  "binding": "conditional_text_candidate_not_C_proof"
+                },
+                {
+                  "op": 12,
+                  "op_name": "OPAQUE",
+                  "parents": [],
+                  "literal": null,
+                  "initial_known": false,
+                  "exact": null,
+                  "line": 1,
+                  "condition": 1,
+                  "unit": 0,
+                  "target": 1,
+                  "binding": "conditional_text_candidate_not_C_proof"
+                },
+                {
+                  "op": 17,
+                  "op_name": "COPY_DEST",
+                  "parents": [
+                    3,
+                    1
+                  ],
+                  "literal": null,
+                  "initial_known": false,
+                  "exact": null,
+                  "line": 1,
+                  "condition": 1,
+                  "unit": 1,
+                  "target": 1,
+                  "binding": "conditional_text_candidate_not_C_proof"
+                }
+              ],
+              "rules": {
+                "state": "unknown",
+                "evidence": [
+                  {
+                    "node": 4,
+                    "kind": "copy",
+                    "a": 3,
+                    "b": 1,
+                    "unit_known": true,
+                    "conditional_operand_values": [
+                      null,
+                      8
+                    ],
+                    "relation": "UNKNOWN"
+                  }
+                ],
+                "function_safety_truth": "UNKNOWN"
+              },
+              "stats": {
+                "opaque_expressions": 1,
+                "branch_assignments": 0,
+                "mutations_unknown": 0,
+                "node_cap": 0
+              },
+              "limits": {
+                "nodes": 64
+              },
+              "version_scope": "source-order candidates; branches retain PHI ambiguity; loop/alias/type proof unsupported"
+            },
+            "tensors": {
+              "tokens": {
+                "shape": [
+                  12,
+                  32
+                ],
+                "dtype": "uint16",
+                "sha256": "91257f107b21f639f6f3451fe42fb389b968e45ec6bc4866f0eed361a4d290ee"
+              },
+              "numbers": {
+                "shape": [
+                  12,
+                  32
+                ],
+                "dtype": "int16",
+                "sha256": "9a75ce9d448f54b9467cee2502b3374bda1a97afde06d242b272f5064054b9e4"
+              },
+              "marks": {
+                "shape": [
+                  12,
+                  32
+                ],
+                "dtype": "uint8",
+                "sha256": "e8097b774a32429e0cedd4b9b6fe1eaf6d29967ac0455b4bcebecbb22896b025"
+              },
+              "line_count": {
+                "shape": [],
+                "dtype": "uint8",
+                "sha256": "dbc1b4c900ffe48d575b5da5c638040125f65db0fe3e24494b76ea986457d986"
+              },
+              "key": {
+                "shape": [],
+                "dtype": "uint8",
+                "sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a"
+              },
+              "ops": {
+                "shape": [
+                  64
+                ],
+                "dtype": "uint8",
+                "sha256": "7925465c00015870764d1c3994b8112a74d5a0cd75517cdaaa5e61d33527e8e0"
+              },
+              "parents": {
+                "shape": [
+                  64,
+                  2
+                ],
+                "dtype": "int16",
+                "sha256": "9066ba5e2d496096ae1e41b250b6508d3434de749d7a1ae5da2a5704db12f5de"
+              },
+              "node_line": {
+                "shape": [
+                  64
+                ],
+                "dtype": "uint8",
+                "sha256": "fd29bb132a0ef4f417ccecf7e8ba3828c30d003d3471a0ce4a65c27a9929c644"
+              },
+              "condition": {
+                "shape": [
+                  64
+                ],
+                "dtype": "uint8",
+                "sha256": "ab9a625e4696e6ea4319fbb83d8e8f03a5b57172f504fa0e93aceca00cc3ba3b"
+              },
+              "unit": {
+                "shape": [
+                  64
+                ],
+                "dtype": "uint8",
+                "sha256": "2aad2f385cf1bfdb1f6a22a1197adf3e69ce5d45b04b4822f86baab7e95fd1b1"
+              },
+              "known": {
+                "shape": [
+                  64
+                ],
+                "dtype": "uint8",
+                "sha256": "4286da436d65e3a216846042ca5e0f51ac7a192e9da271a72a9c4097beecd52f"
+              },
+              "bits": {
+                "shape": [
+                  64,
+                  32
+                ],
+                "dtype": "uint8",
+                "sha256": "6862339669b7f0365377ed347e4febe633de5eba50ee799ba4e75cd6f8fa20c9"
+              },
+              "target": {
+                "shape": [
+                  64
+                ],
+                "dtype": "uint8",
+                "sha256": "fd29bb132a0ef4f417ccecf7e8ba3828c30d003d3471a0ce4a65c27a9929c644"
+              },
+              "node_count": {
+                "shape": [],
+                "dtype": "uint8",
+                "sha256": "e77b9a9ae9e30b0dbdb6f510a264ef9de781501d7b6b92ae89eb059c5ab743db"
+              },
+              "edges": {
+                "shape": [
+                  12,
+                  12
+                ],
+                "dtype": "uint8",
+                "sha256": "096b817256cd95183728f146b6c675f4ffc29b9db476a604df2e3a2ccdb769ab"
+              }
+            },
+            "edge_matrix": [
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                0
+              ]
+            ]
+          }
+        ],
+        "line_edges": [
+          [
+            2,
+            3,
+            "REACHES"
+          ]
+        ],
+        "source_sha256": "da701cb635b9e0bfee0ddd3e9f9a2e5bb2d044fec5ad37740b796bae3d33e998"
+      },
+      "compatibility": "PASS_EXISTING_ORIGINAL_BEHAVIOR",
+      "complete_C_semantics": "UNSUPPORTED",
+      "scope_action": "original unknown remains valid only when its type/operand tokens and actual source context are retained; never safe"
+    },
+    {
+      "name": "sizeof_pointer_unknown",
+      "original_result_sha256": "417ae0e1551f21b056973a5828c2a9ba12cd5c46f7080adb907766bf4aa00049",
+      "public_graph_tensor_evidence": {
+        "candidate_source_lines": [
+          2,
+          3
+        ],
+        "slices": [
+          {
+            "key_source_line": 2,
+            "status": "ENCODED",
+            "public": {
+              "line_num": [
+                2
+              ],
+              "key_line": 0,
+              "line_code": [
+                [
+                  "<U>",
+                  "char",
+                  "*",
+                  "VAR1",
+                  "=",
+                  "malloc",
+                  "(",
+                  "8",
+                  ")",
+                  ";"
+                ]
+              ]
+            },
+            "graph": {
+              "nodes": [
+                {
+                  "op": 12,
+                  "op_name": "OPAQUE",
+                  "parents": [],
+                  "literal": null,
+                  "initial_known": false,
+                  "exact": null,
+                  "line": 0,
+                  "condition": 0,
+                  "unit": 0,
+                  "target": 1,
+                  "binding": "conditional_text_candidate_not_C_proof"
+                },
+                {
+                  "op": 12,
+                  "op_name": "OPAQUE",
+                  "parents": [],
+                  "literal": null,
+                  "initial_known": false,
+                  "exact": null,
+                  "line": 0,
+                  "condition": 1,
+                  "unit": 0,
+                  "target": 1,
+                  "binding": "conditional_text_candidate_not_C_proof"
+                },
+                {
+                  "op": 1,
+                  "op_name": "CONST",
+                  "parents": [],
+                  "literal": 8,
+                  "initial_known": true,
+                  "exact": 8,
+                  "line": 0,
+                  "condition": 1,
+                  "unit": 0,
+                  "target": 1,
+                  "binding": "conditional_text_candidate_not_C_proof"
+                },
+                {
+                  "op": 15,
+                  "op_name": "MALLOC",
+                  "parents": [
+                    2
+                  ],
+                  "literal": null,
+                  "initial_known": false,
+                  "exact": null,
+                  "line": 0,
+                  "condition": 1,
+                  "unit": 1,
+                  "target": 1,
+                  "binding": "conditional_text_candidate_not_C_proof"
+                },
+                {
+                  "op": 2,
+                  "op_name": "COPY",
+                  "parents": [
+                    1
+                  ],
+                  "literal": null,
+                  "initial_known": false,
+                  "exact": null,
+                  "line": 0,
+                  "condition": 1,
+                  "unit": 0,
+                  "target": 1,
+                  "binding": "conditional_text_candidate_not_C_proof"
+                }
+              ],
+              "rules": {
+                "state": "unknown",
+                "evidence": [],
+                "function_safety_truth": "UNKNOWN"
+              },
+              "stats": {
+                "opaque_expressions": 1,
+                "branch_assignments": 0,
+                "mutations_unknown": 0,
+                "node_cap": 0
+              },
+              "limits": {
+                "nodes": 64
+              },
+              "version_scope": "source-order candidates; branches retain PHI ambiguity; loop/alias/type proof unsupported"
+            },
+            "tensors": {
+              "tokens": {
+                "shape": [
+                  12,
+                  32
+                ],
+                "dtype": "uint16",
+                "sha256": "ffa241a9c4d31fb029d808f8ed7152db2e3b44861b1a46b12183b970c0b1cc6d"
+              },
+              "numbers": {
+                "shape": [
+                  12,
+                  32
+                ],
+                "dtype": "int16",
+                "sha256": "ce16aee393edf3e427f3fce87da14c100a216fe1d4303abe74ea7de1226fd458"
+              },
+              "marks": {
+                "shape": [
+                  12,
+                  32
+                ],
+                "dtype": "uint8",
+                "sha256": "5750784548bb2a741faac62e1e38383eb79793ad5b1178d0b44032036584b59d"
+              },
+              "line_count": {
+                "shape": [],
+                "dtype": "uint8",
+                "sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a"
+              },
+              "key": {
+                "shape": [],
+                "dtype": "uint8",
+                "sha256": "6e340b9cffb37a989ca544e6bb780a2c78901d3fb33738768511a30617afa01d"
+              },
+              "ops": {
+                "shape": [
+                  64
+                ],
+                "dtype": "uint8",
+                "sha256": "e867cbb7d2be4416d13372e07c36794b6680767588350fc9f795762c6f53e14e"
+              },
+              "parents": {
+                "shape": [
+                  64,
+                  2
+                ],
+                "dtype": "int16",
+                "sha256": "6d054cb1a619f99b2f12ea80ff2e4363e3396dda9185f4aa03a58410766e31ba"
+              },
+              "node_line": {
+                "shape": [
+                  64
+                ],
+                "dtype": "uint8",
+                "sha256": "f5a5fd42d16a20302798ef6ed309979b43003d2320d9f0e8ea9831a92759fb4b"
+              },
+              "condition": {
+                "shape": [
+                  64
+                ],
+                "dtype": "uint8",
+                "sha256": "ab9a625e4696e6ea4319fbb83d8e8f03a5b57172f504fa0e93aceca00cc3ba3b"
+              },
+              "unit": {
+                "shape": [
+                  64
+                ],
+                "dtype": "uint8",
+                "sha256": "18ae4ccbda9538839d79bb18ca09e23e24ae8c1550f56cbb3d84b05331fff401"
+              },
+              "known": {
+                "shape": [
+                  64
+                ],
+                "dtype": "uint8",
+                "sha256": "2f59c313eecc21d0cae49d92ef60246e0498bcb84ff30925f2e9bc045578b1aa"
+              },
+              "bits": {
+                "shape": [
+                  64,
+                  32
+                ],
+                "dtype": "uint8",
+                "sha256": "224cfc8febbd1860b53ef3bccc3bf93af709436adeed97cf0a7d12cbaa8f65f4"
+              },
+              "target": {
+                "shape": [
+                  64
+                ],
+                "dtype": "uint8",
+                "sha256": "27870e86c1fc141641e4dce622e59b43f5e1a4050b3e05aaa983310890cba735"
+              },
+              "node_count": {
+                "shape": [],
+                "dtype": "uint8",
+                "sha256": "e77b9a9ae9e30b0dbdb6f510a264ef9de781501d7b6b92ae89eb059c5ab743db"
+              },
+              "edges": {
+                "shape": [
+                  12,
+                  12
+                ],
+                "dtype": "uint8",
+                "sha256": "81c611f35bff79491538b2f7cf201c7597a661a5c549633541c62bdc8af1613f"
+              }
+            },
+            "edge_matrix": [
+              [
+                0
+              ]
+            ]
+          },
+          {
+            "key_source_line": 3,
+            "status": "ENCODED",
+            "public": {
+              "line_num": [
+                2,
+                3
+              ],
+              "key_line": 1,
+              "line_code": [
+                [
+                  "<U>",
+                  "char",
+                  "*",
+                  "VAR1",
+                  "=",
+                  "malloc",
+                  "(",
+                  "8",
+                  ")",
+                  ";"
+                ],
+                [
+                  "<U>",
+                  "memset",
+                  "(",
+                  "VAR1",
+                  ",",
+                  "0",
+                  ",",
+                  "sizeof",
+                  "(",
+                  "VAR1",
+                  ")",
+                  ")",
+                  ";"
+                ]
+              ]
+            },
+            "graph": {
+              "nodes": [
+                {
+                  "op": 12,
+                  "op_name": "OPAQUE",
+                  "parents": [],
+                  "literal": null,
+                  "initial_known": false,
+                  "exact": null,
+                  "line": 0,
+                  "condition": 0,
+                  "unit": 0,
+                  "target": 0,
+                  "binding": "conditional_text_candidate_not_C_proof"
+                },
+                {
+                  "op": 12,
+                  "op_name": "OPAQUE",
+                  "parents": [],
+                  "literal": null,
+                  "initial_known": false,
+                  "exact": null,
+                  "line": 0,
+                  "condition": 1,
+                  "unit": 0,
+                  "target": 0,
+                  "binding": "conditional_text_candidate_not_C_proof"
+                },
+                {
+                  "op": 1,
+                  "op_name": "CONST",
+                  "parents": [],
+                  "literal": 8,
+                  "initial_known": true,
+                  "exact": 8,
+                  "line": 0,
+                  "condition": 1,
+                  "unit": 0,
+                  "target": 0,
+                  "binding": "conditional_text_candidate_not_C_proof"
+                },
+                {
+                  "op": 15,
+                  "op_name": "MALLOC",
+                  "parents": [
+                    2
+                  ],
+                  "literal": null,
+                  "initial_known": false,
+                  "exact": null,
+                  "line": 0,
+                  "condition": 1,
+                  "unit": 1,
+                  "target": 0,
+                  "binding": "conditional_text_candidate_not_C_proof"
+                },
+                {
+                  "op": 2,
+                  "op_name": "COPY",
+                  "parents": [
+                    1
+                  ],
+                  "literal": null,
+                  "initial_known": false,
+                  "exact": null,
+                  "line": 0,
+                  "condition": 1,
+                  "unit": 0,
+                  "target": 0,
+                  "binding": "conditional_text_candidate_not_C_proof"
+                },
+                {
+                  "op": 12,
+                  "op_name": "OPAQUE",
+                  "parents": [],
+                  "literal": null,
+                  "initial_known": false,
+                  "exact": null,
+                  "line": 1,
+                  "condition": 1,
+                  "unit": 0,
+                  "target": 1,
+                  "binding": "conditional_text_candidate_not_C_proof"
+                },
+                {
+                  "op": 17,
+                  "op_name": "COPY_DEST",
+                  "parents": [
+                    5,
+                    2
+                  ],
+                  "literal": null,
+                  "initial_known": false,
+                  "exact": null,
+                  "line": 1,
+                  "condition": 1,
+                  "unit": 1,
+                  "target": 1,
+                  "binding": "conditional_text_candidate_not_C_proof"
+                }
+              ],
+              "rules": {
+                "state": "unknown",
+                "evidence": [
+                  {
+                    "node": 6,
+                    "kind": "copy",
+                    "a": 5,
+                    "b": 2,
+                    "unit_known": true,
+                    "conditional_operand_values": [
+                      null,
+                      8
+                    ],
+                    "relation": "UNKNOWN"
+                  }
+                ],
+                "function_safety_truth": "UNKNOWN"
+              },
+              "stats": {
+                "opaque_expressions": 2,
+                "branch_assignments": 0,
+                "mutations_unknown": 0,
+                "node_cap": 0
+              },
+              "limits": {
+                "nodes": 64
+              },
+              "version_scope": "source-order candidates; branches retain PHI ambiguity; loop/alias/type proof unsupported"
+            },
+            "tensors": {
+              "tokens": {
+                "shape": [
+                  12,
+                  32
+                ],
+                "dtype": "uint16",
+                "sha256": "cede871e3fff40133e23dcc804227d843a1c83fbee7bb5569e89a8c9f934134e"
+              },
+              "numbers": {
+                "shape": [
+                  12,
+                  32
+                ],
+                "dtype": "int16",
+                "sha256": "ce16aee393edf3e427f3fce87da14c100a216fe1d4303abe74ea7de1226fd458"
+              },
+              "marks": {
+                "shape": [
+                  12,
+                  32
+                ],
+                "dtype": "uint8",
+                "sha256": "80f2adea6ee529136f964cc4c9f7d3f9d8a286bd3a3f75b153c8e24aef8e2cb2"
+              },
+              "line_count": {
+                "shape": [],
+                "dtype": "uint8",
+                "sha256": "dbc1b4c900ffe48d575b5da5c638040125f65db0fe3e24494b76ea986457d986"
+              },
+              "key": {
+                "shape": [],
+                "dtype": "uint8",
+                "sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a"
+              },
+              "ops": {
+                "shape": [
+                  64
+                ],
+                "dtype": "uint8",
+                "sha256": "3ae6292f8370318c52e1b5367e8722b5f803688955cea250dca5904d89b4dcf4"
+              },
+              "parents": {
+                "shape": [
+                  64,
+                  2
+                ],
+                "dtype": "int16",
+                "sha256": "fa631108d0a54551ad3fa3cbde34acd3697e43f1da1835cba61a757cd926d2a2"
+              },
+              "node_line": {
+                "shape": [
+                  64
+                ],
+                "dtype": "uint8",
+                "sha256": "e66a5dd17eda01518ffa64a8984629a9aa0daa1d24fdcd6c1a5ccb577fbf2b15"
+              },
+              "condition": {
+                "shape": [
+                  64
+                ],
+                "dtype": "uint8",
+                "sha256": "1b516a43ea8ca1914d57ca025bb14d417377c85bf9cfd84322e685aa2cc11af2"
+              },
+              "unit": {
+                "shape": [
+                  64
+                ],
+                "dtype": "uint8",
+                "sha256": "bc4b5c036908778aeab40a9c9ad2588dee20f10b664159bd5cb3bdb966c34d95"
+              },
+              "known": {
+                "shape": [
+                  64
+                ],
+                "dtype": "uint8",
+                "sha256": "2f59c313eecc21d0cae49d92ef60246e0498bcb84ff30925f2e9bc045578b1aa"
+              },
+              "bits": {
+                "shape": [
+                  64,
+                  32
+                ],
+                "dtype": "uint8",
+                "sha256": "224cfc8febbd1860b53ef3bccc3bf93af709436adeed97cf0a7d12cbaa8f65f4"
+              },
+              "target": {
+                "shape": [
+                  64
+                ],
+                "dtype": "uint8",
+                "sha256": "e66a5dd17eda01518ffa64a8984629a9aa0daa1d24fdcd6c1a5ccb577fbf2b15"
+              },
+              "node_count": {
+                "shape": [],
+                "dtype": "uint8",
+                "sha256": "ca358758f6d27e6cf45272937977a748fd88391db679ceda7dc7bf1f005ee879"
+              },
+              "edges": {
+                "shape": [
+                  12,
+                  12
+                ],
+                "dtype": "uint8",
+                "sha256": "096b817256cd95183728f146b6c675f4ffc29b9db476a604df2e3a2ccdb769ab"
+              }
+            },
+            "edge_matrix": [
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                0
+              ]
+            ]
+          }
+        ],
+        "line_edges": [
+          [
+            2,
+            3,
+            "REACHES"
+          ]
+        ],
+        "source_sha256": "e9be69dfbf2218a9660702a0fc95bdeb55198fded9c43d0e334e3bf9d4f0a356"
+      },
+      "compatibility": "PASS_EXISTING_ORIGINAL_BEHAVIOR",
+      "complete_C_semantics": "UNSUPPORTED",
+      "scope_action": "original unknown remains valid only when its type/operand tokens and actual source context are retained; never safe"
+    },
+    {
+      "name": "byte_element_unknown",
+      "original_result_sha256": "2fea5d6f3c1463f58a052924e9d5c2ca9ac3a7f6583cd4b3dab097e6739b4228",
+      "public_graph_tensor_evidence": {
+        "candidate_source_lines": [
+          3
+        ],
+        "slices": [
+          {
+            "key_source_line": 3,
+            "status": "ENCODED",
+            "public": {
+              "line_num": [
+                2,
+                3
+              ],
+              "key_line": 1,
+              "line_code": [
+                [
+                  "<U>",
+                  "int",
+                  "VAR1",
+                  "[",
+                  "8",
+                  "]",
+                  ";"
+                ],
+                [
+                  "<U>",
+                  "memset",
+                  "(",
+                  "VAR1",
+                  ",",
+                  "0",
+                  ",",
+                  "8",
+                  ")",
+                  ";"
+                ]
+              ]
+            },
+            "graph": {
+              "nodes": [
+                {
+                  "op": 12,
+                  "op_name": "OPAQUE",
+                  "parents": [],
+                  "literal": null,
+                  "initial_known": false,
+                  "exact": null,
+                  "line": 0,
+                  "condition": 0,
+                  "unit": 0,
+                  "target": 0,
+                  "binding": "conditional_text_candidate_not_C_proof"
+                },
+                {
+                  "op": 1,
+                  "op_name": "CONST",
+                  "parents": [],
+                  "literal": 8,
+                  "initial_known": true,
+                  "exact": 8,
+                  "line": 0,
+                  "condition": 1,
+                  "unit": 0,
+                  "target": 0,
+                  "binding": "conditional_text_candidate_not_C_proof"
+                },
+                {
+                  "op": 14,
+                  "op_name": "ARRAY",
+                  "parents": [
+                    1
+                  ],
+                  "literal": null,
+                  "initial_known": false,
+                  "exact": null,
+                  "line": 0,
+                  "condition": 1,
+                  "unit": 2,
+                  "target": 0,
+                  "binding": "conditional_text_candidate_not_C_proof"
+                },
+                {
+                  "op": 1,
+                  "op_name": "CONST",
+                  "parents": [],
+                  "literal": 8,
+                  "initial_known": true,
+                  "exact": 8,
+                  "line": 1,
+                  "condition": 1,
+                  "unit": 0,
+                  "target": 1,
+                  "binding": "conditional_text_candidate_not_C_proof"
+                },
+                {
+                  "op": 17,
+                  "op_name": "COPY_DEST",
+                  "parents": [
+                    3,
+                    1
+                  ],
+                  "literal": null,
+                  "initial_known": false,
+                  "exact": null,
+                  "line": 1,
+                  "condition": 1,
+                  "unit": 2,
+                  "target": 1,
+                  "binding": "conditional_text_candidate_not_C_proof"
+                }
+              ],
+              "rules": {
+                "state": "unknown",
+                "evidence": [
+                  {
+                    "node": 4,
+                    "kind": "copy",
+                    "a": 3,
+                    "b": 1,
+                    "unit_known": false,
+                    "conditional_operand_values": [
+                      8,
+                      8
+                    ],
+                    "relation": "UNKNOWN"
+                  }
+                ],
+                "function_safety_truth": "UNKNOWN"
+              },
+              "stats": {
+                "opaque_expressions": 0,
+                "branch_assignments": 0,
+                "mutations_unknown": 0,
+                "node_cap": 0
+              },
+              "limits": {
+                "nodes": 64
+              },
+              "version_scope": "source-order candidates; branches retain PHI ambiguity; loop/alias/type proof unsupported"
+            },
+            "tensors": {
+              "tokens": {
+                "shape": [
+                  12,
+                  32
+                ],
+                "dtype": "uint16",
+                "sha256": "a93d390b16099dcfd341afacd2de27e5d36495a8512d98ffd6214b1b12990506"
+              },
+              "numbers": {
+                "shape": [
+                  12,
+                  32
+                ],
+                "dtype": "int16",
+                "sha256": "285b46979dc5145ba7a442c217393509bd647509be27d669452537248f280894"
+              },
+              "marks": {
+                "shape": [
+                  12,
+                  32
+                ],
+                "dtype": "uint8",
+                "sha256": "ca5f699763465009d8f9ee83de5d1a54ac8c6f4227cafd9e408faa6fa3590742"
+              },
+              "line_count": {
+                "shape": [],
+                "dtype": "uint8",
+                "sha256": "dbc1b4c900ffe48d575b5da5c638040125f65db0fe3e24494b76ea986457d986"
+              },
+              "key": {
+                "shape": [],
+                "dtype": "uint8",
+                "sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a"
+              },
+              "ops": {
+                "shape": [
+                  64
+                ],
+                "dtype": "uint8",
+                "sha256": "6faf45c922dd78f53c17758e1a3eee2452f505eb928888f95cfee8293f74d154"
+              },
+              "parents": {
+                "shape": [
+                  64,
+                  2
+                ],
+                "dtype": "int16",
+                "sha256": "9066ba5e2d496096ae1e41b250b6508d3434de749d7a1ae5da2a5704db12f5de"
+              },
+              "node_line": {
+                "shape": [
+                  64
+                ],
+                "dtype": "uint8",
+                "sha256": "fd29bb132a0ef4f417ccecf7e8ba3828c30d003d3471a0ce4a65c27a9929c644"
+              },
+              "condition": {
+                "shape": [
+                  64
+                ],
+                "dtype": "uint8",
+                "sha256": "ab9a625e4696e6ea4319fbb83d8e8f03a5b57172f504fa0e93aceca00cc3ba3b"
+              },
+              "unit": {
+                "shape": [
+                  64
+                ],
+                "dtype": "uint8",
+                "sha256": "95dc15af449c2b56a64035fb70f985fde04988c4e43691f3ba6f2fa2a3dd42ec"
+              },
+              "known": {
+                "shape": [
+                  64
+                ],
+                "dtype": "uint8",
+                "sha256": "cb1ff2031eb6d4fe2729d9f747449a7d832474b983abf8f5268565c8eaedab35"
+              },
+              "bits": {
+                "shape": [
+                  64,
+                  32
+                ],
+                "dtype": "uint8",
+                "sha256": "5b51f3cbe823cf419d7f426ed22893e585a87ac40e75d28c3766e831b1712ac7"
+              },
+              "target": {
+                "shape": [
+                  64
+                ],
+                "dtype": "uint8",
+                "sha256": "fd29bb132a0ef4f417ccecf7e8ba3828c30d003d3471a0ce4a65c27a9929c644"
+              },
+              "node_count": {
+                "shape": [],
+                "dtype": "uint8",
+                "sha256": "e77b9a9ae9e30b0dbdb6f510a264ef9de781501d7b6b92ae89eb059c5ab743db"
+              },
+              "edges": {
+                "shape": [
+                  12,
+                  12
+                ],
+                "dtype": "uint8",
+                "sha256": "096b817256cd95183728f146b6c675f4ffc29b9db476a604df2e3a2ccdb769ab"
+              }
+            },
+            "edge_matrix": [
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                0
+              ]
+            ]
+          }
+        ],
+        "line_edges": [
+          [
+            2,
+            3,
+            "REACHES"
+          ]
+        ],
+        "source_sha256": "f2dd69484392c235ddce54057a4857dcf335eab6b4862b6bdaf3059f6163019a"
+      },
+      "compatibility": "PASS_EXISTING_ORIGINAL_BEHAVIOR",
+      "complete_C_semantics": "UNSUPPORTED",
+      "scope_action": "original unknown remains valid only when its type/operand tokens and actual source context are retained; never safe"
+    }
+  ],
+  "unsupported_source_patterns": {
+    "format_memory_calls": [
+      "scanf",
+      "fscanf",
+      "sscanf",
+      "vscanf",
+      "vfscanf",
+      "vsscanf",
+      "sprintf",
+      "snprintf",
+      "vsprintf",
+      "vsnprintf"
+    ],
+    "literal_dependent_memory_calls": [
+      "memcpy",
+      "memmove",
+      "strcpy",
+      "strncpy",
+      "strcat",
+      "strncat",
+      "strlen",
+      "strnlen"
+    ],
+    "literal_rules": [
+      "string literal under sizeof expression",
+      "string literal in a declaration containing an array declarator",
+      "string literal or source variable initialized with a string literal used by a listed memory call"
+    ],
+    "unbounded_text_input_calls": [
+      "gets"
+    ],
+    "format_output_pointer_reads": "printf/fprintf/vprintf/vfprintf with nonliteral format or string/pointer conversion cannot be established outside the finite scope"
+  },
+  "original_unknown_policy": "preserve original sizeof/byte-element unknown with retained raw tokens and full source context; not C safety proof",
+  "condition_numeric_graph_policy": "unchanged stable U/T/F only, N rejects; 0..999 L12 T32 N64; original edges/parents/target retained",
+  "no_ground_truth_location_or_error_type_for_source_gate": true,
+  "shape_only_acceptance": false,
+  "source_or_model_executed": false,
+  "overall_C_semantics_supported": false,
+  "result_sha256": "d432c5cb4af8f453d02d4e8eef64be91e9a478c990997ad5c093f3d92229b0be"
+}

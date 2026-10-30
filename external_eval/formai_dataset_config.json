@@ -1,0 +1,65 @@
+{
+  "status": "PASS_FROZEN_DATASET_CONFIG",
+  "dataset": "formai_v2",
+  "sampling": {
+    "salt": "Overflow-Expr|frozen-v76-v52|FormAI-v2|external-generalization|4096|2026-10-15",
+    "algorithm": "sha256(salt + NUL + program_id)",
+    "max_programs": 4096,
+    "replacement": false,
+    "selection_stage": "metadata_only_before_source_or_scores"
+  },
+  "cohort_manifest": {
+    "path": "external_eval/formai_cohort/sampled_programs.jsonl",
+    "sha256": "1d7f2ff9673a62929894eed9a2f4158ed6fefa23cb19b41fd7a284eefb650716"
+  },
+  "pool_ledger": {
+    "path": "external_eval/formai_cohort/all_programs.jsonl",
+    "sha256": "559c5fe3f95fdc5c1a188533b2b1ac976bad0d39a3d006f9fa8d9dd89289b677"
+  },
+  "metadata_receipt": {
+    "path": "external_eval/formai_metadata/metadata_receipt.json",
+    "sha256": "753b40f06027d99aa7dbbd2d539d7b0fe59f1359753f0eeabeb9fe170bbac8de"
+  },
+  "development_registry": {
+    "path": "external_eval/formai_development_registry.json",
+    "sha256": "21edbb1732b4fccaeeaa59b9b16a264f61185f1b3bc3291b7ddaa4c190b3e5a4"
+  },
+  "grouping": "program_id_only_prompt_family_unverified",
+  "label_policy": {
+    "positive": "VULNERABLE + target memorybounds error + verification_finished yes; no contradictory NON-VULNERABLE",
+    "negative": "NON-VULNERABLE + verification_finished yes; no vulnerable/unfinished/category-conflict program record",
+    "unknown": "all other records, including only-unfinished vulnerability reports, receive no binary target label",
+    "negative_scope": "dataset reported non-vulnerable outcome, not proved unbounded C safety"
+  },
+  "target_errors": {
+    "exact": [
+      "array bounds violated: lower bound",
+      "array bounds violated: upper bound",
+      "dereference failure: Access to object out of bounds",
+      "dereference failure: array bounds violated"
+    ],
+    "prefix": "buffer overflow on "
+  },
+  "structural_profile": "single-main-local; exactly one ordinary main function definition; no interprocedural or indirect calls; original context rules retained",
+  "input_semantics_profile": "format-sensitive memory I/O rejected symmetrically; original sizeof/unit unknown retained only with original type/operand tokens and complete context",
+  "memory_task_gate": "label-independent syntactic subscript/pointer access or explicitly enumerated memory API; no memory use is task_not_applicable",
+  "readout": "whole-program all-original-candidate max; complete nonempty accepted inventory required",
+  "flaw_metadata_used_for_input": false,
+  "no_source_or_label_guided_slice_selection": true,
+  "limits": {
+    "lines": 12,
+    "tokens_per_line": 32,
+    "nodes": 64,
+    "numeric_min": 0,
+    "numeric_max": 999
+  },
+  "near_clone_and_prompt_family": "unverified beyond supplied official clone filtering; no claim of semantic independence",
+  "source_directory": "datasets/FormAI-v2/extracted/DATASET-v2_without_clones",
+  "source_archive_sha256": "3098694cee2f4eb37e19d4c2bb7f0c2a5e053c50169a9a4679b1c3b4f6dd03c4",
+  "processor_contract": {
+    "path": "external_eval/condition_processor_contract.json",
+    "sha256": "1902cc1a2ca1546805a669fae17f0f13e1ed3de4ad662248822b1403aa878b7e"
+  },
+  "official_repository": "https://github.com/FormAI-Dataset/FormAI-dataset",
+  "result_sha256": "a4abe2569dcc08a17a2ca7ec0d822719c762adfa7f6c047eddba0d2d7414b5e2"
+}

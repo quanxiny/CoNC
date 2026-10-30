@@ -1,0 +1,119 @@
+{
+  "address_space_bytes": 3221225472,
+  "aggregation_scope": "one main-root program per dataset row; Cppcheck may also inspect same-file unused functions",
+  "bootstrap": {
+    "groups": "MIT base case / FormAI program ID; prompt families unknown",
+    "replicates": 2000,
+    "seed": 20261018
+  },
+  "clang_sa": {
+    "flags": [
+      "--analyze",
+      "-std=gnu11",
+      "-Wno-everything",
+      "-fno-color-diagnostics",
+      "-Xclang",
+      "-analyzer-checker=core,unix.Malloc,alpha.security.ArrayBoundV2,alpha.unix.cstring.OutOfBounds",
+      "-Xclang",
+      "-analyze-function=main",
+      "-Xclang",
+      "-analyzer-output=plist"
+    ],
+    "scope": "main entry with native inlining; pinned version has experimental bounds checkers",
+    "target_ids": [
+      "alpha.security.ArrayBoundV2",
+      "alpha.unix.cstring.OutOfBounds"
+    ]
+  },
+  "cppcheck": {
+    "flags": [
+      "--enable=warning,information,missingInclude",
+      "--platform=unix64",
+      "--std=c11",
+      "--library=posix",
+      "--check-level=normal",
+      "--max-configs=12",
+      "--xml",
+      "--xml-version=2"
+    ],
+    "scope": "native buffer/index/library-size diagnostics; no general null/leak/arithmetic-only warnings",
+    "target_ids": [
+      "arrayIndexOutOfBounds",
+      "arrayIndexOutOfBoundsCond",
+      "negativeIndex",
+      "bufferAccessOutOfBounds",
+      "invalidScanfFormatWidth",
+      "invalidscanf",
+      "stlOutOfBounds",
+      "algorithmOutOfBounds",
+      "containerOutOfBounds",
+      "containerOutOfBoundsIndexExpression"
+    ]
+  },
+  "cpu_seconds": 50,
+  "datasets": {
+    "formai": {
+      "count": 167,
+      "manifest": "external_eval/formai_pool/adaptation/test_inputs/prepared_scenes.jsonl",
+      "source_root": "external_eval/formai_pool/prepared"
+    },
+    "mit": {
+      "count": 1164,
+      "manifest": "external_eval/manifests/mit/scenes.jsonl",
+      "source_root": "external_eval/manifests/mit"
+    }
+  },
+  "failure": "timeout, crash, syntax/header/serialization/analysis failure => UNKNOWN, never negative",
+  "frama_c_eva": {
+    "flags": [
+      "-eva",
+      "-machdep",
+      "x86_64",
+      "-main",
+      "main",
+      "-eva-slevel",
+      "100"
+    ],
+    "memory_library_functions": [
+      "memcpy",
+      "memmove",
+      "memset",
+      "memcmp",
+      "strcpy",
+      "strncpy",
+      "strcat",
+      "strncat",
+      "strlen",
+      "fgets",
+      "fread",
+      "fwrite",
+      "wcscpy",
+      "wcsncpy",
+      "wmemcpy",
+      "wmemmove",
+      "wmemset"
+    ],
+    "scope": "native index/memory validity plus memory-library validity preconditions; mem_access also includes null or dangling pointers",
+    "target_property_kinds": [
+      "index_bound",
+      "mem_access"
+    ]
+  },
+  "machine_model": "Linux x86_64 LP64; int32; wchar_t32; native C GNU11/C11",
+  "model_or_threshold_changed": false,
+  "native_incomplete_paths": "native no-warning does not certify exhaustive path exploration",
+  "negative": "tool completed with no selected warning; not a safety proof",
+  "output_file_bytes": 16777216,
+  "prediction_unit": "whole scene/program; any in-scope native target warning => positive",
+  "ranking_metrics": "AP/AUROC NA for tools: no calibrated continuous decision score",
+  "schema": "native-static-baselines-v1",
+  "source_policy": "existing hash-verified sanitized whole source, original declarations/guards/helpers; no flaw lines, source execution or guessed stubs",
+  "tools": [
+    "cppcheck",
+    "clang_sa",
+    "frama_c_eva"
+  ],
+  "training_steps": 0,
+  "wall_seconds": 60,
+  "result_sha256": "69e40af085ab242bfe19f5027dff08406defbaecea6d41e855bed7229ef5adb3"
+}

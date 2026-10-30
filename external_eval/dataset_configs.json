@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "protocol_version": "scene-static-v1",
+  "status": "preregistered_static_protocol_not_external_acceptance",
+  "shared": {
+    "threshold": 0.5,
+    "comparison": ">=",
+    "aggregation": "one scene prediction = max of all eligible original-rule slice risks",
+    "primary_processability": "label resolved, target applicable, context accepted, nonempty complete original-rule slice inventory, every slice successful for every included method and seed; common intersection frozen before scores",
+    "partial_policy": "diagnostic only: any observed slice >= 0.5 proves positive lower bound; otherwise unknown whenever inventory incomplete or any slice missing; never include partial scenes in primary scores",
+    "zero_slices": "unprocessed, never safe",
+    "slice_selection": "unchanged original frontend rule, identical for both labels; never use official flaw lines",
+    "model_parser": "legacy Joern plus original functions only; tree-sitter is structure/ownership/sanitization only",
+    "source_policy": "one sanitized source per effective member; no inline, join, graph completion or parser substitution",
+    "clone_limit": "template naming groups and exact raw/sanitized hashes only; near-clone and unknown clone overlap unmeasured",
+    "diagnostic_policy": "external source contents never logged; any inspected real source marks its entire template family as development diagnostic"
+  },
+  "datasets": {
+    "juliet": {
+      "archive": "datasets/2017-10-01-juliet-test-suite-for-c-cplusplus-v1-3.zip",
+      "archive_sha256": "ada9d7e1c323d283446df3f55bdee0d00bda1fed786785fe98764d58688f38eb",
+      "version": "1.3",
+      "metadata_member": "C/manifest.xml",
+      "target_cwes": [
+        121,
+        122,
+        124,
+        125,
+        126,
+        127,
+        129,
+        130,
+        131,
+        680
+      ],
+      "label_rule": "official Juliet good/bad entry naming plus parsed function definition and structural entry ownership; unknown roots retain null label",
+      "group_rule": "filename template prefix before terminal two-digit flow; family retains flow, removes filepart/class-role suffix; no semantic clone inference",
+      "good_wrapper_rule": "split only nonempty body consisting exclusively of direct zero-argument calls to unique defined goodB2G/goodG2B-style void(void) branches; wrapper not another scene",
+      "official_metadata": "external_eval/official_dataset_metadata.json",
+      "arithmetic_diagnostic_cwes": [
+        190,
+        191
+      ],
+      "arithmetic_applicability": "190/191 starts diagnostic_pending_memory_check; original frontend keys/operation kinds may identify memory-related diagnostics without official flaw lines; only established pure arithmetic is task_not_applicable"
+    },
+    "mit": {
+      "archive": "datasets/2014-06-08-a-taxonomy-of-buffer-overflows.zip",
+      "archive_sha256": "79ab9203a8e66271ad623a9feef19c32a6a10e2cebbdf54fd3c4d7c01cad6e80",
+      "variants": {
+        "min": 1,
+        "med": 1,
+        "large": 1,
+        "ok": 0
+      },
+      "label_rule": "variant mapping must agree with official SARIF state and result kind; disagreement is label_unresolved",
+      "entry_rule": "one official base-case/variant scene, main entry; helpers belong to that scene, never independent labeled samples",
+      "supplement": {
+        "archive": "external_eval/vendor/mit/2073-v2.0.0.zip",
+        "archive_sha256": "a969f0c87bc15270d151bec1050b47375ce3e24d4436c70b95e6820295f0ec88",
+        "original_identifier": "2073-v1.0.0",
+        "effective_identifier": "2073-v2.0.0",
+        "base_case": "basic-00180",
+        "variant": "ok",
+        "replacement_reason": "official candidate v2 replaces deprecated v1 (original properties.id=834); original archive retained",
+        "official_metadata": "external_eval/official_dataset_metadata.json#mit_2073_v2"
+      }
+    }
+  }
+}

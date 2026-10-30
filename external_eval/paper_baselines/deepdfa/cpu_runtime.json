@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "status": "FROZEN_BEFORE_RESTART_AND_ANY_EXTERNAL_SCORING",
+  "device": "cpu",
+  "dtype": "float32",
+  "flush_denormal": true,
+  "torch_version": "2.10.0+cu128",
+  "threads": 8,
+  "scope": "All three source-training seeds and their frozen inference use the same CPU floating-point runtime setting.",
+  "reason": "Measured gradual-underflow slowdown; synthetic matmul and TRAIN-only forward/gradient acceptance. No target scores used.",
+  "evidence": [
+    "external_eval/paper_baselines/deepdfa/cpu_denormal_runtime_probe.json",
+    "external_eval/paper_baselines/deepdfa/cpu_denormal_train_acceptance.json",
+    "external_eval/paper_baselines/deepdfa/cpu_runtime_acceptance.json"
+  ],
+  "preserved_prior_attempt": "external_eval/paper_baselines/deepdfa/controllers/pipeline_v4/state.json",
+  "numerical_boundary": "Subnormal floating-point values are flushed to zero. This is not a claim of bit-identical training trajectories to gradual underflow; the official model, features, optimizer, epoch count and DEV selection rule are unchanged."
+}

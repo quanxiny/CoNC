@@ -1,0 +1,68 @@
+{
+  "evidence": {
+    "common_scene_prediction_disagreements": 0,
+    "historical_prediction_rows_exact": 7164,
+    "historical_tensor_fields_exact": 17910,
+    "numeric_recovered_scenes": 263
+  },
+  "post_hoc_diagnostics": {
+    "artifacts_deleted": false,
+    "diagnostic_result": "external_eval/mit_remaining_adaptation/result.json",
+    "direct_1d_extension_role": "reported diagnostic only; excluded from final primary protocol",
+    "newly_recovered": 12,
+    "processable_if_separately_enabled": 1071,
+    "selection_not_based_on_score": true,
+    "selection_reason": "introduced after the numeric protocol was frozen and changes slice closure; wchar_t also uses an opt-in graph whitelist extension"
+  },
+  "primary_model_evaluation": {
+    "all_scene_status_rows": "external_eval/mit_numeric_ood/all_samples_protocol_predictions.csv",
+    "checkpoint_selection_changed": false,
+    "coverage": 0.9097938144329897,
+    "methods": [
+      "v76",
+      "v52"
+    ],
+    "metrics_by_seed": "external_eval/mit_numeric_ood/all_samples_comparison_by_seed.csv",
+    "negative": 265,
+    "positive": 794,
+    "prediction_rows": "external_eval/mit_numeric_ood/combined_scene_predictions.csv",
+    "preprocessing_contract": "canonical decimal integer range 0..32767; original 15 fields and 32-bit numeric encoding",
+    "processable_scenes": 1059,
+    "scene_aggregation": "maximum slice risk, unchanged",
+    "seeds": [
+      11,
+      29,
+      47
+    ],
+    "summary": "external_eval/mit_numeric_ood/all_samples_comparison_summary.csv",
+    "threshold": 0.5,
+    "training_or_finetuning": false,
+    "unknown_negative": 26,
+    "unknown_positive": 79,
+    "unknown_scenes": 105
+  },
+  "protocol_id": "mit_external_numeric_0_32767_v1",
+  "reporting_limits": [
+    "UNKNOWN is not relabeled safe and is excluded from conditional detection metrics.",
+    "The numeric large families were exposed during adapter development; this is an external frozen diagnostic, not a pristine blind test.",
+    "Exact-overlap diagnostics are available; reliable near-clone exclusion was not established.",
+    "The post-hoc direct-1D result remains reported regardless of its poor detection result."
+  ],
+  "request": {
+    "all_samples_comparison_receipt_sha256": "067fbaa27c5b32c24a2dc4fc80335af5014d9154f75d815a6db4135ee953ff81",
+    "numeric_inference_receipt_sha256": "fa46c1eafafc00524cb25d9ccfb6f363acbbeed1518bbb9b105e490d8a30815e",
+    "numeric_preparation_receipt_sha256": "cf605152f34c036d2cd20c99fec2f28d525f733187acc64f88c750561a930c2f",
+    "numeric_result_receipt_sha256": "d3f7e6b71b1aed4268bfe35a52f84b5f429740200a31d163f269b8b5dbad586a",
+    "post_hoc_direct_1d_result_sha256": "be294161f3068122252bfa9bad46301496bab05a04dd5f8f0f2dff021b8f0c0b",
+    "script_sha256": "67fc1ee04198cdba31da39f7dd67fc1e288fdf259d63d3cd33c67994561c7265"
+  },
+  "status": "FINAL_PROTOCOL_FROZEN",
+  "target_registry": {
+    "all_scenes_retained_in_coverage_ledger": true,
+    "base_cases": 291,
+    "negative": 291,
+    "positive": 873,
+    "scenes": 1164
+  },
+  "result_sha256": "d28b7a56d87b2654312579abc70a127a42c05ec667f585b852acaac4527424e3"
+}

@@ -1,0 +1,139 @@
+{
+  "repo": "https://github.com/jumormt/DeepWukong",
+  "commit": "28449e57262dd24c0938108687e1019f0fc6ddd5",
+  "files": [
+    {
+      "path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/LICENSE",
+      "bytes": 1067,
+      "sha256": "66446dd4d4fb9d73203c625dba2c00af146897474f31e6d1d13216cf4b85d4f3"
+    },
+    {
+      "path": "configs/dwk.yaml",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/configs/dwk.yaml",
+      "bytes": 1151,
+      "sha256": "a8c06c87b25c909cb77630e8c34d3586dfb99f92c6896938dbe11dc230f93e2b"
+    },
+    {
+      "path": "requirements.txt",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/requirements.txt",
+      "bytes": 264,
+      "sha256": "5e457a149f535f3d55f36d46ec33599da4a9e49d54d1ca36ca8ccfd4124126ee"
+    },
+    {
+      "path": "src/data_generator.py",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/src/data_generator.py",
+      "bytes": 14142,
+      "sha256": "91c5d2dc8e06f89684aeebef19271a42af3920d899c8fd5dadd8f13b64879c04"
+    },
+    {
+      "path": "src/datas/datamodules.py",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/src/datas/datamodules.py",
+      "bytes": 2577,
+      "sha256": "a8a8a8a49f7549534e9f18dc3de0c57683e410f9fa743abebdabc1fc47080ea9"
+    },
+    {
+      "path": "src/datas/datasets.py",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/src/datas/datasets.py",
+      "bytes": 1309,
+      "sha256": "ca8af8d49b8de72799d63f42fc5008b6d745be713964b1fe60209dce2cf4a221"
+    },
+    {
+      "path": "src/datas/graphs.py",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/src/datas/graphs.py",
+      "bytes": 3218,
+      "sha256": "368a0cc6c41d7e372a81477ff4ee201004a9d67632c72a87768fcca3d3a6644c"
+    },
+    {
+      "path": "src/datas/samples.py",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/src/datas/samples.py",
+      "bytes": 880,
+      "sha256": "e2dc0e91f4bb9e1d55408e7b40cc99005fe2c8fb16c6a99693b3a0e5a4c9a75c"
+    },
+    {
+      "path": "src/detect.py",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/src/detect.py",
+      "bytes": 2807,
+      "sha256": "b3e6a3acf0ce485b73db2a75cea1887586a1c5ae1ba5c6034f91dbbff1cb7eb7"
+    },
+    {
+      "path": "src/evaluate.py",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/src/evaluate.py",
+      "bytes": 1455,
+      "sha256": "11515497409e9d5157e9c1ad4a7300b697b4cd9147b8aa82f943f2d67d76a5bb"
+    },
+    {
+      "path": "src/joern/joern-parse.py",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/src/joern/joern-parse.py",
+      "bytes": 973,
+      "sha256": "2029ad6596ac4439aab40fc1b5db3254827a8ef97a07c841cbe9638dfb2d6e49"
+    },
+    {
+      "path": "src/metrics.py",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/src/metrics.py",
+      "bytes": 3424,
+      "sha256": "56399b4b8a88405855c7e04d3307b072eacc85df6fc069b51048999bf66eee6d"
+    },
+    {
+      "path": "src/models/modules/common_layers.py",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/src/models/modules/common_layers.py",
+      "bytes": 4676,
+      "sha256": "97c3471da20d30278ca4b88879d1e956d8e0048fa18905ac3b3bd1dbfee8497b"
+    },
+    {
+      "path": "src/models/modules/gnns.py",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/src/models/modules/gnns.py",
+      "bytes": 4569,
+      "sha256": "a3b7c6720e0dda4d8c570a5cce2e9e8448f8b2366f174bbdef29e6d82d44ea62"
+    },
+    {
+      "path": "src/models/vd.py",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/src/models/vd.py",
+      "bytes": 6891,
+      "sha256": "4748521d59e9305551f266c26acf5d6dd02a0dd3ebb91657b59b122be9a94594"
+    },
+    {
+      "path": "src/preprocess/dataset_generator.py",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/src/preprocess/dataset_generator.py",
+      "bytes": 5469,
+      "sha256": "712e471a75dd2363386f5ee8679999b9e776e3f30eb5fad0f50b93e0bc58a6e0"
+    },
+    {
+      "path": "src/preprocess/symbolizer.py",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/src/preprocess/symbolizer.py",
+      "bytes": 8154,
+      "sha256": "bed879140fb001c6b98eb7fa94beac10fbcc0d272348d1c20418867a49aaa7c1"
+    },
+    {
+      "path": "src/preprocess/word_embedding.py",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/src/preprocess/word_embedding.py",
+      "bytes": 2762,
+      "sha256": "2c2d85922f77821589d6aa22edc1d95329276c5ba42adcb80c79f7f2d8d703c7"
+    },
+    {
+      "path": "src/run.py",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/src/run.py",
+      "bytes": 1422,
+      "sha256": "618e9fc81e62d5355fa2ca614dfd74dc864efef881eee7ca7a0f4e5222c6261a"
+    },
+    {
+      "path": "src/train.py",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/src/train.py",
+      "bytes": 1942,
+      "sha256": "ed40c669da332b14dce68795c8c532c01b1eed36ed919d679902d267dbf8cc1f"
+    },
+    {
+      "path": "src/utils.py",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/src/utils.py",
+      "bytes": 5815,
+      "sha256": "54adc9f802b037cea54c425048663d3bab9487123d9049962bf2e45755494e03"
+    },
+    {
+      "path": "src/vocabulary.py",
+      "url": "https://raw.githubusercontent.com/jumormt/DeepWukong/28449e57262dd24c0938108687e1019f0fc6ddd5/src/vocabulary.py",
+      "bytes": 1984,
+      "sha256": "072dc8c7dd21639522b34213507e04b8424ed98664d8caf177517a3c5fea73e1"
+    }
+  ],
+  "scope": "Pinned upstream source files used by the matched-slice adaptation."
+}

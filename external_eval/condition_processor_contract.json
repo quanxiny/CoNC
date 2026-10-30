@@ -1,0 +1,60 @@
+{
+  "status": "PASS_FROZEN_PROCESSOR_CONTRACT",
+  "checks": {
+    "original_12_fixture_tensor_parity": true,
+    "six_real_mechanism_probes_complete": true,
+    "prior_encoded_tensor_regressions_exact": true,
+    "required_N_rejected": true,
+    "unchanged_original_semantics": true,
+    "coordinator_metadata_self_test": true
+  },
+  "evidence": {
+    "partial_parity": {
+      "path": "external_eval/partial_condition_audit/verified_result.json",
+      "sha256": "2568bb4db3de79033f6b85c824b8031b5e7135791a521756dc20438806b48e61"
+    },
+    "representative_execution": {
+      "path": "external_eval/condition_repair_probe/result.json",
+      "sha256": "d3f9c6a0595ea05609d8756bd47b52c92e1cf3a531da51827a2aa52d044a0cf5"
+    },
+    "metadata_self_test": {
+      "path": "external_eval/condition_overlay_metadata_self_test.json",
+      "sha256": "024dfa5054f6f4d48acf7ce99007a23f1083bc99a57aa523121079443385e40e"
+    }
+  },
+  "dependency_hashes": {
+    "external_eval/condition_repair.py": "adf5e21fd4a5775d612f39050cf5d61bf128bb02ae359018f31adcceb9aa1f90",
+    "external_eval/partial_condition_probe.py": "70aa553972aec972abd1da7526e9c6ce4eecf6f359bbcb3059ad0b70886761c3",
+    "external_eval/prepare_external.py": "78e3748059d0bd146b26e5e2610ba1c47e3d7844f917ba654e688ef9369d9cc1",
+    "external_eval/legacy_frontend.py": "b0bdd07ba95e2515a69f38068b929f24c0947f1d6f1e36570d98b1e3c7d7cbb3",
+    "external_eval/input_contract.py": "f25d8308bfc3fb932eefc6a7583f62cfc4fa851163de40908824ffb8ace758a0",
+    "external_eval/dataset_configs.json": "ba7f22b45af2d5e300932b257b7735c59cb435cb5d25771fac7e094be4ba2ce7",
+    "external_eval/finite_frontend_profile.json": "94c006a3707e565454a17a096f8b245c1e18e1502242bc29818e6223a16dd48b",
+    "external_eval/prepare_condition_overlay.py": "007e1a0cc5eed65d4122767fb6080354cbd81abd16b6cf2feb000d543347d910"
+  },
+  "development_registry": {
+    "path": "external_eval/condition_repair_development_registry.json",
+    "sha256": "39061769cc50a988d67530c34eaadbc6e174f60fe539266cea5db44c57326a3b"
+  },
+  "policy": {
+    "base_status": "rejected_original_nontermination",
+    "selection": "unit contains at least one record_kind scene with task_applicability target",
+    "mixed_unit": "all original candidates; diagnostic scenes retained; no label-based slice selection",
+    "pure_diagnostic_units": "retain original records; explicitly not repaired",
+    "unknown_condition": "N is rejected at original slice access; never converted to U/T/F",
+    "context_numeric_layout_guards": "unchanged",
+    "max_workers": 8
+  },
+  "unit_caps": {
+    "unit_wall_seconds": 40,
+    "worker_cpu_seconds": 20,
+    "worker_address_space_GiB": 3,
+    "parser_wall_seconds": 20,
+    "parser_heap_MiB": 512,
+    "condition_wall_seconds": 1
+  },
+  "representative_prior_exact_slices": 1,
+  "model_forward": false,
+  "C_executed": false,
+  "result_sha256": "5c5ed0c91eabe00d272b5991812d8624db9c223c68bf356aa8573e9e84bd6bd7"
+}

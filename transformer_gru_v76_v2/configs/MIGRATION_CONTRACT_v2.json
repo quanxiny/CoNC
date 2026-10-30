@@ -1,0 +1,42 @@
+{
+  "data_scope": "OverflowGen selected TRAIN/DEV only",
+  "sha256": {
+    "src/research_project/ubuntu_local_research_store/hybrid_numeric_semantic_v59/baseline_dev60/tokens.npy": "a8c472b2a2493c29a96caa6c24e6c2e7d6e0cbbd4b11bd7d114f0ee4434d44ae",
+    "src/research_project/ubuntu_local_research_store/hybrid_numeric_semantic_v59/baseline_dev60/numbers.npy": "7adf5f08aa9edb4299a74135442c84fc1322b4021122311a3ed445d9f3eb2c58",
+    "src/research_project/ubuntu_local_research_store/hybrid_numeric_semantic_v59/baseline_dev60/marks.npy": "939f4c5a3f9630bc3c2a1e09317f9a91d38a44b91e57f2a082e9a38161e9348e",
+    "src/research_project/ubuntu_local_research_store/hybrid_numeric_semantic_v59/baseline_dev60/line_count.npy": "404ac48a8222299f6919b7ce0eb3761d0f78e17ee8e11467bba2741d2c561ee0",
+    "src/research_project/ubuntu_local_research_store/hybrid_numeric_semantic_v59/baseline_dev60/key.npy": "2193213a9b9fd75b241892a712315632d1c153a19fe4c9cdbdf621d3fbc07d06",
+    "src/research_project/ubuntu_local_research_store/hybrid_numeric_semantic_v59/baseline_dev60/ops.npy": "bcb596c0ec623b9ea462143822cff756d0fc9b7df5da2e0be23b39f23e54995a",
+    "src/research_project/ubuntu_local_research_store/hybrid_numeric_semantic_v59/baseline_dev60/parents.npy": "198d79d3c518dca34665aec8bf3776d5ecb479d7b51f22f501fb5af543e4275c",
+    "src/research_project/ubuntu_local_research_store/hybrid_numeric_semantic_v59/baseline_dev60/node_line.npy": "477986511d4f67136b97b6ad24badf0487094461b15454829d71bdb70f847a08",
+    "src/research_project/ubuntu_local_research_store/hybrid_numeric_semantic_v59/baseline_dev60/condition.npy": "c7e2fc734df1d3e8adce189e552d63c58a5bfeda35470288a67490e2e10dea60",
+    "src/research_project/ubuntu_local_research_store/hybrid_numeric_semantic_v59/baseline_dev60/unit.npy": "4606aa50e7903f717069ac5a293ee9cb231cebe8e25ed257ae5b21d3881911b3",
+    "src/research_project/ubuntu_local_research_store/hybrid_numeric_semantic_v59/baseline_dev60/known.npy": "db54490dd03983ae7270e570c6cfae6251d09c08788f16f675130960648de85d",
+    "src/research_project/ubuntu_local_research_store/hybrid_numeric_semantic_v59/baseline_dev60/bits.npy": "37c1a8850ec0f474d2c1765f95ad72ac01a71b118d78fd7bfe7ab9213fecdf5b",
+    "src/research_project/ubuntu_local_research_store/hybrid_numeric_semantic_v59/baseline_dev60/target.npy": "898d9cfa8d8be0ea0d94a7b4516479b54df87aea934ffe5905a7c9afe4d7ef6c",
+    "src/research_project/ubuntu_local_research_store/hybrid_numeric_semantic_v59/baseline_dev60/node_count.npy": "17084d46eaa023152f8c537eb375cf03d364612512b21e7341900842f2009033",
+    "src/research_project/ubuntu_local_research_store/hybrid_numeric_semantic_v59/baseline_dev60/edges.npy": "25dc0493ddf3de0f562342e15f9181f245086cacb031ba6f7e108a4e10215bac",
+    "src/research_project/ubuntu_local_research_store/hybrid_numeric_semantic_v59/baseline_dev60/row.npy": "eb2aad37407d56318a626f7a0eff28d45ec8574aae6c4953528aa5478391ba43",
+    "src/research_project/ubuntu_local_research_store/hybrid_numeric_semantic_v59/baseline_dev60/split.npy": "f8acf5a03ade1394105ccabf1114e2107bc6fb63c2760fe9b40619cafbaf12df",
+    "src/research_project/ubuntu_local_research_store/hybrid_numeric_semantic_v59/baseline_dev60/targets.npy": "bfdeb277e5a4305ee34d8712bf99138e9687beb0843253c9e27fee4f5c7e9ca0",
+    "src/research_project/ubuntu_local_research_store/hybrid_numeric_semantic_v59/baseline_dev60/MANIFEST60.json": "5b7a97b55d6f6f2b1d12a4fda38e8a825bae966018093fc7f5ce11c044797fb8",
+    "assets/initialization/v52_all_visible_s11.pt": "fcaa24d2ac8547227bc7a33da47f0a78a600a6026b6f1f95a3273644118e4554",
+    "assets/initialization/v52_all_visible_s11.pt.sha256": "36b436a14997926abbb02c46457bf34afd41080cda04b72778d0270e185750ad",
+    "assets/reference_metrics/v52_s11_DEV.json": "fabf05adcc1df85c7a4762333e6e88eafd0784b37e80210736e2822f0f3f9c8f",
+    "src/research_project/ubuntu_local_research_store/no_refiner_frozen_v76/initialization/legacy_post_init_cpu_rng_s11.npy": "4c9f864258f32b190646b669088b63881f31443fb5b4c63bf7f4165096e4f2d3",
+    "assets/initialization/v52_all_visible_s29.pt": "f97e5d4bae689f40646802c23303acb39755b23a059b3eb806483ae30b1fda0c",
+    "assets/initialization/v52_all_visible_s29.pt.sha256": "86d961180a48c273e9ae68822725717ed7864f89fa8eac619375f1cfaa993dd9",
+    "assets/reference_metrics/v52_s29_DEV.json": "cae1a13121e02d805a62c303266e163991e19250f8b436f5bede071d66228d79",
+    "src/research_project/ubuntu_local_research_store/no_refiner_frozen_v76/initialization/legacy_post_init_cpu_rng_s29.npy": "35a17190d0bd702352ebb54e5da93ac891bfaef95bc496f8f6aaa64c473f1f41",
+    "assets/initialization/v52_all_visible_s47.pt": "f2ef9ca2028a6c707155fc96fb3095d2894223dcbb163ef2acd2b46f11618533",
+    "assets/initialization/v52_all_visible_s47.pt.sha256": "15397823e8890be210de4f62f818d8ad82553d7dafc981893e24dcc4bb12fa7b",
+    "assets/reference_metrics/v52_s47_DEV.json": "2d492076b83999358f2a2abf13fa0e7440dc947e16f935872809ced490a72085",
+    "src/research_project/ubuntu_local_research_store/no_refiner_frozen_v76/initialization/legacy_post_init_cpu_rng_s47.npy": "3c3b62b4caaf462a4c085c0fa6e935fc55ea23b0a4bd71c66cce70e6d053b2c6",
+    "external/overflowgen/safe_numeric_artifacts/dice_Q.npy": "ba542af43a8e8837892cd09c0d55dc3200ca5bf04423e21f1ea8081ca57b161d",
+    "external/overflowgen/safe_numeric_artifacts/word_index.json": "f3694506a45f65f176eabb2f31e3bb0e3d62a882686126d285fa56cd2d7f0ed8"
+  },
+  "resources": {
+    "training_wall_s_per_run": 21600,
+    "minimum_free_bytes": 8589934592
+  }
+}

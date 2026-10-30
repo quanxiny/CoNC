@@ -1,0 +1,13 @@
+{
+  "version": 3,
+  "status": "FROZEN_BEFORE_FORMAL_TRAINING_AND_EVALUATION",
+  "source_training_recipe": "unchanged protocol.json; no target-based selection",
+  "coverage": "A scene is covered only when every required frozen slice has a finite native-model logit and probability. Any missing or uncovered required slice makes scene UNKNOWN with null score/prediction.",
+  "aggregation": "When all required slices are scored, sort slices by sample_id then select max probability, retaining the first probability tie exactly as the fixed existing baseline rule. Retain that selected slice ID and its actual raw model logit for ranking, sigmoid probability and >0.5 prediction. Saturated equal probabilities do not trigger a separate logit tie breaker.",
+  "slice_outputs": "Preserve every required slice ID, scene ID, metadata, label, coverage/status, actual model logit, sigmoid probability, prediction and checkpoint SHA256.",
+  "inference_resume": "SQLite sample_id primary key, fixed checkpoint/packing/protocol/code/expected-population contract. Commit each successful batch immediately. Resume computes only missing samples; contract mismatch fails closed.",
+  "training_resume": "Save and restore model, Adam optimizer, epoch, best DEV BCE, history, Python RNG, NumPy RNG and Torch CPU RNG. Epoch-local negative sampling/shuffle seed is fixed by seed and epoch. Official GGNN has no stochastic dropout; checkpoint RNG remains explicit.",
+  "cache_validation": "Completed training must verify checkpoint SHA256/internal contract, protocol and every packed artifact SHA256. Completed evaluation must verify contract, every prediction artifact SHA256, and complete SQLite sample-ID set.",
+  "scope": "Correctness/resumability clarification only; formal training not started and no target score inspected. protocol.json and full native frontend unchanged. Prior WAITING pipeline_v1/v2 contracts and evaluation_contract_v2.json preserved.",
+  "threshold": "Official DeepDFA code_gnn/models/base_module.py:364 uses preds > 0.5. Exact probability0.5 predicts0; count exact0.5 cases in DEV, per-slice and per-scene evaluation. This boundary differs from >=0.5 in some existing methods and is disclosed."
+}

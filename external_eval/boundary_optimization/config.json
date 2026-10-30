@@ -1,0 +1,98 @@
+{
+  "protocol": "boundary_optimization_20261020",
+  "base": "historical_family_v70_liquid_transfer_frozen",
+  "seeds": [
+    11,
+    29,
+    47
+  ],
+  "threshold": 0.5,
+  "source_split": "original_historical_family_94179_11940_11577_unchanged",
+  "training": {
+    "steps_per_epoch": 128,
+    "max_epochs": 10,
+    "patience": 4,
+    "learning_rate": 2e-05,
+    "weight_decay": 0.01,
+    "source_batch": 32,
+    "pair_batch": 4,
+    "augmentation_weight": 1.0,
+    "ranking_weight": 0.25,
+    "ranking_margin": 1.0,
+    "distillation_weight": 0.0,
+    "max_seconds": 7200
+  },
+  "arms": [
+    "source_replay",
+    "boundary_ce",
+    "boundary_rank",
+    "boundary_rank_unfreeze"
+  ],
+  "selection": {
+    "source_DEV_F1_max_drop": 0.01,
+    "endpoint": "boundary_validation_pair_accuracy",
+    "tie": "boundary_validation_BCE",
+    "threshold_selection": false
+  },
+  "synthetic": {
+    "train_capacities": [
+      9,
+      13,
+      19,
+      23,
+      29,
+      37,
+      43,
+      53,
+      61,
+      79,
+      97,
+      113,
+      149,
+      181,
+      223,
+      269,
+      313,
+      379,
+      443,
+      557,
+      631,
+      719,
+      839,
+      947
+    ],
+    "validation_capacities": [
+      11,
+      31,
+      71,
+      131,
+      251,
+      503,
+      761,
+      991
+    ],
+    "test_capacities": [
+      17,
+      41,
+      89,
+      163,
+      283,
+      467,
+      683,
+      983,
+      1007,
+      1021,
+      1531,
+      4093,
+      8191,
+      16381
+    ],
+    "offsets": [
+      1,
+      2
+    ],
+    "max_workers": 4
+  },
+  "evaluation_policy": "Existing diagnostic bank is development only; new fixed structural holdouts are prospective after method diagnosis, not pristine independent external evidence. Original TEST/MIT/FormAI only after arm selection.",
+  "no_C_execution": true
+}

@@ -1,0 +1,34 @@
+{
+  "transfer_sources": {
+    "11": {
+      "checkpoint": "assets/initialization/v52_all_visible_s11.pt",
+      "checkpoint_sha256": "fcaa24d2ac8547227bc7a33da47f0a78a600a6026b6f1f95a3273644118e4554",
+      "data_manifest_sha256": "c5aaefc8bced2b023d57e881d1473912ccb7e39038d60cf554ea6deb8d3ce2cc",
+      "DEV_receipt": "assets/reference_metrics/v52_s11_DEV.json",
+      "rng": "src/research_project/ubuntu_local_research_store/no_refiner_frozen_v76/initialization/legacy_post_init_cpu_rng_s11.npy",
+      "rng_sha256": "4c9f864258f32b190646b669088b63881f31443fb5b4c63bf7f4165096e4f2d3"
+    },
+    "29": {
+      "checkpoint": "assets/initialization/v52_all_visible_s29.pt",
+      "checkpoint_sha256": "f97e5d4bae689f40646802c23303acb39755b23a059b3eb806483ae30b1fda0c",
+      "data_manifest_sha256": "c5aaefc8bced2b023d57e881d1473912ccb7e39038d60cf554ea6deb8d3ce2cc",
+      "DEV_receipt": "assets/reference_metrics/v52_s29_DEV.json",
+      "rng": "src/research_project/ubuntu_local_research_store/no_refiner_frozen_v76/initialization/legacy_post_init_cpu_rng_s29.npy",
+      "rng_sha256": "35a17190d0bd702352ebb54e5da93ac891bfaef95bc496f8f6aaa64c473f1f41"
+    },
+    "47": {
+      "checkpoint": "assets/initialization/v52_all_visible_s47.pt",
+      "checkpoint_sha256": "f2ef9ca2028a6c707155fc96fb3095d2894223dcbb163ef2acd2b46f11618533",
+      "data_manifest_sha256": "c5aaefc8bced2b023d57e881d1473912ccb7e39038d60cf554ea6deb8d3ce2cc",
+      "DEV_receipt": "assets/reference_metrics/v52_s47_DEV.json",
+      "rng": "src/research_project/ubuntu_local_research_store/no_refiner_frozen_v76/initialization/legacy_post_init_cpu_rng_s47.npy",
+      "rng_sha256": "3c3b62b4caaf462a4c085c0fa6e935fc55ea23b0a4bd71c66cce70e6d053b2c6"
+    }
+  },
+  "synthetic_only": true,
+  "seeds": [
+    11,
+    29,
+    47
+  ]
+}

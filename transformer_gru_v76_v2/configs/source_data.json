@@ -1,0 +1,31 @@
+{
+  "source": "OverflowGen historical family split",
+  "sha256": {
+    "tokens.npy": "054913928dae2c945c683f9b49061098af3fdc1bde56bbb2e84574a8018c5127",
+    "numbers.npy": "e97d8fef1f3a3653327276a538ea14d9b6cc56db5b25677b078cd17c770638b6",
+    "marks.npy": "e93b2ce6d7873f82675b3298ccf7643d9f5d4888a36097701af7f6a242521cea",
+    "line_count.npy": "f266d4053063ff93e5441e16a346c6dabef7dd7143586f2d58962a6781188a96",
+    "key.npy": "b51ba34fbee901cbfd2bf2de4fab8536b8c95d5971c831be50decddd9fe9973b",
+    "ops.npy": "d6ef49e34ce942159ffb937c95a9ff9f82b62777bc63baac3e05775e9e22bbe7",
+    "parents.npy": "c54ac45b781f0e1fbd20396946c2ee76194168c2042726b69d7803ceb198d57d",
+    "node_line.npy": "6a103cae83c33d19aee13a0fde454ed694014bc53bdc7dd079ba31db0376b268",
+    "condition.npy": "51fae40d22caae745747d49b66fbf2d526c2e4de89fa822c5671ca64f9f244b2",
+    "unit.npy": "8c6c1b5072ad1dcbbeee39fa6d594fac097f61c77a11702d276b97c4535d143e",
+    "known.npy": "849375f4e00da3a47095196935f9453e62a727e20bcdfe5491c87e172d704051",
+    "bits.npy": "1a015455eba60ef824e78c4f75f18ec0f15e7f3ceab63f494e079cd5387fc115",
+    "target.npy": "b093f5378b1e9a54681789201bf77efdf3e9dfcb8eb1a17ac15c06a1642d1401",
+    "node_count.npy": "537db6d218974733e0485df1c6a401a1d138b988d553f664585b9aea62d5f293",
+    "edges.npy": "f5713c484a5c8f4d1768b5891640ca8ef92a8a9f27edfd0453ced2bfe694c4af",
+    "labels.npy": "6b73ff000b2f249a53ed48ff30feabda27e55622bd150cda43516fe251538540",
+    "author_split.npy": "2842c7cf8c67f6e6cf11cf975bdcc1e8aff34caa57f8a19f42fa50de3af1b58f",
+    "family_split.npy": "2e0135b015fb5120272dcafc0d92728f2135abf82ac1802f1426eb88ff617b77",
+    "case.npy": "ae4f08048ba147fbe33fd00191175d5af9058a914b0b4a4f3ca8b5035248da2c",
+    "family.npy": "04faa351ef9bfcf96fee7d95866831619b15b271ccfb69ef9b8429f701a5175c"
+  },
+  "rows": 117696,
+  "split_rows": {
+    "train": 94179,
+    "dev": 11940,
+    "test": 11577
+  }
+}

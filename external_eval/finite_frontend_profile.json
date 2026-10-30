@@ -1,0 +1,217 @@
+{
+  "status": "PASS_FINITE_INPUT_PROFILE",
+  "legacy_fixture_overall_status": "FAIL",
+  "request": {
+    "driver_sha256": "f25d8308bfc3fb932eefc6a7583f62cfc4fa851163de40908824ffb8ace758a0",
+    "receipt_sha256": {
+      "legacy_frontend_fixture_bounded/result.json": "459b5d9dcf2754737ee95039ce7ad0c327501447784aa486e0d52432ac8c5073",
+      "vendor/source_assets.json": "806bd2929e3c411cc25b7432be0b4a60906a60ed98e24538f105c9efef4f3ee1",
+      "dataset_configs.json": "ba7f22b45af2d5e300932b257b7735c59cb435cb5d25771fac7e094be4ba2ce7"
+    },
+    "legacy_driver_sha256": "b0bdd07ba95e2515a69f38068b929f24c0947f1d6f1e36570d98b1e3c7d7cbb3"
+  },
+  "request_sha256": "42a7895ad7d151559625b951d5680519482530fded773c8f81d2c5e0f2729f4f",
+  "tool_and_author_train_golden_parity": "PASS",
+  "golden_checks": {
+    "csv_headers_equal_saved": true,
+    "directional_line_edges_equal_saved": true,
+    "saved_tables_reconstruct_author_public_tokens": true,
+    "fresh_tables_reconstruct_author_public_tokens": true,
+    "golden_encodable": true
+  },
+  "compatible_fixture_checks": [
+    "array_overflow",
+    "array_safe",
+    "byte_element_unknown",
+    "element_index_safe",
+    "eof_no_newline",
+    "guard_tabs",
+    "multiple_queries",
+    "numeric_domain_rejection",
+    "sizeof_array_unknown",
+    "sizeof_char_safe",
+    "sizeof_pointer_unknown"
+  ],
+  "retained_failed_fixtures": [
+    "cross_file_unknown",
+    "guard_spaces"
+  ],
+  "known_rejections": {
+    "guard_spaces": "unchanged original condition helper did not terminate; preserve spaces and reject on deadline",
+    "cross_file_unknown": "original single-file PDG produced no encodable query context; no file joining or completion",
+    "eof_no_newline": "selected source line would lose its final character under original symbolizer",
+    "numeric_domain_rejection": "numeric literal exceeds original 0..999 domain"
+  },
+  "unknown_policy": "Original unknown bits, parents and sizeof/unit limitations are legal inputs when source context and input contract are intact; never replace unknown with safe.",
+  "external_preprocessing_timeout_seconds": 1.0,
+  "audit_preprocessing_timeout_seconds": 3,
+  "literal_policy": "Only canonical decimal 0..999; reject multichar leading zero, octal, hex, binary, suffixes, floats, exponent forms and out-of-range values in included source lines.",
+  "literal_guard_fixtures": [
+    {
+      "name": "decimal",
+      "expected_reasons": [],
+      "observed": [],
+      "status": "PASS"
+    },
+    {
+      "name": "operators",
+      "expected_reasons": [],
+      "observed": [],
+      "status": "PASS"
+    },
+    {
+      "name": "octal",
+      "expected_reasons": [
+        "unsupported_literal_spelling"
+      ],
+      "observed": [
+        {
+          "line": 1,
+          "reason": "unsupported_literal_spelling",
+          "literal": "010"
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "leading_zero",
+      "expected_reasons": [
+        "unsupported_literal_spelling"
+      ],
+      "observed": [
+        {
+          "line": 1,
+          "reason": "unsupported_literal_spelling",
+          "literal": "00"
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "hex",
+      "expected_reasons": [
+        "unsupported_literal_spelling"
+      ],
+      "observed": [
+        {
+          "line": 1,
+          "reason": "unsupported_literal_spelling",
+          "literal": "0x10"
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "binary",
+      "expected_reasons": [
+        "unsupported_literal_spelling"
+      ],
+      "observed": [
+        {
+          "line": 1,
+          "reason": "unsupported_literal_spelling",
+          "literal": "0b10"
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "suffix",
+      "expected_reasons": [
+        "unsupported_literal_spelling",
+        "unsupported_literal_spelling"
+      ],
+      "observed": [
+        {
+          "line": 1,
+          "reason": "unsupported_literal_spelling",
+          "literal": "8U"
+        },
+        {
+          "line": 1,
+          "reason": "unsupported_literal_spelling",
+          "literal": "9LL"
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "float",
+      "expected_reasons": [
+        "unsupported_literal_spelling",
+        "unsupported_literal_spelling",
+        "unsupported_literal_spelling"
+      ],
+      "observed": [
+        {
+          "line": 1,
+          "reason": "unsupported_literal_spelling",
+          "literal": "1.5"
+        },
+        {
+          "line": 1,
+          "reason": "unsupported_literal_spelling",
+          "literal": ".5"
+        },
+        {
+          "line": 1,
+          "reason": "unsupported_literal_spelling",
+          "literal": "1."
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "exponent",
+      "expected_reasons": [
+        "unsupported_literal_spelling",
+        "unsupported_literal_spelling"
+      ],
+      "observed": [
+        {
+          "line": 1,
+          "reason": "unsupported_literal_spelling",
+          "literal": "1e-3"
+        },
+        {
+          "line": 1,
+          "reason": "unsupported_literal_spelling",
+          "literal": "0x1p+2"
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "range",
+      "expected_reasons": [
+        "number_outside_0_999"
+      ],
+      "observed": [
+        {
+          "line": 1,
+          "reason": "number_outside_0_999",
+          "literal": "1000"
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "quoted_and_comment",
+      "expected_reasons": [],
+      "observed": [],
+      "status": "PASS"
+    },
+    {
+      "name": "identifier",
+      "expected_reasons": [],
+      "observed": [],
+      "status": "PASS"
+    }
+  ],
+  "scope": "single-file complete-context scenes accepted by unchanged original finite preprocessing",
+  "static_manifest_gate_enabled": true,
+  "automatic_model_inference_authorization": false,
+  "source_program_proof": false,
+  "full_C_frontend_support": false,
+  "profile_sha256": "a7a4dafa895e2952d3e6ae1061cc439ae399bd3d8a0c1a1347c768d4180327c8"
+}

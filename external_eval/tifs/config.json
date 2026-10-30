@@ -1,0 +1,159 @@
+{
+  "protocol": "tifs_mechanism_20261019",
+  "source_dataset": "overflowgen_24455320",
+  "seeds": [
+    11,
+    29,
+    47
+  ],
+  "variants": [
+    "full",
+    "local_q",
+    "no_h_to_q",
+    "no_dynamic_q_to_h",
+    "symmetric_q",
+    "no_clamp",
+    "mlp_q",
+    "no_both_dynamic"
+  ],
+  "independent_baselines": [
+    "vd",
+    "deepdfa"
+  ],
+  "split": {
+    "seed": 20261019,
+    "fractions": [
+      0.8,
+      0.1,
+      0.1
+    ],
+    "group_fields": [
+      "source_case",
+      "family_id",
+      "normalized_slice_sha256",
+      "exact_slice_sha256"
+    ],
+    "minimum_eval_groups": 50,
+    "minimum_eval_per_class": 100,
+    "maximum_eval_group_fraction": 0.2,
+    "maximum_train_fraction": 0.9
+  },
+  "training": {
+    "stage1": {
+      "max_epochs": 100,
+      "patience": 10,
+      "min_delta": 0.0001,
+      "lr": 0.0001,
+      "batch_size": 64,
+      "weight_decay": 0.01,
+      "grad_clip": 5.0,
+      "scheduler_gamma": 0.95,
+      "epoch0_eligible": false
+    },
+    "stage2": {
+      "max_epochs": 100,
+      "patience": 10,
+      "min_delta": 0.0001,
+      "lr": 0.0001,
+      "batch_size": 64,
+      "weight_decay": 0.01,
+      "grad_clip": 5.0,
+      "scheduler_gamma": 0.95,
+      "epoch0_eligible": true
+    },
+    "vd": {
+      "max_epochs": 100,
+      "patience": 10,
+      "min_delta": 0.0,
+      "lr": 2e-05,
+      "batch_size": 64,
+      "weight_decay": 0.0,
+      "grad_clip": 5.0,
+      "scheduler_gamma": 0.95,
+      "epoch0_eligible": false
+    }
+  },
+  "runtime": {
+    "python": "python",
+    "deepdfa_python": "python",
+    "devices": [
+      0,
+      1
+    ],
+    "cpu_threads": 4,
+    "wall_seconds_per_stage": 14400,
+    "hard_grace_seconds": 900,
+    "checkpoint_every_steps": 250,
+    "maximum_rss_gib": 24,
+    "maximum_gpu_gib": 36,
+    "minimum_free_disk_gib": 96,
+    "poll_seconds": 30,
+    "retry_crashes": false
+  },
+  "diagnostics": {
+    "max_programs": 4096,
+    "pair_seed": 20261019,
+    "values": [
+      8,
+      16,
+      32,
+      64,
+      128,
+      256,
+      510,
+      512,
+      514,
+      768,
+      999,
+      1001,
+      1017,
+      1023,
+      1024,
+      1026,
+      2048,
+      4096,
+      8192,
+      16384,
+      32766
+    ],
+    "depths": [
+      0,
+      1,
+      2,
+      4,
+      6
+    ],
+    "operations": [
+      "direct",
+      "add",
+      "sub"
+    ],
+    "parser_timeout_seconds": 45,
+    "preprocess_timeout_seconds": 3,
+    "max_workers": 2
+  },
+  "statistics": {
+    "threshold": 0.5,
+    "primary_endpoint": "opposite_label_pair_both_correct",
+    "bootstrap_replicates": 2000,
+    "bootstrap_seed": 20261019,
+    "seed_sd_ddof": 1,
+    "external_threshold_selection": false
+  },
+  "real_pairs": {
+    "source": "existing_primevul_v0_1_paired_test",
+    "maximum_feasibility_pairs": 20,
+    "new_downloads": false,
+    "require_independent_label_review_for_confirmatory_use": true
+  },
+  "optional_disabled": [
+    "gray_code",
+    "deepwukong_retraining"
+  ],
+  "interpretation": {
+    "new_split": "retrospective_strict_group_resplit_not_pristine_unseen_test",
+    "diagnostics": "controlled_generated_C_not_real_vulnerabilities",
+    "external_training": false,
+    "selection": "source_DEV_loss_only"
+  }
+}

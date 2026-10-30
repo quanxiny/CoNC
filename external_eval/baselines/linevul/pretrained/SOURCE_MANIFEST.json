@@ -1,0 +1,38 @@
+{
+  "repository": "microsoft/codebert-base",
+  "commit": "3b0952feddeffad0063f274080e3c23d75e7eb39",
+  "retrieved_at": "2026-10-18T14:44:46.453197+00:00",
+  "purpose": "Official pretraining only; no task classifier or real_reproduction asset reused",
+  "files": [
+    {
+      "path": "config.json",
+      "url": "https://huggingface.co/microsoft/codebert-base/resolve/3b0952feddeffad0063f274080e3c23d75e7eb39/config.json",
+      "bytes": 498,
+      "sha256": "742474d6148a061fa975dadc09ce93725fa9673c55421ed316ef75532cc6b7aa"
+    },
+    {
+      "path": "merges.txt",
+      "url": "https://huggingface.co/microsoft/codebert-base/resolve/3b0952feddeffad0063f274080e3c23d75e7eb39/merges.txt",
+      "bytes": 456318,
+      "sha256": "1ce1664773c50f3e0cc8842619a93edc4624525b728b188a9e0be33b7726adc5"
+    },
+    {
+      "path": "special_tokens_map.json",
+      "url": "https://huggingface.co/microsoft/codebert-base/resolve/3b0952feddeffad0063f274080e3c23d75e7eb39/special_tokens_map.json",
+      "bytes": 150,
+      "sha256": "7638f5bbbe86ef6d604ef28ad3647dc690d6d117c81c0d63e885416be8da1150"
+    },
+    {
+      "path": "tokenizer_config.json",
+      "url": "https://huggingface.co/microsoft/codebert-base/resolve/3b0952feddeffad0063f274080e3c23d75e7eb39/tokenizer_config.json",
+      "bytes": 25,
+      "sha256": "994f46754c5bf4014f1aa92d34b1374319c3a6b3f702105cd5b742beaecd18ce"
+    },
+    {
+      "path": "vocab.json",
+      "url": "https://huggingface.co/microsoft/codebert-base/resolve/3b0952feddeffad0063f274080e3c23d75e7eb39/vocab.json",
+      "bytes": 898822,
+      "sha256": "06b4d46c8e752d410213d9548eb27a54db70fda0319b6271fb8d59dead5e1cab"
+    }
+  ]
+}

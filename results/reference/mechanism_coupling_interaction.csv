@@ -1,0 +1,7 @@
+dataset,status,n,groups,endpoint,contrast,effect,ci_low,ci_high,replicates,interpretation
+source,PASS,11769,4312,f1,Full - no_HQ - no_QH + no_both,0.0029042036929313917,0.0013693156193595106,0.004403582375787538,2000,interaction on this metric scale; not proof of causal synergy
+mit,PASS,1059,265,f1,Full - no_HQ - no_QH + no_both,-0.0414070102190609,-0.05815762449701565,-0.025688716606355737,2000,interaction on this metric scale; not proof of causal synergy
+mit,PASS,1059,265,pair_accuracy,Full - no_HQ - no_QH + no_both,0.04534005037783376,0.013832913518052057,0.07711835454947827,2000,interaction on this metric scale; not proof of causal synergy
+formai,PASS,167,167,f1,Full - no_HQ - no_QH + no_both,0.030529600504159527,-0.014215118468469515,0.07014487769020483,2000,interaction on this metric scale; not proof of causal synergy
+diagnostic,PASS,912,7,f1,Full - no_HQ - no_QH + no_both,-0.0035977949073124718,-0.062202500432147145,0.044348788720626676,2000,interaction on this metric scale; not proof of causal synergy
+diagnostic,PASS,912,7,pair_accuracy,Full - no_HQ - no_QH + no_both,-0.012454212454212452,-0.045326162628794214,0.00590580300983087,2000,interaction on this metric scale; not proof of causal synergy

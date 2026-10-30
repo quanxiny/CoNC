@@ -1,0 +1,11 @@
+{
+  "source_readme": "https://github.com/awsm-research/LineVul",
+  "public_download_id": "1oodyQqRb9jEcvLMVVKILmu8qHyNwd-zH",
+  "file": "official_12heads_linevul_model.bin",
+  "bytes": 997349337,
+  "sha256": "1b18ff8e75af787520a00139bd86e70d02eb448c716290ee7b2cb20bda61a67b",
+  "downloaded_at": "2026-10-18T14:52:22.066991+00:00",
+  "training_domain": "Official published Big-Vul task-trained checkpoint; not OverflowGen-trained",
+  "role": "Separate cross-domain transfer comparator; cannot enter equal-source-training panel",
+  "untrusted_pickle_policy": "Only torch.load(weights_only=True); never execute pickle objects"
+}

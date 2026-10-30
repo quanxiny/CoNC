@@ -1,0 +1,105 @@
+{
+  "source": {
+    "registered_queries": 11577,
+    "common_queries": 11342,
+    "common_positive": 4961,
+    "common_negative": 6381,
+    "counts_by_seed": [
+      {
+        "seed": 11,
+        "cohort": 11342,
+        "net_TP": 479,
+        "net_FP": 40,
+        "conc_only_positive": 605,
+        "eva_only_positive": 126,
+        "conc_only_false_alert": 163,
+        "eva_only_false_alert": 123
+      },
+      {
+        "seed": 29,
+        "cohort": 11342,
+        "net_TP": 448,
+        "net_FP": 14,
+        "conc_only_positive": 607,
+        "eva_only_positive": 159,
+        "conc_only_false_alert": 136,
+        "eva_only_false_alert": 122
+      },
+      {
+        "seed": 47,
+        "cohort": 11342,
+        "net_TP": 501,
+        "net_FP": 54,
+        "conc_only_positive": 614,
+        "eva_only_positive": 113,
+        "conc_only_false_alert": 172,
+        "eva_only_false_alert": 118
+      }
+    ],
+    "positive_union_with_initialization_at_or_before_query": 621,
+    "positive_union_with_non_terminating_function_log": 497,
+    "stable_conc_only_positive": 594,
+    "union_conc_only_positive": 622
+  },
+  "mit": {
+    "cohort": "MIT extended 1059",
+    "by_seed": [
+      {
+        "seed": 11,
+        "n": 1059,
+        "tn": 154,
+        "fp": 111,
+        "fn": 373,
+        "tp": 421,
+        "f1": 0.6349924585218703,
+        "both_correct_pairs": 128,
+        "pairs": 794,
+        "all_four_correct_bases": 1,
+        "full_four_bases": 264,
+        "conc_wrong_eva_correct": 484
+      },
+      {
+        "seed": 29,
+        "n": 1059,
+        "tn": 145,
+        "fp": 120,
+        "fn": 241,
+        "tp": 553,
+        "f1": 0.7539195637355146,
+        "both_correct_pairs": 198,
+        "pairs": 794,
+        "all_four_correct_bases": 37,
+        "full_four_bases": 264,
+        "conc_wrong_eva_correct": 361
+      },
+      {
+        "seed": 47,
+        "n": 1059,
+        "tn": 156,
+        "fp": 109,
+        "fn": 277,
+        "tp": 517,
+        "f1": 0.7281690140845071,
+        "both_correct_pairs": 195,
+        "pairs": 794,
+        "all_four_correct_bases": 37,
+        "full_four_bases": 264,
+        "conc_wrong_eva_correct": 386
+      }
+    ],
+    "eva": {
+      "tn": 265,
+      "fp": 0,
+      "fn": 0,
+      "tp": 794
+    },
+    "all_seed_wrong_eva_correct": 221,
+    "all_seed_wrong_by_label": {
+      "1": 165,
+      "0": 56
+    },
+    "all_seed_wrong_without_cross_label_complete_input_collision": 218,
+    "complete_input_cross_label_collision_groups": 1,
+    "collision_scenes": 4
+  }
+}

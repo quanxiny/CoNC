@@ -1,0 +1,7 @@
+# Preserve bytes used by the released checksum manifests.
+* -text
+*.gz binary
+*.npy binary
+*.npz binary
+*.pt binary
+*.zip binary
