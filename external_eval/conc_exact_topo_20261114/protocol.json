@@ -1,0 +1,19 @@
+{
+  "name": "CoNC-ExactTopo-v1",
+  "date": "2026-11-14",
+  "dataset": "overflowgen_24455320",
+  "split": "original historical family allocation",
+  "counts": {"train": 94179, "val": 11940, "test": 11577},
+  "seeds": [11, 29, 47],
+  "arms": ["literal_only", "exact_topo"],
+  "baseline": "original v70 liquid_transfer_frozen, all backbone and refiner parameters frozen",
+  "arithmetic": "signed32 COPY/ADD/SUB on the supplied ordered DAG; missing or unsupported inputs and signed overflow remain UNKNOWN; no inference-time labels or references",
+  "architecture": "exact node and ordered-parent bit states plus exact three-way operand comparison; node MLP; global/query mean and query max; pooled CoNC context; zero-initialized residual logit fusion",
+  "control": "identical architecture and parameter count, but only supplied literals have numeric values; computed nodes remain unknown",
+  "cache": "reuse hash-checked original CoNC FP32 logits and explicitly approximate FP16 pooled context; do not use old numeric, rule, access-label or oracle features",
+  "training": {"batch_size": 512, "max_epochs": 30, "patience": 5, "lr": 0.001, "weight_decay": 0.01, "clip_norm": 5.0, "min_delta": 0.00001, "criterion": "classification cross entropy", "selection": "minimum source DEV cross entropy", "epoch_zero_eligible": true, "full_train_pass_each_epoch": true},
+  "runtime": {"cpu_threads": 4, "gpu_memory_fraction": 0.35, "precision": "FP32 training, TF32 disabled; exact values int64 with explicit signed32 limits", "devices": [0, 1]},
+  "evaluation": {"threshold": 0.5, "unit": "slice", "primary": "full 11577 TEST F1", "secondary": "same 11342 common IDs as paper; precision recall specificity MCC AUROC AP", "bootstrap_replicates": 2000, "bootstrap_seed": 20261114, "bootstrap_unit": "paired family groups with seeds averaged inside each replicate"},
+  "test_gate": "all six DEV selections complete and checkpoint hashes frozen before any new TEST scoring",
+  "interpretation": "retrospective source-domain experiment on a known template-generated dataset; arithmetic exactness is conditional on the supplied graph and is separate from C semantics and detection accuracy"
+}

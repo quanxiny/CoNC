@@ -1,0 +1,16 @@
+{
+  "name": "CoNC-ExactTopo-v1.1-strict-RQ1-4",
+  "date": "2026-11-14",
+  "split": "Reuse audited 20261019 connected-component split; source case, family, normalized/exact text and full consumed-input identities isolated",
+  "counts": {"train": 94157, "val": 11770, "test": 11769},
+  "seeds": [11, 29, 47],
+  "backbone": "Reuse verified full CoNC stage1/stage2 checkpoints trained from scratch only on this strict TRAIN with strict DEV selection; never load historical-family heads or backbones",
+  "arms": ["literal_only", "four_round", "exact_topo"],
+  "architecture": "Unchanged v1.1 ExactFusion, 105089 trainable parameters; frozen strict CoNC; exact signed32 COPY/ADD/SUB",
+  "training": {"batch_size": 512, "max_epochs": 30, "patience": 5, "lr": 0.0003, "weight_decay": 0.01, "clip_norm": 5.0, "min_delta": 0.00001, "delta_l2_weight": 0.05, "selection": "strict DEV classification CE", "epoch_zero_eligible": true},
+  "cache": "Fresh strict-checkpoint FP32 logits and approximate FP16 pooled context, exact integer channel stored separately",
+  "runtime": {"gpu_memory_fraction": 0.35, "cpu_threads": 4, "cache_batch_size": 128},
+  "evaluation": {"threshold": 0.5, "bootstrap_replicates": 2000, "bootstrap_seed": 20261114, "unit": "paired connected component, average seeds within each draw", "primary": "full strict TEST F1 plus precision recall specificity MCC AUROC AP and coverage", "rq3": "reuse fixed target-syntax definitions, report absent or single-class strata", "rq4": "same-ID static complementarity; disclose static coverage and report same-static-evidence control"},
+  "test_gate": "Freeze all nine DEV-selected adapter checkpoints before new TEST scoring; no recipe search on this split",
+  "limitations": ["Retrospective data already used in previous experiments, not a pristine holdout", "Lexical and consumed-input disjointness is not semantic-clone certification", "Connected components induce class-prior shift and a large indivisible TRAIN component", "Exact arithmetic is conditional on supplied graph, not full C semantics"]
+}

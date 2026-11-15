@@ -1,110 +1,61 @@
 # Preserving Numerical Structure in Learned Buffer-Overflow Vulnerability Detection
 
-Source code, frozen inputs, checkpoints and reference predictions for the paper. **CoNC** (Coupled Numerical and Contextual detector; historically `Full`) is the numerical/context model with liquid graph refinement and partial freezing (`liquid_transfer_frozen`, v70). The v76 model is the **no-refiner ablation**. CoNC+Trace+Eva (H) is the separate decision policy combining CoNC, conditional address evidence and Eva alerts.
+Reproducibility materials for the Coupled Numerical and Contextual detector (**CoNC**), its baselines, ablations and static-evidence policy. The implementation corresponds to the manuscript dated 14 November 2026.
 
-[中文说明](README_zh-CN.md) · [Core models and training](transformer_gru_v76_v2/README.md) · [External experiments and baselines](external_eval/README.md) · [Data](DATASETS.md) · [Licenses](NOTICE.md) · [Validation](VALIDATION.json)
+CoNC combines a numerical/context backbone and graph refiner with an exact arithmetic channel and learned residual fusion. The channel evaluates supported COPY, ADD and SUB operations in dependency order on supplied expression graphs, with known operands and signed 32-bit results. Unknown inputs, unsupported operations and out-of-range results stay unknown. It does not establish complete C-language semantics.
 
-## Start with the saved results
+[中文说明](README_zh-CN.md) · [Data and attribution](DATASETS.md) · [Licenses](NOTICE.md) · [Historical backbone guide](transformer_gru_v76_v2/README.md) · [Historical experimental code](external_eval/README.md)
 
-The source archive includes per-sample predictions and cohort membership. Python 3.11 is sufficient for these commands; no machine-learning packages or GPU are required.
+## Reproduce saved results
+
+Python 3.10 or later is sufficient; this command uses only the standard library:
 
 ```bash
 python scripts/verify_bundle.py --part source --syntax
-python scripts/replay_results.py --output outputs/replay
-python scripts/check_paper_tables.py
+python scripts/current_experiment.py replay
 ```
 
-The table check compares 76 published rounded mean F1 values in the main tables and strict-study supplement. Strict-study values are checked against saved summaries. The replay recomputes confusion counts, precision, recall, F1, specificity and paired correctness, checks them against the retained reference tables, and writes per-seed and mean/sample-SD CSV files. It covers the 11,577 source test slices, the 11,342-slice common subset, the registered 1,164 MIT scenes, its 796- and 1,059-scene cohorts, and 448 controlled boundary programs. Missing predictions remain `UNKNOWN`. Replaying saved predictions is distinct from retraining or rerunning inference.
+The command recomputes F1 from individual saved predictions. It reports strict-test CoNC 97.39%, family common-test CoNC 97.06%, strict CoNC+Trace+Eva (H) 98.01%, and strict Trace+Eva+0 93.61%; the three-seed standard deviations are also printed. `data/current/` includes the current method, baseline and intervention predictions, plus Trace and Eva decisions. `results/current/` contains per-seed and comparison summaries. Saved-prediction replay is not retraining or inference.
 
-## Install and load the data
+## Install and run the model
 
-Use Python 3.11 and a dedicated environment:
-
-```bash
-python -m venv .venv
-source .venv/bin/activate
-python -m pip install -r requirements-core.txt
-```
-
-Extract the release attachments beside the source archive; every archive has the same top-level `overflow-reproducibility/` directory. The data attachment contains source tensors, original dataset archives, fixed splits, first-stage initialization checkpoints, MIT inputs and boundary inputs. The model attachment contains the retained CoNC, VDTransformer, DeepWukong and DeepDFA checkpoints. The optional hybrid attachment contains the nine source-only continuation checkpoints.
+Create a Python 3.11 environment and install `requirements-core.txt`. Download the release attachments to the parent of the source directory and extract them there:
 
 ```bash
 unzip overflow-reproducibility-data.zip
+unzip overflow-reproducibility-current-assets.zip
+# Family-split backbone checkpoints and historical comparisons:
 unzip overflow-reproducibility-weights.zip
-# Optional: unzip overflow-reproducibility-hybrid-weights.zip
 cd overflow-reproducibility
 python scripts/verify_bundle.py --part data
-python scripts/verify_bundle.py --part weights
-python transformer_gru_v76_v2/scripts/smoke_core.py --with-assets
+python scripts/verify_bundle.py --part current_assets
+python scripts/current_experiment.py evaluate --seed 11 --arm exact_topo --device cpu
+python scripts/current_experiment.py live --seed 11 --limit 32 --device cpu
 ```
 
-Run extraction from the parent directory, not from inside the repository. If using the already expanded delivery directory, the attachments are already present. Raw C sources and the original slice/graph files can be materialized with `python scripts/prepare_data.py --mode full`; this is unnecessary for cached tensor inference.
+`evaluate` runs the selected fusion branch on the frozen strict graph tensors, backbone logits and FP16 cached context for all 11,769 test examples, and checks predicted classes against the reference. Run seeds 11, 29, 47 and arms `exact_topo`, `literal_only`, `four_round` for the full matched comparison. `live` loads the strict stage-two backbone and fusion branch, computes context directly from the encoded dataset, and checks a sample of complete model predictions. Set `--limit 11769` for the full strict test. The current-assets archive contains strict split inputs, cached contexts, strict backbones, strict fusion and matched-control heads, family fusion heads, and strict DeepWukong checkpoints.
 
-## Train and evaluate
+To retrain one fusion branch from the supplied frozen strict backbone context:
 
 ```bash
-# Small CPU inference check using a supplied CoNC checkpoint.
-python transformer_gru_v76_v2/scripts/evaluate_core.py \
-  --model conc --seed 11 --split test --device cpu --limit-rows 2 \
-  --output-dir outputs/full_smoke
-
-# Inspect the CoNC training recipe; add --execute to train.
-python transformer_gru_v76_v2/scripts/train_full.py \
-  --arm conc --seed 11 --output-dir outputs/full_s11
+python scripts/train_current_fusion.py --seed 11 --arm exact_topo --device cuda:0 --output-dir outputs/strict_exact_s11
 ```
 
-Use seeds 11, 29 and 47. The [core guide](transformer_gru_v76_v2/README.md) specifies source-stage training, CoNC training, refiner controls, representation controls, full-split inference and resume behavior. The [experiment guide](external_eval/README.md) specifies independent baselines, the strict mechanism study, frozen external inference, address evidence and H branch ablations. Optional graph baselines have additional dependencies; DeepDFA uses its separate requirements file and environment.
+The training recipe uses the strict TRAIN and DEV tensors, DEV cross-entropy selection including epoch zero, AdamW, and the fixed residual penalty. GPU retraining may exhibit platform-dependent floating-point differences. Backbones were trained separately; the code does not claim end-to-end retraining from cached context. The retained research-stage campaign code records the original split, baseline and native-tool protocols and may require intermediate artifacts beyond these compact attachments. See the historical guides for backbone training and baseline dependencies; those guides describe the earlier backbone-only CoNC and older experimental tables.
 
-| Paper experiment | Implementation | Released evidence |
+## Experiments and naming
+
+| Manuscript name | Released identifier | Scope |
 |---|---|---|
-| RQ1: CoNC and independent baselines | Core `train_full.py`, `train_source.py`; `external_eval/baselines`; static-analyzer adapter | Source tensors, split IDs, native graph inputs, checkpoints, reference predictions |
-| RQ2: internal controls | Core model variants; `external_eval/tifs/models.py` and `train.py` | Historical split, strict mechanism split, initialization states, per-seed metrics and numerical-state summaries |
-| RQ3: frozen MIT transfer | `external_eval/portable_inputs.py` and external evaluator | Original MIT archive, 1,164 registered scenes, 1,578 slices for 1,059 processable scenes |
-| RQ4: H and continuation controls | `external_eval/boundary_optimization/script` | Decision evidence, boundary programs/tensors, branch controls, optional continuation checkpoints |
+| CoNC | `exact_topo` | Frozen numerical/context backbone with exact channel and residual fusion |
+| CoNC backbone | `original` | Backbone without the new fusion branch |
+| Literal-only fusion | `literal_only` | Matched branch with literal states only |
+| Four-round fusion | `four_round` | Matched finite-round propagation control |
+| H: CoNC+Trace+Eva | `H` | Trace decision, then Eva positive alert, then CoNC fallback |
+| Static evidence control | `Trace+Eva+0` | Same Trace/Eva evidence with zero fallback |
 
-## Layout
+The strict component split has 94,157 TRAIN, 11,770 DEV and 11,769 TEST slices. The historical family split has 94,179 TRAIN, 11,940 DEV and 11,577 TEST slices; the family common-test result uses 11,342 slices. Strict and family checkpoints are different and must not be interchanged. Both are retrospective studies on an already-used corpus; component isolation does not establish semantic novelty. Strict TEST lacks several library-call forms. The 7,178/7,178 exact-channel result refers only to reference-computable COPY/ADD/SUB probe nodes, not all graph nodes or programs.
 
-- `transformer_gru_v76_v2/`: shared model, input builder, training and inference source. The historical directory name preserves compatible paths.
-- `external_eval/`: necessary external-input, baseline, mechanism and H implementations.
-- `data/`: normalized predictions/cohorts plus the optional frozen input attachments.
-- `results/reference/`: published result values and supporting numerical/paired summaries.
-- `scripts/`: checksum verification, dataset extraction and saved-result replay.
-- `manifests/`: file sizes and SHA-256 checksums for each component.
+`results/current/strict/hybrid_reanalysis.json` is a subsequent post-hoc analysis; it is separate from the manuscript's main table. See [VALIDATION.json](VALIDATION.json) for the scope of the current checks.
 
-Large dataset/checkpoint attachments are excluded from ordinary Git history by `.gitignore`. Upload those attachments as GitHub Release assets or to a data repository. The source archive contains no checkpoint binaries, raw dataset archives or training outputs.
-
-## Reproduction scope
-
-This release preserves the historical family split, model selection and three seeds. The strict mechanism study uses a different component-disjoint split and must not replace the historical main-table denominator. MIT and the controlled boundary bank support retrospective diagnostics. CoNC's numerical states are learned representations; literal restoration does not imply exact learned arithmetic. H's supported address decisions do not certify unrestricted C safety.
-
-CPU architecture checks, real-checkpoint inference samples, input-value parity, checksums and saved-result metrics were verified during packaging. CoNC GPU retraining and complete native-tool reruns were not repeated. The native static tools (Cppcheck 2.22.0, Clang 14 and Frama-C Eva 33.0) and Joern are external dependencies; their adapters and settings are supplied. Optional LineVul transfer uses upstream pretrained resources, which are identified but not redistributed. Historical orchestration receipts are not required by the portable entry points; some retained research-stage modules need the intermediate artifacts described in the experiment guide.
-
-See `NOTICE.md` for the separate permissions and attribution of the original code and third-party data.
-
-## Names used in the paper and in saved artifacts
-
-The current paper calls the historical `Full` detector **CoNC**. The independently trained strict-study configuration also has the paper name CoNC, but uses the strict component split and distinct checkpoints; it must not be substituted for the historical family-split checkpoint. `conc` is accepted by the model and strict-study command-line entries; the previous `full` and `liquid_transfer_frozen` identifiers remain supported.
-
-| Paper configuration | Historical identifier in checkpoints or prediction CSVs |
-|---|---|
-| CoNC | `original_N` in prediction records; `liquid_transfer_frozen` for historical training |
-| H: original checkpoint | `original_H` |
-| H: ordinary continuation | `ordinary_H`; training arm `ordinary_continue` |
-| H: fallback-weighted continuation | `residual_H`; training arm `residual_weighted`, also accepted as `fallback_weighted` |
-| H: class-matched continuation | `classmatch_H`; training arm `class_prior_matched` |
-| Residual refiner | `residual_refiner`, a separate architecture control |
-| No refiner (stage two) | `no_refiner` / `no_refiner_frozen` |
-| Frozen-encoder dropout off | `fixed_encoder_no_dropout` |
-| Stage-one checkpoint | `numeric_all_visible` / `source_backbone` |
-| Lexical-context, numerical-structure, decimal-GRU joint controls | `semantic`, `numeric`, `legacy_joint` |
-
-The fallback-weighted loss refers to neural fallback in H; it is not the residual-refiner architecture. [experiment_names.json](experiment_names.json) maps the paper's labels to all retained prediction and strict-study identifiers. Saved prediction and reference CSVs retain their original machine identifiers; the replay output adds `paper_name` alongside `method`.
-
-Figure 6 and the accompanying disagreement counts can be rebuilt from the supplied compact, retrospective evidence:
-
-```bash
-python scripts/analyze_disagreements.py
-python scripts/plot_case_studies.py
-```
-
-The plotting command needs `matplotlib` (install with `python -m pip install matplotlib`); it uses the installed serif font, so typography may differ from the manuscript. These cases were selected retrospectively and do not estimate failure prevalence. The 621 initialization-alarm and 497 no-final-state counts in the supplement come from archived native reports, not from the released predictions; `data/case_studies/disagreement_summary.json` records those saved counts without claiming to recompute them.
+Original datasets, third-party implementations and licenses remain subject to their respective terms; see [DATASETS.md](DATASETS.md) and [NOTICE.md](NOTICE.md).

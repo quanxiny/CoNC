@@ -15,8 +15,6 @@ from pathlib import Path, PurePosixPath
 
 ARCHIVES = {
     'datasets/overflowgen_24455320/data.zip': '70d4785d8c3937055275482e97527a095b0eb28fb1b9deb9ec0b829d582d54fe',
-    'datasets/2014-06-08-a-taxonomy-of-buffer-overflows.zip': '79ab9203a8e66271ad623a9feef19c32a6a10e2cebbdf54fd3c4d7c01cad6e80',
-    'external_eval/vendor/mit/2073-v2.0.0.zip': 'a969f0c87bc15270d151bec1050b47375ce3e24d4436c70b95e6820295f0ec88',
 }
 PACKAGE = 'transformer_gru_v76_v2'
 
@@ -38,22 +36,13 @@ def check(root: Path) -> dict:
         if sha(path) != expected:
             raise ValueError(f'Archive checksum mismatch: {relative}')
         checked.append(relative)
-    for dataset in ['mit', 'boundary']:
-        directory = root / 'data' / dataset
-        manifest = json.loads((directory / 'manifest.json').read_text())
-        for relative, expected in manifest['files'].items():
-            if sha(directory / relative) != expected:
-                raise ValueError(f'Frozen input checksum mismatch: data/{dataset}/{relative}')
-            checked.append(f'data/{dataset}/{relative}')
     directory = root / PACKAGE / 'src/research_project/ubuntu_local_research_store/hybrid_numeric_semantic_v59/baseline_dev60'
     manifest = json.loads((directory / 'MANIFEST60.json').read_text())
     for relative, expected in manifest['array_sha256'].items():
         if sha(directory / relative) != expected:
             raise ValueError(f'Selected TRAIN/DEV tensor checksum mismatch: {relative}')
         checked.append(relative)
-    return {'status': 'PASS', 'checked_files': len(checked), 'archives': len(ARCHIVES),
-            'MIT': {'target_scenes': 1164, 'complete_scenes': 1059},
-            'boundary': {'programs': 448, 'pairs': 224}}
+    return {'status': 'PASS', 'checked_files': len(checked), 'archives': len(ARCHIVES)}
 
 
 def crc(path: Path) -> int:

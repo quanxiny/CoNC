@@ -1,52 +1,19 @@
 {
-  "release_version": "0.1.0",
-  "date": "2026-10-25",
-  "core_environment": {
-    "python": "3.11",
-    "torch": "2.7.1+cu126",
-    "numpy": "2.3.4",
-    "scikit-learn": "1.7.2",
-    "scipy": "1.16.3"
-  },
+  "version": "0.2.0",
+  "manuscript_date": "2026-11-14",
   "checks": {
-    "source_only_relocation_eight_architectures": "PASS",
-    "core_asset_checksums_33_files": "PASS",
-    "selected_train_dev_counts_94179_11940": "PASS",
-    "full_and_vd_real_checkpoint_source_samples": "PASS",
-    "full_and_vd_real_checkpoint_mit_samples": "PASS",
-    "full_real_checkpoint_boundary_samples": "PASS",
-    "mit_unsupported_and_out_of_range_remain_unknown": "PASS",
-    "source_to_full_transfer_configuration_and_zero_refiner_parity": "PASS",
-    "mechanism_eight_variants_forward_backward_and_resume": "PASS",
-    "saved_prediction_reference_value_checks": 1961,
-    "saved_prediction_rows": 713441,
-    "mit_original_tensor_value_parity": "PASS: 1578 slices, 1164 registered scenes, 1059 complete",
-    "boundary_original_tensor_value_parity": "PASS: 896 slices, 448 programs, 224 pairs",
-    "original_archive_and_selected_input_verification": "PASS: 27 files, including 3 archives",
-    "deepdfa_real_graph_forward_backward": "PASS: 8 source graphs",
-    "hybrid_checkpoint_metadata_storage_parity": "PASS: 9 checkpoints; only one provenance path per checkpoint normalized",
-    "deepwukong_native_graph_conversion_parity_and_training_smoke": "PASS: 128 TRAIN graphs, 8 training batches; transient states discarded",
-    "hybrid_normalized_checkpoint_strict_load_and_inference": "PASS: residual_weighted seed 11, 2 MIT scenes",
-    "full_vd_reference_prediction_class_parity": "PASS; bounded CPU probability differences at most 2.36e-6",
-    "strict_source_preparation_counts": "PASS: TRAIN 94157, DEV 11770, TEST 11769",
-    "classmatched_continuation_nonzero_loss_backward": "PASS: two TRAIN examples, loss 1.0120617",
-    "hybrid_decision_replay_matches_reference_rows": 39567,
-    "conc_and_fallback_weighted_aliases": "PASS: two-row source/MIT CoNC inference, training plan and two-example fallback-weighted smoke",
-    "latest_paper_main_and_supplement_mean_f1_values": 76,
-    "case_study_disagreement_counts": "PASS: source and MIT saved predictions",
-    "case_study_figure": "PASS: generated with installed matplotlib serif font"
+    "strict_fusion_saved_prediction_class_parity": "PASS: all 11769 TEST slices, seeds 11/29/47, exact_topo/literal_only/four_round; 0 class differences",
+    "strict_fusion_max_probability_difference": 1.7881393432617188e-07,
+    "strict_full_model_sample_parity": "PASS: 32 TEST slices per seed, seeds 11/29/47; 0 class differences",
+    "strict_full_model_max_probability_difference": 7.748603820800781e-07,
+    "strict_fusion_training_smoke": "PASS: epoch-zero DEV evaluation; complete retraining not repeated during packaging",
+    "current_assets_checksums": "PASS: 39 files after archive extraction",
+    "current_saved_predictions": "PASS: strict and family CoNC, strict H and fixed-static replay"
   },
-  "not_repeated": [
-    "CoNC GPU training campaigns",
-    "Complete model inference across every experiment and seed",
-    "Complete native parser and static-analyzer runs"
-  ],
-  "interpretation": "Packaging and bounded execution checks establish artifact consistency and entry-point usability. They do not constitute a new full numerical reproduction of the paper.",
-  "paper_revision": {
-    "date": "2026-10-29",
-    "title": "Preserving Numerical Structure in Learned Buffer-Overflow Vulnerability Detection",
-    "manuscript_sha256": "1963e7bac1282d9187a3e83758d67dbfcb7d26953a96425a02cc697728beb07f",
-    "supplement_sha256": "d8518b0a2050716a7c86cb6a85678aa3ceb61ac94217e81034ca5539f8a5bc32",
-    "scope": "Experiment labels and released artifacts aligned to the supplied manuscript and supplement."
-  }
+  "limits": [
+    "Strict and family evaluations are retrospective and use different checkpoints.",
+       "Exact arithmetic is conditional on the supplied graph, known operands, supported operations and signed32 range.",
+    "Full GPU retraining, all baseline inference and native-tool reruns were not repeated during packaging.",
+    "Research-stage orchestration can require intermediate artifacts beyond the compact release."
+  ]
 }

@@ -5,16 +5,16 @@ title: "Preserving Numerical Structure in Learned Buffer-Overflow Vulnerability 
 authors:
   - family-names: Yang
     given-names: Quanxin
-  - family-names: Xu
-    given-names: Yihang
+  - family-names: Yao
+    given-names: Ye
   - family-names: Yu
     given-names: Dongjin
   - family-names: Ping
     given-names: Yuan
+  - family-names: Xu
+    given-names: Yihang
   - family-names: Chen
     given-names: Xin
-  - family-names: Yao
-    given-names: Ye
-version: "0.1.0"
-date-released: "2026-10-29"
+version: "0.2.0"
+date-released: "2026-11-15"
 license: MIT

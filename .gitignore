@@ -30,3 +30,11 @@ data/hybrid/
 weights/
 mpl_cache/
 .cache/
+
+# Current experiment release attachment
+data/current_assets/
+
+# OverflowGen artifacts supplied by the data attachment
+transformer_gru_v76_v2/external/overflowgen/joint_graph_study_v1/*.json
+transformer_gru_v76_v2/external/overflowgen/joint_graph_study_v1/*.jsonl.gz
+transformer_gru_v76_v2/external/overflowgen/safe_numeric_artifacts/

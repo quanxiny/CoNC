@@ -1,63 +1,16 @@
 {
-  "paper_title": "Preserving Numerical Structure in Learned Buffer-Overflow Vulnerability Detection",
-  "detector": "CoNC (Coupled Numerical and Contextual detector)",
-  "decision_policy": "CoNC+Trace+Eva (H)",
-  "prediction_method_names": {
-    "original_N": "CoNC",
-    "original_H": "H: original checkpoint",
-    "ordinary_N": "CoNC: ordinary continuation",
-    "ordinary_H": "H: ordinary continuation",
-    "residual_N": "CoNC: fallback-weighted continuation",
-    "residual_H": "H: fallback-weighted continuation",
-    "classmatch_N": "CoNC: class-matched continuation",
-    "classmatch_H": "H: class-matched continuation",
-    "numeric_all_visible": "Stage-one checkpoint",
-    "residual_refiner": "Residual refiner",
-    "no_refiner": "No refiner (stage two)",
-    "fixed_encoder_no_dropout": "Frozen-encoder dropout off",
-    "semantic": "Lexical-context control",
-    "numeric": "Numerical-structure control",
-    "legacy_joint": "Decimal-GRU joint control",
-    "vd": "VDTransformer",
-    "dwk": "DeepWukong-GCN (matched slice)",
-    "dfa": "DeepDFA (native CFG)",
-    "cppcheck": "Cppcheck",
-    "clang_sa": "Clang Static Analyzer",
-    "eva": "Frama-C Eva",
-    "D_trace": "Conditional trace evidence",
-    "Eva": "Frama-C Eva",
-    "weighted_H": "H: fallback-weighted continuation",
-    "weighted_N": "CoNC: fallback-weighted continuation",
-    "old_Eva": "Frama-C Eva",
-    "all_positive": "All-positive reference",
-    "deepdfa_native_cfg": "DeepDFA (native CFG)",
-    "deepwukong_matched_slice": "DeepWukong-GCN (matched slice)",
-    "frama_c_eva": "Frama-C Eva",
-    "deepdfa": "DeepDFA (native CFG)"
+  "manuscript": "2026-11-14",
+  "models": {
+    "CoNC": "exact_topo",
+    "CoNC backbone": "original",
+    "Literal-only fusion": "literal_only",
+    "Four-round fusion": "four_round",
+    "VDTransformer": "vd",
+    "DeepWukong": "deepwukong",
+    "DeepDFA": "deepdfa",
+    "CoNC+Trace+Eva": "H",
+    "Trace+Eva+0": "static_control"
   },
-  "strict_study_variant_names": {
-    "full": "CoNC",
-    "local_q": "Local numerical input (Local-Q)",
-    "no_h_to_q": "No contextual input or routing (No H→Q)",
-    "no_dynamic_q_to_h": "No dynamic feedback (No dynamic Q→H)",
-    "symmetric_q": "Both operand orders averaged (Symmetric-Q)",
-    "no_clamp": "No literal restoration (No clamping)",
-    "mlp_q": "MLP numerical proposal (MLP-Q)",
-    "no_both_dynamic": "Both dynamic paths off (Neither dynamic path)"
-  },
-  "compatibility": "Historical identifiers, checkpoint names and numerical results are preserved. CoNC in the strict study uses independently trained strict-split checkpoints. The historical identifier residual_weighted refers to fallback-weighted continuation; residual_refiner is a different architectural control.",
-  "historical_internal_ids": {
-    "v70": "CoNC",
-    "v71": "Residual refiner",
-    "v76": "No refiner (stage two)",
-    "v75": "Frozen-encoder dropout off",
-    "v52": "Stage-one checkpoint"
-  },
-  "decision_branch_ids": {
-    "Full_H": "H: fallback-weighted checkpoint",
-    "without_D": "No trace",
-    "without_Eva": "No Eva",
-    "N_only": "Neural only",
-    "without_N": "No neural fallback"
-  }
+  "split_checkpoints": "Strict component and historical family checkpoints are separate.",
+  "seeds": [11, 29, 47]
 }

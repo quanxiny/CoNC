@@ -1,3 +1,5 @@
+> Historical backbone-only guide (October 2026). For the current exact-channel CoNC, splits, results and entry points, see the repository root README.
+
 # Source model and internal controls
 
 The paper's **CoNC** model (historical ID `Full`) is `AdaptiveGraph70('liquid_transfer_frozen')`:

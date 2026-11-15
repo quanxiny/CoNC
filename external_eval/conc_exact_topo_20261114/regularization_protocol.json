@@ -1,0 +1,9 @@
+{
+  "name": "CoNC-ExactTopo-v1.1",
+  "reason": "All six initial runs selected epoch zero by DEV cross entropy. Their trained heads increased confidence and DEV loss. This follow-up is designed before any new TEST scoring.",
+  "scope": "same architecture, seeds, full TRAIN, DEV, threshold and two matched arms",
+  "training": {"batch_size": 512, "max_epochs": 30, "patience": 5, "lr": 0.0003, "weight_decay": 0.01, "clip_norm": 5.0, "min_delta": 0.00001, "delta_l2_weight": 0.05, "selection": "minimum DEV classification cross entropy, excluding penalty", "epoch_zero_eligible": true},
+  "global_recipe_selection": "Compare mean selected DEV CE for exact_topo across three seeds between initial and regularized recipes; apply the winning recipe to both arms and all seeds; tie favors initial recipe. Never select a seed.",
+  "test_gate": "All six regularized runs completed; global recipe and all six selected checkpoints hashed before TEST scoring.",
+  "reporting": "Preserve both recipes and disclose DEV-informed follow-up. Historical family TEST is retrospective, not a pristine holdout."
+}
