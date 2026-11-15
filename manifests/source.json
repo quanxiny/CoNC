@@ -1,8 +1,8 @@
 {
   "version": "0.2.0",
   "component": "source",
-  "file_count": 302,
-  "total_bytes": 23776295,
+  "file_count": 304,
+  "total_bytes": 23791431,
   "files": [
     {
       "path": ".gitattributes",
@@ -11,8 +11,8 @@
     },
     {
       "path": ".gitignore",
-      "bytes": 1000,
-      "sha256": "1b3c210d5358230e078d350b7dbb411ffe20a6621f1bdad3b048fa9304318e86"
+      "bytes": 1030,
+      "sha256": "df3cfff96702a15142aff05443b3b814d03b452dc8fe873749a097e63d82562b"
     },
     {
       "path": "CITATION.cff",
@@ -21,8 +21,8 @@
     },
     {
       "path": "DATASETS.md",
-      "bytes": 2078,
-      "sha256": "c2bc84ba0751a0bf4262291a4f7b13c573925fe361cbd9aabd7e00890a2da43b"
+      "bytes": 2267,
+      "sha256": "4e92ab8714f84a0905b4baba5906326151e78f18a0a7dbe2af0a3ffae8953e5b"
     },
     {
       "path": "LICENSE",
@@ -36,18 +36,18 @@
     },
     {
       "path": "README.md",
-      "bytes": 5469,
-      "sha256": "5419f1df7e8349c8d60d2614792ba6481e4c7e57aa1b5ce797dd412cbe8d54de"
+      "bytes": 6088,
+      "sha256": "bb56d68162cf8c1904021d8bd285f3895879bae26155a9648e3c3fdcf9b0a5e4"
     },
     {
       "path": "README_zh-CN.md",
-      "bytes": 2354,
-      "sha256": "07ebc38df6caac466ef98130397be77b015496fa5a54d4677af4e433730b0515"
+      "bytes": 2750,
+      "sha256": "57278c948f1ed49a801121f769d61ee7ee029223a746418acd21bfef60006bd2"
     },
     {
       "path": "VALIDATION.json",
-      "bytes": 1220,
-      "sha256": "a10b01cbad86e808cfccfcdba001499c0158086014cb6ee62d52938db3e45f63"
+      "bytes": 1601,
+      "sha256": "df77151676e03acdd4401bfc6bef23b50c1960eaec750eeb1ab0bd402ed3cb35"
     },
     {
       "path": "data/current/backbone_checksums.json",
@@ -1155,6 +1155,11 @@
       "sha256": "865e1524fcc7d1401a82f3ca1c439ef355fa8b3b576974acc5b83a62862422fa"
     },
     {
+      "path": "manifests/strict_baselines.json",
+      "bytes": 10900,
+      "sha256": "22a5a676735d5ad201b40c0e66ec910a3cb76e760ef65dc58b9310fede901742"
+    },
+    {
       "path": "manifests/weights.json",
       "bytes": 12738,
       "sha256": "0a08ef6f65f1dcc792d5f70d69d2ddbd588340afb3cd1efb8edff395a14911ee"
@@ -1215,6 +1220,11 @@
       "sha256": "390c45b35f652805c18f0db4242720f594e71eca62f0a448cf6a06edfe9f6afe"
     },
     {
+      "path": "scripts/evaluate_strict_baseline.py",
+      "bytes": 2583,
+      "sha256": "c3280ec83a11e61f52f2159d6283682372ef580d64c11cd94ef2c8e386776ce4"
+    },
+    {
       "path": "scripts/prepare_data.py",
       "bytes": 5729,
       "sha256": "a1453fc779a1037fe11d5dcb2403da8d0e247ad7539d8227b68ccf5bece57d68"
@@ -1226,8 +1236,8 @@
     },
     {
       "path": "scripts/verify_bundle.py",
-      "bytes": 1759,
-      "sha256": "91428ec11dfeb31a35d5d37a60e79f66f5cfc5f0dcd87d5679b523ec2f9003a7"
+      "bytes": 1797,
+      "sha256": "756249490357718d66da1cdb8ff6072a31783fe5b07f97d7279d9cc346b41267"
     },
     {
       "path": "transformer_gru_v76_v2/README.md",

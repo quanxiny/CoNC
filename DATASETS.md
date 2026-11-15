@@ -9,7 +9,7 @@ python scripts/verify_bundle.py --part data
 python scripts/verify_bundle.py --part current_assets
 ```
 
-The data attachment provides the original OverflowGen archive, encoded graph cache, row metadata, historical family assignment, strict component manifest, prepared baseline inputs and backbone initialization files. The current-assets attachment provides strict split graph tensors and cached backbone contexts for TRAIN, DEV and TEST; the strict backbone and fusion checkpoints; matched fusion-control checkpoints; family fusion checkpoints; and strict DeepWukong checkpoints. See the root README for supported commands and limitations. Model checkpoints loaded by the portable current entry points contain tensor-only state dictionaries.
+The data attachment provides the original OverflowGen archive, encoded graph cache, row metadata, historical family assignment, strict component manifest, prepared baseline inputs and backbone initialization files. The `overflow-reproducibility-strict-baselines.zip` attachment contains the strict-split VDTransformer, DeepDFA and backbone-intervention checkpoints, with original and released checksums. The current-assets attachment provides strict split graph tensors and cached backbone contexts for TRAIN, DEV and TEST; the strict backbone and fusion checkpoints; matched fusion-control checkpoints; family fusion checkpoints; and strict DeepWukong checkpoints. See the root README for supported commands and limitations. Model checkpoints loaded by the portable current entry points contain tensor-only state dictionaries.
 
 To materialize original OverflowGen C programs, slices and graph tables for native tools:
 

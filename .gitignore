@@ -38,3 +38,4 @@ data/current_assets/
 transformer_gru_v76_v2/external/overflowgen/joint_graph_study_v1/*.json
 transformer_gru_v76_v2/external/overflowgen/joint_graph_study_v1/*.jsonl.gz
 transformer_gru_v76_v2/external/overflowgen/safe_numeric_artifacts/
+data/current_baseline_assets/

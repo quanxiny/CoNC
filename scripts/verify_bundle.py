@@ -19,10 +19,10 @@ def sha256(path):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--part",choices=["source","data","weights","current_assets","all"],default="source")
+    parser.add_argument("--part",choices=["source","data","weights","current_assets","strict_baselines","all"],default="source")
     parser.add_argument("--syntax",action="store_true",help="Also parse the released Python source files.")
     args = parser.parse_args()
-    parts = ["source","data","weights","current_assets"] if args.part == "all" else [args.part]
+    parts = ["source","data","weights","current_assets","strict_baselines"] if args.part == "all" else [args.part]
     checked = 0
     for part in parts:
         manifest = ROOT/"manifests"/(part+".json")

@@ -24,13 +24,17 @@ Create a Python 3.11 environment and install `requirements-core.txt`. Download t
 ```bash
 unzip overflow-reproducibility-data.zip
 unzip overflow-reproducibility-current-assets.zip
+# Strict-split VDTransformer, DeepDFA and backbone interventions:
+unzip overflow-reproducibility-strict-baselines.zip
 # Family-split backbone checkpoints and historical comparisons:
 unzip overflow-reproducibility-weights.zip
 cd overflow-reproducibility
 python scripts/verify_bundle.py --part data
 python scripts/verify_bundle.py --part current_assets
+python scripts/verify_bundle.py --part strict_baselines
 python scripts/current_experiment.py evaluate --seed 11 --arm exact_topo --device cpu
 python scripts/current_experiment.py live --seed 11 --limit 32 --device cpu
+python scripts/evaluate_strict_baseline.py --variant vd --seed 11 --limit 32
 ```
 
 `evaluate` runs the selected fusion branch on the frozen strict graph tensors, backbone logits and FP16 cached context for all 11,769 test examples, and checks predicted classes against the reference. Run seeds 11, 29, 47 and arms `exact_topo`, `literal_only`, `four_round` for the full matched comparison. `live` loads the strict stage-two backbone and fusion branch, computes context directly from the encoded dataset, and checks a sample of complete model predictions. Set `--limit 11769` for the full strict test. The current-assets archive contains strict split inputs, cached contexts, strict backbones, strict fusion and matched-control heads, family fusion heads, and strict DeepWukong checkpoints.
@@ -40,6 +44,8 @@ To retrain one fusion branch from the supplied frozen strict backbone context:
 ```bash
 python scripts/train_current_fusion.py --seed 11 --arm exact_topo --device cuda:0 --output-dir outputs/strict_exact_s11
 ```
+
+The strict-baselines archive contains the strict VDTransformer, DeepDFA and seven backbone-intervention state dictionaries. `evaluate_strict_baseline.py` runs VDTransformer or a backbone intervention from encoded inputs and compares its sample predictions with the references; use `--help` to list variants. These states are distinct from the family-split baselines.
 
 The training recipe uses the strict TRAIN and DEV tensors, DEV cross-entropy selection including epoch zero, AdamW, and the fixed residual penalty. GPU retraining may exhibit platform-dependent floating-point differences. Backbones were trained separately; the code does not claim end-to-end retraining from cached context. The retained research-stage campaign code records the original split, baseline and native-tool protocols and may require intermediate artifacts beyond these compact attachments. See the historical guides for backbone training and baseline dependencies; those guides describe the earlier backbone-only CoNC and older experimental tables.
 

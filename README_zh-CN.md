@@ -18,14 +18,18 @@ python scripts/current_experiment.py replay
 ```bash
 unzip overflow-reproducibility-data.zip
 unzip overflow-reproducibility-current-assets.zip
+# 严格划分基线和骨干消融权重：
+unzip overflow-reproducibility-strict-baselines.zip
 # 历史家族划分及比较方法权重：
 unzip overflow-reproducibility-weights.zip
 cd overflow-reproducibility
 python -m pip install -r requirements-core.txt
 python scripts/verify_bundle.py --part data
 python scripts/verify_bundle.py --part current_assets
+python scripts/verify_bundle.py --part strict_baselines
 python scripts/current_experiment.py evaluate --seed 11 --arm exact_topo --device cpu
 python scripts/current_experiment.py live --seed 11 --limit 32 --device cpu
+python scripts/evaluate_strict_baseline.py --variant vd --seed 11 --limit 32
 ```
 
 `evaluate` 使用冻结的图和上下文缓存对严格测试集完整重算融合分支；`live` 从已编码输入运行完整严格划分骨干和融合分支，默认验证 32 条样本。可将种子设为 11、29、47，分支设为 `exact_topo`、`literal_only` 或 `four_round`。若要从缓存的严格训练集和验证集重新训练融合分支：
@@ -33,6 +37,8 @@ python scripts/current_experiment.py live --seed 11 --limit 32 --device cpu
 ```bash
 python scripts/train_current_fusion.py --seed 11 --arm exact_topo --device cuda:0 --output-dir outputs/strict_exact_s11
 ```
+
+严格划分基线附件还包含 VDTransformer、DeepDFA 和七种骨干消融的检查点。`evaluate_strict_baseline.py --help` 列出可直接运行的配置。
 
 严格划分为 94,157 / 11,770 / 11,769，历史家族划分为 94,179 / 11,940 / 11,577，两者的检查点不能混用。部分旧版模型脚本对应此前没有精确算术分支的骨干模型；新版结果位于 `data/current/` 和 `results/current/`。重训原始骨干或完整重跑原生静态工具还需要相应环境及部分中间材料，详见英文说明。
 
