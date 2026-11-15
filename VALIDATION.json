@@ -12,7 +12,9 @@
     "strict_baseline_sample_parity": "PASS: VDTransformer seeds 11/29/47 and seven interventions seed 11, 32 TEST slices each, zero class differences",
     "strict_baseline_max_probability_difference": 1.0609626770019531e-05,
     "strict_baseline_assets": "PASS: 27 checkpoint hashes and complete archive CRC",
-    "strict_fusion_backward": "PASS: 64 TRAIN slices, finite gradients"
+    "strict_fusion_backward": "PASS: 64 TRAIN slices, finite gradients",
+    "family_full_model_sample_parity": "PASS: 32 TEST slices per seed, seeds 11/29/47; 0 class differences",
+    "family_full_model_max_probability_difference": 7.525086402893066e-07
   },
   "limits": [
     "Strict and family evaluations are retrospective and use different checkpoints.",

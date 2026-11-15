@@ -33,11 +33,12 @@ python scripts/verify_bundle.py --part data
 python scripts/verify_bundle.py --part current_assets
 python scripts/verify_bundle.py --part strict_baselines
 python scripts/current_experiment.py evaluate --seed 11 --arm exact_topo --device cpu
-python scripts/current_experiment.py live --seed 11 --limit 32 --device cpu
+python scripts/current_experiment.py live --split strict --seed 11 --limit 32 --device cpu
+python scripts/current_experiment.py live --split family --seed 11 --limit 32 --device cpu
 python scripts/evaluate_strict_baseline.py --variant vd --seed 11 --limit 32
 ```
 
-`evaluate` runs the selected fusion branch on the frozen strict graph tensors, backbone logits and FP16 cached context for all 11,769 test examples, and checks predicted classes against the reference. Run seeds 11, 29, 47 and arms `exact_topo`, `literal_only`, `four_round` for the full matched comparison. `live` loads the strict stage-two backbone and fusion branch, computes context directly from the encoded dataset, and checks a sample of complete model predictions. Set `--limit 11769` for the full strict test. The current-assets archive contains strict split inputs, cached contexts, strict backbones, strict fusion and matched-control heads, family fusion heads, and strict DeepWukong checkpoints.
+`evaluate` runs the selected fusion branch on the frozen strict graph tensors, backbone logits and FP16 cached context for all 11,769 test examples, and checks predicted classes against the reference. Run seeds 11, 29, 47 and arms `exact_topo`, `literal_only`, `four_round` for the full matched comparison. `live` loads the selected split-specific backbone and fusion branch, computes context directly from the encoded dataset, and checks complete model predictions against the saved references. The family split additionally requires the weights attachment. Set `--limit 11769` for the full strict test or `--limit 11577` for the full family test. The current-assets archive contains strict split inputs, cached contexts, strict backbones, strict fusion and matched-control heads, family fusion heads, and strict DeepWukong checkpoints.
 
 To retrain one fusion branch from the supplied frozen strict backbone context:
 

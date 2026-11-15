@@ -28,11 +28,12 @@ python scripts/verify_bundle.py --part data
 python scripts/verify_bundle.py --part current_assets
 python scripts/verify_bundle.py --part strict_baselines
 python scripts/current_experiment.py evaluate --seed 11 --arm exact_topo --device cpu
-python scripts/current_experiment.py live --seed 11 --limit 32 --device cpu
+python scripts/current_experiment.py live --split strict --seed 11 --limit 32 --device cpu
+python scripts/current_experiment.py live --split family --seed 11 --limit 32 --device cpu
 python scripts/evaluate_strict_baseline.py --variant vd --seed 11 --limit 32
 ```
 
-`evaluate` 使用冻结的图和上下文缓存对严格测试集完整重算融合分支；`live` 从已编码输入运行完整严格划分骨干和融合分支，默认验证 32 条样本。可将种子设为 11、29、47，分支设为 `exact_topo`、`literal_only` 或 `four_round`。若要从缓存的严格训练集和验证集重新训练融合分支：
+`evaluate` 使用冻结的图和上下文缓存对严格测试集完整重算融合分支；`live` 从已编码输入运行相应划分的完整骨干和融合分支，上述命令各验证 32 条样本；家族划分需要额外解压 weights 附件。可将种子设为 11、29、47，分支设为 `exact_topo`、`literal_only` 或 `four_round`。若要从缓存的严格训练集和验证集重新训练融合分支：
 
 ```bash
 python scripts/train_current_fusion.py --seed 11 --arm exact_topo --device cuda:0 --output-dir outputs/strict_exact_s11

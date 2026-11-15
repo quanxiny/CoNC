@@ -86,32 +86,38 @@ def live(args):
     from external_eval.tifs.models import make_model
     from external_eval.conc_exact_topo_20261114.model import CoNCExactTopo
     torch.set_num_threads(4)
-    asset = ROOT/'data/current_assets/strict'
+    asset = ROOT/'data/current_assets'/args.split
     package = Path(args.data_root).resolve()/'transformer_gru_v76_v2'
     common.CACHE = package/'external/overflowgen/joint_graph_study_v1'
     common.METADATA = package/'assets/comparisons/overflowgen/overflow_interfaces_v51/output/row_metadata.jsonl.gz'
-    base = make_model('full', 2, args.seed)
-    state = torch.load(asset/f'backbones/full_s{args.seed}_stage2.pt', map_location='cpu', weights_only=True)
+    if args.split == 'strict':
+        base = make_model('full', 2, args.seed)
+        state = torch.load(asset/f'backbones/full_s{args.seed}_stage2.pt', map_location='cpu', weights_only=True)
+    else:
+        from model70 import AdaptiveGraph70
+        from overflow51.training import load_own_checkpoint
+        base = AdaptiveGraph70('liquid_transfer_frozen')
+        state = load_own_checkpoint(package/f'assets/comparisons/overflowgen/adaptive_graph_liquid_v70/runs/liquid_transfer_frozen_s{args.seed}/best.pt')
     base.load_state_dict(state['model'], strict=True)
     model = CoNCExactTopo(base).to(args.device).eval()
     head = torch.load(asset/f'heads/exact_topo_s{args.seed}.pt', map_location='cpu', weights_only=True)
     model.adapter.load_state_dict(head['head'], strict=True)
-    data = torch.load(asset/'data/test.pt', map_location='cpu', weights_only=True)
     source = common.SourceData()
-    with gzip.open(ROOT/f'data/current/strict/exact_topo_s{args.seed}.csv.gz', 'rt', newline='') as f:
+    with gzip.open(ROOT/f'data/current/{args.split}/exact_topo_s{args.seed}.csv.gz', 'rt', newline='') as f:
         reference = list(csv.DictReader(f))[:args.limit]
+    family_indices = {common.stable_id(m): i for i,m in enumerate(source.metadata)} if args.split == 'family' else None
     mismatch = 0
     max_difference = 0.0
     with torch.inference_mode():
         for start in range(0, len(reference), args.batch_size):
             part = reference[start:start+args.batch_size]
-            indices = [int(r['source_row']) for r in part]
+            indices = [int(r['source_row']) if family_indices is None else family_indices[r['sample_id']] for r in part]
             x, labels = source.batch(indices, args.device)
             out = model(x)
             scores = out['risk'].cpu().tolist()
             mismatch += sum((v >= .5) != bool(int(r['prediction'])) for v,r in zip(scores,part))
             max_difference = max(max_difference, *(abs(v-float(r['risk'])) for v,r in zip(scores,part)))
-    print(json.dumps({'rows':len(reference),'seed':args.seed,'class_mismatches':mismatch,'max_probability_difference':max_difference},indent=2))
+    print(json.dumps({'split':args.split,'rows':len(reference),'seed':args.seed,'class_mismatches':mismatch,'max_probability_difference':max_difference},indent=2))
     if mismatch: raise SystemExit('Predicted classes differ from saved reference')
 
 
@@ -124,7 +130,8 @@ def main():
     q.add_argument('--arm', choices=('exact_topo','literal_only','four_round'), default='exact_topo')
     q.add_argument('--device', default='cpu')
     q.add_argument('--batch-size', type=int, default=512)
-    l = sub.add_parser('live', help='Run full strict model on encoded inputs')
+    l = sub.add_parser('live', help='Run full model on encoded strict or family inputs')
+    l.add_argument('--split', choices=('strict','family'), default='strict')
     l.add_argument('--seed', type=int, choices=(11,29,47), default=11)
     l.add_argument('--device', default='cpu')
     l.add_argument('--batch-size', type=int, default=16)
